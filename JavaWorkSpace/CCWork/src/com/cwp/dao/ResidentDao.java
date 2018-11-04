@@ -1,5 +1,6 @@
 package com.cwp.dao;
 
+import com.cwp.entity.Page;
 import com.cwp.entity.Resident;
 
 import java.util.List;
@@ -16,10 +17,10 @@ public interface ResidentDao {
     boolean updateResident(Resident resident);
 
     //   单个查询居民
-    boolean findResident(String residentAccount);
+    Resident findResident(Resident resident);
 
     //   列表查询居民
-    List<Resident> listResident();
+    List<Resident> listResident(Resident resident, Page page);
 
     //    查询居民数量
     Long findTotalCount(Resident resident);

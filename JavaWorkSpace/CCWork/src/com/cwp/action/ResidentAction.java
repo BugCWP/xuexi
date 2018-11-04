@@ -16,7 +16,8 @@ public class ResidentAction extends ActionSupport implements ModelDriven<Residen
     @Autowired
     private ResidentService residentService;
 
-    @Action(value = "addResident",results = {@Result(name = "success",type = "dispatcher",location = "/success.jsp")})
+    //添加接口
+    @Action(value = "addResident",results = {@Result(name = "success",type = "dispatcher",location = "/index.jsp")})
     public String addResident(){
         boolean flag=residentService.addResident(resident);
         if (flag){
@@ -26,6 +27,16 @@ public class ResidentAction extends ActionSupport implements ModelDriven<Residen
         }
     }
 
+    //注册接口
+    @Action(value = "register",results = {@Result(name = "success",type = "dispatcher",location = "/index.jsp")})
+    public String registerResident(){
+        System.out.print(resident.toString());
+        return SUCCESS;
+    }
+    //删除接口
+    //修改接口
+    //数组信息
+    //单条信息
     @Override
     public Resident getModel() {
         return resident;

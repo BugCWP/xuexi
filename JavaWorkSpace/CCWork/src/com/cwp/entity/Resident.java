@@ -32,6 +32,8 @@ public class Resident implements Serializable {
     private String residentAvatar;
     @Column(name = "resident_age")
     private String residentAge;
+    @Column(name = "resdent_permission")
+    private Long resdentPermission;
     @Column(name = "resident_delete")
     private int residentDelete;
 
@@ -107,11 +109,36 @@ public class Resident implements Serializable {
         this.residentAvatar = residentAvatar;
     }
 
+    public Long getResdentPermission() {
+        return resdentPermission;
+    }
+
+    public void setResdentPermission(Long resdentPermission) {
+        this.resdentPermission = resdentPermission;
+    }
+
     public String getResidentAge() {
         return residentAge;
     }
 
     public void setResidentAge(String residentAge) {
         this.residentAge = residentAge;
+    }
+
+    @Override
+    public String toString() {
+        return "Resident{" +
+                "residentId=" + residentId +
+                ", residentAccount='" + residentAccount + '\'' +
+                ", residentPassword='" + residentPassword + '\'' +
+                ", residentName='" + residentName + '\'' +
+                ", residentCommunity='" + residentCommunity + '\'' +
+                ", residentPhone='" + residentPhone + '\'' +
+                ", residentAdress='" + residentAdress + '\'' +
+                ", residentAvatar='" + residentAvatar + '\'' +
+                ", residentAge='" + residentAge + '\'' +
+                ", resdentPermission=" + resdentPermission +
+                ", residentDelete=" + residentDelete +
+                '}';
     }
 }
