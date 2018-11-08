@@ -30,6 +30,7 @@ public class ResidentServiceImpl implements ResidentService {
 
     @Override
     public boolean deleteResident(Resident resident) {
+
         return false;
     }
 
@@ -45,6 +46,29 @@ public class ResidentServiceImpl implements ResidentService {
 
     @Override
     public Resident findResident(Resident resident) {
-        return null;
+        Resident r=residentDao.findResident(resident);
+        System.out.println(r.getResidentAccount()+r.getResidentPassword());
+        if (r.getResidentAccount()!=null&&!"".equals(r.getResidentAccount())){
+            return r;
+        }else {
+           return null;
+        }
+    }
+
+    @Override
+    public Resident loginResident(Resident resident) {
+        boolean flag=residentDao.loginResident(resident);
+        Resident r=new Resident();
+        if (flag){
+            r=residentDao.findResident(resident);
+        }else {
+            r=null;
+        }
+        return r;
+    }
+
+    @Override
+    public Long findTotalCount(Resident resident) {
+        return residentDao.findTotalCount(resident);
     }
 }

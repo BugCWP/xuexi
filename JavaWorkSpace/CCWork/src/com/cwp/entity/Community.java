@@ -15,12 +15,14 @@ public class Community implements Serializable {
     private Long communityId;
     @Column(name = "community_name")
     private String communityName;
-    @Column(name = "commnity_adress")
-    private String commnityAdress;
-    @Column(name = "commnity_introduction")
-    private String commnityIntroduction;
-    @Column(name = "commnity_delete")
-    private int commnityDelete;
+    @Column(name = "community_adress")
+    private String communityAdress;
+    @Column(name = "community_introduction")
+    private String communityIntroduction;
+    @Column(name = "community_picture")
+    private String communityPicture;
+    @Column(name = "community_delete")
+    private int communityDelete;
 
     public Long getCommunityId() {
         return communityId;
@@ -38,27 +40,35 @@ public class Community implements Serializable {
         this.communityName = communityName;
     }
 
-    public String getCommnityAdress() {
-        return commnityAdress;
+    public String getCommunityAdress() {
+        return communityAdress;
     }
 
-    public void setCommnityAdress(String commnityAdress) {
-        this.commnityAdress = commnityAdress;
+    public void setCommunityAdress(String communityAdress) {
+        this.communityAdress = communityAdress;
     }
 
-    public String getCommnityIntroduction() {
-        return commnityIntroduction;
+    public String getCommunityIntroduction() {
+        return communityIntroduction;
     }
 
-    public void setCommnityIntroduction(String commnityIntroduction) {
-        this.commnityIntroduction = commnityIntroduction;
+    public void setCommunityIntroduction(String communityIntroduction) {
+        this.communityIntroduction = communityIntroduction;
     }
 
-    public int getCommnityDelete() {
-        return commnityDelete;
+    public String getCommunityPicture() {
+        return communityPicture;
     }
 
-    public void setCommnityDelete(int commnityDelete) {
-        this.commnityDelete = commnityDelete;
+    public void setCommunityPicture(String communityPicture) {
+        this.communityPicture = communityPicture;
+    }
+
+    public int getCommunityDelete() {
+        return communityDelete;
+    }
+
+    public void setCommunityDelete(int communityDelete) {
+        this.communityDelete = communityDelete;
     }
 }

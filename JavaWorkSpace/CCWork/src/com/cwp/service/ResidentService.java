@@ -16,4 +16,8 @@ public interface ResidentService {
     List<Resident> listResident(Resident resident, Page page);
     //返回居民单条信息
     Resident findResident(Resident resident);
+    //登陆
+    Resident loginResident(Resident resident);
+    //返回用户数量
+    Long findTotalCount(Resident resident);
 }

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1b173199-970b-4061-8c82-a018778cd8eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../CCWork/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/src/com/cwp/action/CommunityAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/src/com/cwp/service/AnnouncementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/src/com/cwp/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/src/com/cwp/service/CommunityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/src/com/cwp/service/PermissionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/src/com/cwp/service/PictureService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/src/com/cwp/service/impl/CommunityServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/400.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/401.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/403.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/500.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/503.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/WEB-INF/lib/commons-beanutils-1.8.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/WEB-INF/lib/commons-collections-3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/WEB-INF/lib/commons-httpclient-2.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/WEB-INF/lib/commons-lang-2.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/WEB-INF/lib/ezmorph-1.0.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/WEB-INF/lib/json-lib-2.2.2-jdk15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/js/jquery-3.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CCWork/web/terms.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebSocket.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/CCWork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/CCWork.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/ResidentAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/ResidentAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/CommunityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/CommunityDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/CommunityDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/CommunityDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/entity/Community.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/entity/Community.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/ResidentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/ResidentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/ResidentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/ResidentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/artifacts/CCWork_war_exploded/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/production/CCWork/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/production/CCWork/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/production/CCWork/com/cwp/action/ResidentAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/production/CCWork/com/cwp/action/ResidentAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/production/CCWork/com/cwp/dao/CommunityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/production/CCWork/com/cwp/dao/CommunityDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/production/CCWork/com/cwp/dao/impl/CommunityDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/production/CCWork/com/cwp/dao/impl/CommunityDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/production/CCWork/com/cwp/entity/Community.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/production/CCWork/com/cwp/entity/Community.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/production/CCWork/com/cwp/service/ResidentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/production/CCWork/com/cwp/service/ResidentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/out/production/CCWork/com/cwp/service/impl/ResidentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/out/production/CCWork/com/cwp/service/impl/ResidentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/src/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/src/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/src/com/cwp/action/ResidentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/src/com/cwp/action/ResidentAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/src/com/cwp/dao/CommunityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/src/com/cwp/dao/CommunityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/src/com/cwp/dao/impl/CommunityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/src/com/cwp/dao/impl/CommunityDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/src/com/cwp/entity/Community.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/src/com/cwp/entity/Community.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/src/com/cwp/service/impl/ResidentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/src/com/cwp/service/impl/ResidentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CCWork/web/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../CCWork/web/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/.idea/artifacts/ccDemo_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/ccDemo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/classes/com/cwp/action/ResidentAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/classes/com/cwp/dao/ResidentDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/classes/com/cwp/dao/impl/ResidentDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/classes/com/cwp/entity/Resident.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/classes/com/cwp/service/ResidentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/classes/com/cwp/service/impl/ResidentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/classes/spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/asm-3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/asm-commons-3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/aspectjweaver-1.8.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/c3p0-0.9.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/classmate-1.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/commons-fileupload-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/commons-io-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/commons-lang3-3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/dom4j-1.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/freemarker-2.3.28.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/hibernate-c3p0-5.1.16.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/hibernate-core-5.1.16.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/hibernate-entitymanager-5.1.16.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/jandex-2.0.3.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/javassist-3.20.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/mchange-commons-java-0.2.3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/mysql-connector-java-8.0.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/ognl-3.0.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/spring-aop-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/spring-beans-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/spring-context-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/spring-core-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/spring-expression-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/spring-jdbc-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/spring-orm-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/spring-tx-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/spring-web-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/struts2-convention-plugin-2.3.35.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/struts2-core-2.3.35.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/struts2-spring-plugin-2.3.35.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/lib/xwork-core-2.3.35.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/artifacts/ccDemo_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/production/ccDemo/com/cwp/action/ResidentAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/production/ccDemo/com/cwp/dao/ResidentDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/production/ccDemo/com/cwp/dao/impl/ResidentDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/production/ccDemo/com/cwp/entity/Resident.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/production/ccDemo/com/cwp/service/ResidentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/production/ccDemo/com/cwp/service/impl/ResidentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/out/production/ccDemo/spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/src/com/cwp/action/ResidentAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/src/com/cwp/dao/ResidentDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/src/com/cwp/dao/impl/ResidentDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/src/com/cwp/entity/Resident.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/src/com/cwp/service/ResidentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/src/com/cwp/service/impl/ResidentServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/src/spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/antlr-2.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/asm-3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/asm-commons-3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/aspectjweaver-1.8.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/c3p0-0.9.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/classmate-1.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/commons-fileupload-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/commons-io-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/commons-lang3-3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/dom4j-1.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/freemarker-2.3.28.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/hibernate-c3p0-5.1.16.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/hibernate-core-5.1.16.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/hibernate-entitymanager-5.1.16.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/jandex-2.0.3.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/javassist-3.20.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/mchange-commons-java-0.2.3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/mysql-connector-java-8.0.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/ognl-3.0.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/spring-aop-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/spring-beans-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/spring-context-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/spring-core-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/spring-expression-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/spring-jdbc-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/spring-orm-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/spring-tx-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/spring-web-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/struts2-convention-plugin-2.3.35.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/struts2-core-2.3.35.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/struts2-spring-plugin-2.3.35.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/lib/xwork-core-2.3.35.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccDemo/web/index.jsp" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2053179293">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1578" />
+    <option name="height" value="693" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="WebSocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebSocket" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541434623593" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CCWork" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b173199-970b-4061-8c82-a018778cd8eb" name="Default Changelist" comment="" />
+      <created>1541428226677</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541428226677</updated>
+      <workItem from="1541428229348" duration="636000" />
+      <workItem from="1541469211018" duration="260000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="896000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25383994" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

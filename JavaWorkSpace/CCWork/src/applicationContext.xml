@@ -27,7 +27,7 @@
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/mymysql?serverTimezone=GMT"></property>
         <property name="user" value="root"></property>
-        <property name="password" value="302771918"></property>
+        <property name="password" value="password"></property>
     </bean>
 
     <!-- 4.配置hibernate的SessionFactory -->

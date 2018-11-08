@@ -19,7 +19,7 @@ public class CommunityDaoImpl implements CommunityDao {
     @Override
     public boolean addCommunity(Community community) {
         Session s=sessionFactory.getCurrentSession();
-        community.setCommnityDelete(1);
+        community.setCommunityDelete(1);
         s.save(community);
         return true;
     }
@@ -35,19 +35,19 @@ public class CommunityDaoImpl implements CommunityDao {
     public boolean deleteCommunity(Community community) {
         Session s=sessionFactory.getCurrentSession();
         String communityName=community.getCommunityName();
-        String communityAdress=community.getCommnityAdress();
+        String communityAdress=community.getCommunityAdress();
         Long communityId=community.getCommunityId();
         Community c=new Community();
         if (communityName!=null &&"".equals(communityName)){
              c =s.get(Community.class,community.getCommunityName());
         }
         else if (communityAdress!=null &&"".equals(communityAdress)){
-            c =s.get(Community.class,community.getCommnityAdress());
+            c =s.get(Community.class,community.getCommunityAdress());
         }
         else if (communityId!=null &&"".equals(communityId)){
             c =s.get(Community.class,community.getCommunityId());
         }
-        c.setCommnityDelete(0);
+        c.setCommunityDelete(0);
         s.update(c);
         return true;
     }
@@ -56,14 +56,14 @@ public class CommunityDaoImpl implements CommunityDao {
     public Community findCommunity(Community community) {
         Session s=sessionFactory.getCurrentSession();
         String communityName=community.getCommunityName();
-        String communityAdress=community.getCommnityAdress();
+        String communityAdress=community.getCommunityAdress();
         Long communityId=community.getCommunityId();
         Community c=new Community();
         if (communityName!=null &&"".equals(communityName)){
             c =s.get(Community.class,community.getCommunityName());
         }
         else if (communityAdress!=null &&"".equals(communityAdress)){
-            c =s.get(Community.class,community.getCommnityAdress());
+            c =s.get(Community.class,community.getCommunityAdress());
         }
         else if (communityId!=null &&"".equals(communityId)){
             c =s.get(Community.class,community.getCommunityId());
@@ -75,7 +75,7 @@ public class CommunityDaoImpl implements CommunityDao {
     public List<Community> listCommunity(Community community, Page page) {
         Session s=sessionFactory.getCurrentSession();
         String communityName=community.getCommunityName();
-        String communityAdress=community.getCommnityAdress();
+        String communityAdress=community.getCommunityAdress();
         Long communityId=community.getCommunityId();
         StringBuffer hql=new StringBuffer("from Community where 1=1");
         if (communityName!=null &&"".equals(communityName)){
@@ -90,47 +90,48 @@ public class CommunityDaoImpl implements CommunityDao {
         hql.append("and communityDelete = :communityDelete");
         Query query=s.createQuery(hql.toString()).setFirstResult(page.getRecordStart()).setMaxResults(page.getPageSize());
         if (communityName!=null &&"".equals(communityName)){
-           query.setParameter("communityName",communityName);
+           query.setParameter("communityName","%"+communityName+"%");
         }
         if (communityAdress!=null &&"".equals(communityAdress)){
-           query.setParameter("communityAdress",communityAdress);
+           query.setParameter("communityAdress","%"+communityAdress+"%");
         }
-        if (communityId!=null &&"".equals(communityId)){
+        if (communityId!=null){
             query.setParameter("communityId",communityId);
         }
-        query.setParameter("communityId",1);
+        query.setParameter("communityDelete",1);
         return query.list();
     }
 
     @Override
-    public Long findTotalCommunity(Community community) {
+    public long findTotalCommunity(Community community) {
         Session s=sessionFactory.getCurrentSession();
         String communityName=community.getCommunityName();
-        String communityAdress=community.getCommnityAdress();
+        String communityAdress=community.getCommunityAdress();
         Long communityId=community.getCommunityId();
-        StringBuffer hql=new StringBuffer("from Community where 1=1");
+        StringBuffer hql=new StringBuffer("select count(*) from Community where 1=1");
         if (communityName!=null &&"".equals(communityName)){
-            hql.append("and communityName like :communityName");
+            hql.append(" and communityName like :communityName");
         }
         if (communityAdress!=null &&"".equals(communityAdress)){
-            hql.append("and communityAdress like :communityName");
+            hql.append(" and communityAdress like :communityName");
         }
         if (communityId!=null &&"".equals(communityId)){
-            hql.append("and communityId like :communityId");
+            hql.append(" and communityId like :communityId");
         }
-        hql.append("and communityDelete = :communityDelete");
+        hql.append(" and communityDelete = :communityDelete");
         Query query=s.createQuery(hql.toString());
         if (communityName!=null &&"".equals(communityName)){
-            query.setParameter("communityName",communityName);
+            query.setParameter("communityName","%"+communityName+"%");
         }
         if (communityAdress!=null &&"".equals(communityAdress)){
-            query.setParameter("communityAdress",communityAdress);
+            query.setParameter("communityAdress","%"+communityAdress+"%");
         }
-        if (communityId!=null &&"".equals(communityId)){
+        if (communityId!=null){
             query.setParameter("communityId",communityId);
         }
-        query.setParameter("communityId",1);
-        return (long)query.uniqueResult();
+        query.setParameter("communityDelete",1);
+        long i= (long)query.uniqueResult();
+        return i;
     }
 
     @Override

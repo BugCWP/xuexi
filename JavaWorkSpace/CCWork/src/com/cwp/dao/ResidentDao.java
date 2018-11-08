@@ -2,6 +2,7 @@ package com.cwp.dao;
 
 import com.cwp.entity.Page;
 import com.cwp.entity.Resident;
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 
 import java.util.List;
 
@@ -27,4 +28,7 @@ public interface ResidentDao {
 
     //     是否已存在
     boolean isExisr(String residentaccount);
+
+    //登陆
+    boolean loginResident(Resident resident);
 }

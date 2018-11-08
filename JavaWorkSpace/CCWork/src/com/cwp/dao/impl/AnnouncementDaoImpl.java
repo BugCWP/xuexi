@@ -107,31 +107,31 @@ public class AnnouncementDaoImpl implements AnnouncementDao {
         String announcementTitle=announcement.getAnnouncementTitle();
         String announcementTime=announcement.getAnnouncementTime();
         Long announcementPersion=announcement.getAnnouncementPersion();
-        StringBuffer hql=new StringBuffer("from Announcement where 1=1");
-        if (announcementId!=null&&"".equals(announcementId)){
-            hql.append("and announcementId= :announcementId");
+        StringBuffer hql=new StringBuffer("select count(*) from Announcement where 1=1");
+        if (announcementId!=null&&!"".equals(announcementId)){
+            hql.append(" and announcementId= :announcementId");
         }
-        if (announcementTitle!=null&&"".equals(announcementTitle)){
-            hql.append("and announcementTitle like :announcementTitle");
+        if (announcementTitle!=null&&!"".equals(announcementTitle)){
+            hql.append(" and announcementTitle like :announcementTitle");
         }
-        if (announcementTime!=null &&"".equals(announcementTime)){
-            hql.append("and announcementTime = :announcementTime");
+        if (announcementTime!=null &&!"".equals(announcementTime)){
+            hql.append(" and announcementTime = :announcementTime");
         }
-        if (announcementPersion!=null&&"".equals(announcementPersion)){
-            hql.append("and announcementPersion = :announcementPersion");
+        if (announcementPersion!=null&&!"".equals(announcementPersion)){
+            hql.append(" and announcementPersion = :announcementPersion");
         }
-        hql.append("and announcementDelete =announcementDelete");
+        hql.append(" and announcementDelete = :announcementDelete");
         Query query=session.createQuery(hql.toString());
-        if (announcementId!=null&&"".equals(announcementId)){
+        if (announcementId!=null&&!"".equals(announcementId)){
             query.setParameter("announcementId",announcementId);
         }
-        if (announcementTitle!=null&&"".equals(announcementTitle)){
-            query.setParameter("announcementTitle",announcementTitle);
+        if (announcementTitle!=null&&!"".equals(announcementTitle)){
+            query.setParameter("announcementTitle","%"+announcementTitle+"%");
         }
-        if (announcementTime!=null &&"".equals(announcementTime)){
+        if (announcementTime!=null &&!"".equals(announcementTime)){
             query.setParameter("announcementTime",announcementTime);
         }
-        if (announcementPersion!=null&&"".equals(announcementPersion)){
+        if (announcementPersion!=null&&!"".equals(announcementPersion)){
             query.setParameter("announcementPersion",announcementPersion);
         }
         query.setParameter("announcementDelete",1);

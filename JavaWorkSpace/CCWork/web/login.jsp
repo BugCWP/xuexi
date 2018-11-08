@@ -25,23 +25,26 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
-    <script src="./assets/js/require.min.js"></script>
+    <script src="/assets/js/require.min.js"></script>
     <script>
         requirejs.config({
             baseUrl: '.'
         });
     </script>
     <!-- Dashboard Core -->
-    <link href="./assets/css/dashboard.css" rel="stylesheet" />
-    <script src="./assets/js/dashboard.js"></script>
+    <link href="/assets/css/dashboard.css" rel="stylesheet" />
+    <script src="/assets/js/dashboard.js"></script>
     <!-- c3.js Charts Plugin -->
-    <link href="./assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
-    <script src="./assets/plugins/charts-c3/plugin.js"></script>
+    <link href="/assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
+    <script src="/assets/plugins/charts-c3/plugin.js"></script>
     <!-- Google Maps Plugin -->
-    <link href="./assets/plugins/maps-google/plugin.css" rel="stylesheet" />
-    <script src="./assets/plugins/maps-google/plugin.js"></script>
+    <link href="/assets/plugins/maps-google/plugin.css" rel="stylesheet" />
+    <script src="/assets/plugins/maps-google/plugin.js"></script>
     <!-- Input Mask Plugin -->
-    <script src="./assets/plugins/input-mask/plugin.js"></script>
+    <script src="/assets/plugins/input-mask/plugin.js"></script>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
 </head>
 <body class="">
 <div class="page">
@@ -52,33 +55,33 @@
                     <div class="text-center mb-6">
                         <%--<img src="./assets/brand/tabler.svg" class="h-6" alt="">--%>
                     </div>
-                    <form class="card" action="" method="post">
+                    <form class="card" action="/resident/login" method="post">
                         <div class="card-body p-6">
                             <div class="card-title">登陆</div>
                             <div class="form-group">
                                 <label class="form-label">邮箱</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="${msg==null?'Enter Emaill':msg}" name="residentAccount">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">
                                    密码
-                                    <a href="./forgot-password.html" class="float-right small">忘记密码</a>
+                                    <a href="/forgetPassword.jsp" class="float-right small">忘记密码</a>
                                 </label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password" name="residentPassword">
                             </div>
                             <div class="form-group">
                                 <label class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" />
+                                    <input type="checkbox" class="custom-control-input" id="remberpass" />
                                     <span class="custom-control-label">记住密码</span>
                                 </label>
                             </div>
                             <div class="form-footer">
-                                <button type="submit" class="btn btn-primary btn-block">登陆</button>
+                                <button type="submit" class="btn btn-primary btn-block" id="loginbtn" disabled="true">登陆</button>
                             </div>
                         </div>
                     </form>
                     <div class="text-center text-muted">
-                        Don't have account yet? <a href="./register.html">Sign up</a>
+                        还没有账号？<a href="./register.html">注册</a>
                     </div>
                 </div>
             </div>

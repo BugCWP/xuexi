@@ -1,0 +1,58 @@
+#tablebox{
+    width:90%;
+    height: 300px;
+    /*background-color: #0a0c0d;*/
+    position: relative;
+    left:5%;
+}
+#tablebtnbox{
+    background-color: white;
+    /*background-color: red;*/
+}
+#tablecommunity{
+    position: absolute;
+    top:35px;
+    width: 100%;
+    height: 200px;
+    left: -10px;
+    display: block;
+}
+#tableannouncement{
+    position: absolute;
+    top:35px;
+    /*background-color: red;*/
+    width: 100%;
+    height: 200px;
+    left: -10px;
+    display: none;
+}
+#tablepermission{
+    position: absolute;
+    top:35px;
+    /*background-color: red;*/
+    width: 100%;
+    height: 200px;
+    left: -10px;
+    display: none;
+}
+#tablecomment{
+    position: absolute;
+    top:35px;
+    /*background-color: red;*/
+    width: 100%;
+    height: 200px;
+    left: -10px;
+    display: none;
+}
+#tableresident{
+    position: absolute;
+    top:35px;
+    /*background-color: red;*/
+    width: 100%;
+    height: 200px;
+    left: -10px;
+    display: none;
+}
+.btnNumber{
+    margin-right: 5px;
+}

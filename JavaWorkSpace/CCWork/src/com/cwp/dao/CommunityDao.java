@@ -17,7 +17,7 @@ public interface CommunityDao {
     //查询社区列表
     List<Community> listCommunity(Community community, Page page);
     //查询社区数量
-    Long findTotalCommunity(Community community);
+    long findTotalCommunity(Community community);
     //查询社区是否存在
     boolean isExisr(Community community);
 }

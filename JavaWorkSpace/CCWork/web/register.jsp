@@ -25,23 +25,26 @@
     <title>注册</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
-    <script src="./assets/js/require.min.js"></script>
+    <script src="/assets/js/require.min.js"></script>
     <script>
         requirejs.config({
             baseUrl: '.'
         });
     </script>
     <!-- Dashboard Core -->
-    <link href="./assets/css/dashboard.css" rel="stylesheet" />
-    <script src="./assets/js/dashboard.js"></script>
+    <link href="/assets/css/dashboard.css" rel="stylesheet" />
+    <script src="/assets/js/dashboard.js"></script>
     <!-- c3.js Charts Plugin -->
-    <link href="./assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
-    <script src="./assets/plugins/charts-c3/plugin.js"></script>
+    <link href="/assets/plugins/charts-c3/plugin.css" rel="stylesheet" />
+    <script src="/assets/plugins/charts-c3/plugin.js"></script>
     <!-- Google Maps Plugin -->
-    <link href="./assets/plugins/maps-google/plugin.css" rel="stylesheet" />
-    <script src="./assets/plugins/maps-google/plugin.js"></script>
+    <link href="/assets/plugins/maps-google/plugin.css" rel="stylesheet" />
+    <script src="/assets/plugins/maps-google/plugin.js"></script>
     <!-- Input Mask Plugin -->
-    <script src="./assets/plugins/input-mask/plugin.js"></script>
+    <script src="/assets/plugins/input-mask/plugin.js"></script>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/register.js"></script>
 </head>
 <body class="">
 <div class="page">
@@ -57,35 +60,35 @@
                             <div class="card-title">注册新用户</div>
                             <div class="form-group">
                                 <label class="form-label">姓名</label>
-                                <input type="text" class="form-control" placeholder="Enter name" name="residentName">
+                                <input type="text" class="form-control" placeholder="Enter name" name="residentName" id="residentName">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">邮箱</label>
-                                <input type="email" class="form-control" placeholder="Enter email" name="residentAccount">
+                                <input type="email" class="form-control" placeholder="Enter email" name="residentAccount" id="residentAccount">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">密码</label>
-                                <input type="password" class="form-control" placeholder="Password" name="residentPassword">
+                                <input type="password" class="form-control" placeholder="Enter Password" name="residentPassword" id="residentPassword">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">所在社区</label>
-                                <select class="form-control custom-select">
-
+                                <select class="form-control custom-select" name="residentCommunity" id="residentCommunity">
+                                       <option disabled="true" selected="true">Select community</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" />
-                                    <span class="custom-control-label">同意 <a href="terms.html">条款和政策</a></span>
+                                    <input type="checkbox" class="custom-control-input" id="agreecb"/>
+                                    <span class="custom-control-label">同意 <a href="terms.jsp">条款和政策</a></span>
                                 </label>
                             </div>
                             <div class="form-footer">
-                                <button type="submit" class="btn btn-primary btn-block">注册</button>
+                                <button type="submit" class="btn btn-primary btn-block" disabled="true" id="registerbtn">注册</button>
                             </div>
                         </div>
                     </form>
                     <div class="text-center text-muted">
-                        已有账号 <a href="./login.html">登陆</a>
+                        已有账号 <a href="login.jsp">登陆</a>
                     </div>
                 </div>
             </div>

@@ -84,19 +84,19 @@ public class CommentDaoImpl implements CommentDao {
         Session session=sessionFactory.getCurrentSession();
         String  commentNumber=comment.getCommentNumber();
         Long commentPersion=comment.getCommentPersion();
-        StringBuffer hql=new StringBuffer("from Comment where 1=1");
-        if (commentNumber!=null&&"".equals(commentNumber)){
-            hql.append("and commentNumber = :commentNumber");
+        StringBuffer hql=new StringBuffer("select count(*) from Comment where 1=1");
+        if (commentNumber!=null&&!"".equals(commentNumber)){
+            hql.append(" and commentNumber = :commentNumber");
         }
-        if (commentPersion!=null&&"".equals(commentPersion)){
-            hql.append("and commentPersion = :commentPersion");
+        if (commentPersion!=null&&!"".equals(commentPersion)){
+            hql.append(" and commentPersion = :commentPersion");
         }
-        hql.append("and commentDelete = :commentDelete");
+        hql.append(" and commentDelete = :commentDelete");
         Query query=session.createQuery(hql.toString());
-        if (commentNumber!=null&&"".equals(commentNumber)){
+        if (commentNumber!=null&&!"".equals(commentNumber)){
             query.setParameter("commentNumber",commentNumber);
         }
-        if (commentPersion!=null&&"".equals(commentPersion)){
+        if (commentPersion!=null&&!"".equals(commentPersion)){
             query.setParameter("commentPersion",commentPersion);
         }
         query.setParameter("commentDelete",1);
