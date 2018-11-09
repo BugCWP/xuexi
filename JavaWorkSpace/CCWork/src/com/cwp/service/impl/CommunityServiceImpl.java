@@ -19,12 +19,14 @@ public class CommunityServiceImpl implements CommunityService {
 
     @Override
     public boolean addCommunity(Community community) {
-        return false;
+        communityDao.addCommunity(community);
+        return true;
     }
 
     @Override
     public boolean deleteCommunity(Community community) {
-        return false;
+        communityDao.deleteCommunity(community);
+        return true;
     }
 
     @Override
@@ -39,7 +41,8 @@ public class CommunityServiceImpl implements CommunityService {
 
     @Override
     public Community findCommunity(Community community) {
-        return null;
+
+        return communityDao.findCommunity(community);
     }
 
     @Override

@@ -29,11 +29,6 @@ public class CommunityAction extends ActionSupport implements ModelDriven<Commun
     @Autowired
     private CommunityService communityService;
 
-    @Action()
-    public String listCommunity(){
-
-        return SUCCESS;
-    }
 
 //    返回社区队列
     @Action(value = "/listAllCommunity")
@@ -59,14 +54,14 @@ public class CommunityAction extends ActionSupport implements ModelDriven<Commun
     public void getListCommunityByPage() throws IOException{
         HttpServletRequest request=ServletActionContext.getRequest();
         HttpServletResponse response=ServletActionContext.getResponse();
-
         response.setContentType("text/html;charset=utf-8");
-        String pageIndex=request.getParameter("pageIndex");
+        String pageIndex=request.getParameter("communityPageIndex");
         String communityTitle=request.getParameter("communityTitle");
-        System.out.println(pageIndex+","+communityTitle);
+        String communitypageSize=request.getParameter("communitypageSize");
         Page page=new Page();
         Community c=new Community();
         page.setPageIndex(Integer.parseInt(pageIndex));
+        page.setPageCount(Integer.parseInt(communitypageSize));
         if (communityTitle!=null&&!"".equals(communityTitle)){
             c.setCommunityName(communityTitle);
         }
@@ -88,6 +83,47 @@ public class CommunityAction extends ActionSupport implements ModelDriven<Commun
         String jsonString= JSONObject.fromObject(jsonMap).toString();
         PrintWriter out=response.getWriter();
         out.println(jsonString);
+        out.flush();
+        out.close();
+    }
+
+    //添加社区
+    @Action(value = "addCommunity")
+    public void AddCommunity(){
+        HttpServletRequest request=ServletActionContext.getRequest();
+        String communityName=request.getParameter("communityName");
+        String communityAdress=request.getParameter("communityAdress");
+        String communityIntroduction=request.getParameter("communityIntroduction");
+        Community c=new Community();
+        c.setCommunityName(communityName);
+        c.setCommunityAdress(communityAdress);
+        c.setCommunityIntroduction(communityIntroduction);
+        communityService.addCommunity(c);
+    }
+
+    //删除社区
+    @Action(value = "deleteCommunity")
+    public void DeleteCommunity(){
+        HttpServletRequest request=ServletActionContext.getRequest();
+        String id=request.getParameter("id");
+        Community c=new Community();
+        c.setCommunityId(Long.parseLong(id));
+        communityService.deleteCommunity(c);
+    }
+
+    //返回单一的社区
+    @Action(value = "findcommunity")
+    public void findCommunity() throws  IOException{
+        HttpServletRequest request=ServletActionContext.getRequest();
+        HttpServletResponse response=ServletActionContext.getResponse();
+        response.setContentType("text/html;charset=utf-8");
+        String id=request.getParameter("id");
+        Community c=new Community();
+        c.setCommunityId(Long.parseLong(id));
+        Community c2=communityService.findCommunity(c);
+        String jsonstring=JSONObject.fromObject(c2).toString();
+        PrintWriter out=response.getWriter();
+        out.println(jsonstring);
         out.flush();
         out.close();
     }

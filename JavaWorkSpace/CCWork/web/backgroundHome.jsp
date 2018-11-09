@@ -211,13 +211,13 @@
             </div>
             <div id="tablecommunity">
                 <div class="col-12">
-                    <div class="card" style="height: 400px">
+                    <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">社区管理</h3>
                             <div class="input-group" style="position: absolute;right: 20px;top: 10px;height: 35px;width: 200px">
                                 <input type="text" class="form-control" placeholder="根据名称搜索" id="communityTitle">
                                 <span class="input-group-append">
-                                    <button class="btn btn-primary"><i class="fe fe-search" style="cursor: pointer"></i></button>
+                                    <button class="btn btn-primary" id="communitySearch"><i class="fe fe-search" style="cursor: pointer"></i></button>
                                 </span>
                             </div>
                         </div>
@@ -238,12 +238,13 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div style="height: 100px"></div>
                         <div class="btn-list" style="position:absolute;bottom: 20px;right: 10px">
-                            <a class="btn btn-secondary">上一页</a>
+                            <a class="btn btn-secondary" id="communitylastpage"><i class="fe fe-arrow-left"></i></a>
                             <span id="communityPageBtnNumber" style="position: relative;top: -2px;margin-right: 5px"></span>
-                            <a class="btn btn-secondary">下一页</a>
+                            <a class="btn btn-secondary" id="communitynextpage"><i class="fe fe-arrow-right"></i></a>
                             <a class="btn btn-secondary" >总页数:<span id="communityPageSize"></span></a>
-                            <a class="btn btn-secondary" >总条数:<span id="communityTotalCount"></span></a>
+                            <a class="btn btn-secondary">总条数:<span id="communityTotalCount"></span></a>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,6 @@ public class Page {
     private int pageIndex = 1;//要查询的页码
     private int pageSize = 10;//每页查询的记录数
     private int pageCount;//总页数
-    private long totalCount;//总记录数
     private int recordStart;//sql查询的偏移量
     private String url;//请求地址
 
@@ -25,20 +24,13 @@ public class Page {
     }
 
     public int getPageCount() {
-        return pageCount = (int)(totalCount%pageSize==0? totalCount/pageSize: totalCount/pageSize+1);
+        return pageCount;
     }
 
     public void setPageCount(int pageCount) {
         this.pageCount = pageCount;
     }
 
-    public long getTotalCount() {
-        return totalCount;
-    }
-
-    public void setTotalCount(long totalCount) {
-        this.totalCount = totalCount;
-    }
 
     public int getRecordStart() {
         if(pageIndex<1) {

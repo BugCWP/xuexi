@@ -38,13 +38,13 @@ public class CommunityDaoImpl implements CommunityDao {
         String communityAdress=community.getCommunityAdress();
         Long communityId=community.getCommunityId();
         Community c=new Community();
-        if (communityName!=null &&"".equals(communityName)){
+        if (communityName!=null &&!"".equals(communityName)){
              c =s.get(Community.class,community.getCommunityName());
         }
-        else if (communityAdress!=null &&"".equals(communityAdress)){
+        else if (communityAdress!=null &&!"".equals(communityAdress)){
             c =s.get(Community.class,community.getCommunityAdress());
         }
-        else if (communityId!=null &&"".equals(communityId)){
+        else if (communityId!=null &&!"".equals(communityId)){
             c =s.get(Community.class,community.getCommunityId());
         }
         c.setCommunityDelete(0);
@@ -59,13 +59,13 @@ public class CommunityDaoImpl implements CommunityDao {
         String communityAdress=community.getCommunityAdress();
         Long communityId=community.getCommunityId();
         Community c=new Community();
-        if (communityName!=null &&"".equals(communityName)){
+        if (communityName!=null &&!"".equals(communityName)){
             c =s.get(Community.class,community.getCommunityName());
         }
-        else if (communityAdress!=null &&"".equals(communityAdress)){
+        else if (communityAdress!=null &&!"".equals(communityAdress)){
             c =s.get(Community.class,community.getCommunityAdress());
         }
-        else if (communityId!=null &&"".equals(communityId)){
+        else if (communityId!=null &&!"".equals(communityId)){
             c =s.get(Community.class,community.getCommunityId());
         }
         return c;
@@ -78,21 +78,22 @@ public class CommunityDaoImpl implements CommunityDao {
         String communityAdress=community.getCommunityAdress();
         Long communityId=community.getCommunityId();
         StringBuffer hql=new StringBuffer("from Community where 1=1");
-        if (communityName!=null &&"".equals(communityName)){
-            hql.append("and communityName like :communityName");
+        if (communityName!=null &&!"".equals(communityName)){
+            hql.append(" and communityName like :communityName");
         }
-        if (communityAdress!=null &&"".equals(communityAdress)){
-            hql.append("and communityAdress like :communityName");
+        if (communityAdress!=null &&!"".equals(communityAdress)){
+            hql.append(" and communityAdress like :communityName");
         }
-        if (communityId!=null &&"".equals(communityId)){
-            hql.append("and communityId like :communityId");
+        if (communityId!=null &&!"".equals(communityId)){
+            hql.append("and communityId = :communityId");
         }
-        hql.append("and communityDelete = :communityDelete");
+        hql.append(" and communityDelete = :communityDelete");
         Query query=s.createQuery(hql.toString()).setFirstResult(page.getRecordStart()).setMaxResults(page.getPageSize());
-        if (communityName!=null &&"".equals(communityName)){
+        System.out.println(page.getRecordStart()+";"+page.getPageSize());
+        if (communityName!=null &&!"".equals(communityName)){
            query.setParameter("communityName","%"+communityName+"%");
         }
-        if (communityAdress!=null &&"".equals(communityAdress)){
+        if (communityAdress!=null &&!"".equals(communityAdress)){
            query.setParameter("communityAdress","%"+communityAdress+"%");
         }
         if (communityId!=null){
