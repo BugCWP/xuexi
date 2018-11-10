@@ -51,6 +51,7 @@ public class ResidentDaoImpl implements ResidentDao {
         String residentPhone=resident.getResidentPhone();
         String residentAdress=resident.getResidentAdress();
         String residentAge=resident.getResidentAge();
+        Long id=resident.getResidentId();
         Resident r=new Resident();
         if(residentAccount!=null &&!"".equals(residentAccount)){
             r=s.get(Resident.class,resident.getResidentAccount());
@@ -69,6 +70,8 @@ public class ResidentDaoImpl implements ResidentDao {
         }
         else if (residentAge!=null &&!"".equals(residentAge)){
             r=s.get(Resident.class,resident.getResidentAge());
+        }else if(id!=null){
+            r=s.get(Resident.class,id);
         }
         r.setResidentDelete(0);
         s.update(r);
@@ -87,16 +90,21 @@ public class ResidentDaoImpl implements ResidentDao {
     public Resident findResident(Resident resident) {
         Session s=sessionFactory.getCurrentSession();
         String residentAccount=resident.getResidentAccount();
+        Long id=resident.getResidentId();
         StringBuffer hql=new StringBuffer("from Resident where 1=1");
         if(residentAccount!=null &&!"".equals(residentAccount)){
             hql.append(" and residentAccount= :residentAccount");
         }
-        hql.append(" and residentDelete = :residentDelete");
+        if(id!=null){
+            hql.append(" and residentId = :residentId");
+        }
         Query query=s.createQuery(hql.toString());
         if(residentAccount!=null &&!"".equals(residentAccount)){
             query.setParameter("residentAccount",residentAccount);
         }
-        query.setParameter("residentDelete",1);
+        if (id!=null){
+            query.setParameter("residentId",id);
+        }
         List<Resident> residentList= query.list();
         Resident r1=null;
         for (Resident r2:residentList){
@@ -116,25 +124,27 @@ public class ResidentDaoImpl implements ResidentDao {
         String residentPhone=resident.getResidentPhone();
         String residentAdress=resident.getResidentAdress();
         String residentAge=resident.getResidentAge();
+        int residentDelete=resident.getResidentDelete();
         if(residentAccount!=null &&!"".equals(residentAccount)){
-            hql.append("and residentAccount= :residentAccount");
+            hql.append(" and residentAccount= :residentAccount");
         }
         if (residentName!=null&&!"".equals(residentName)){
-            hql.append("and residentName like :residentName");
+            hql.append(" and residentName like :residentName");
         }
         if (residentCommunity!=null && !"".equals(residentCommunity)){
-            hql.append("and residentCommunity = :residentCommunity");
+            hql.append(" and residentCommunity = :residentCommunity");
         }
         if (residentPhone!=null&&!"".equals(residentPhone)){
-            hql.append("and residentPhone like :residentPhone");
+            hql.append(" and residentPhone like :residentPhone");
         }
         if (residentAdress!=null&&!"".equals(residentAdress)){
-            hql.append("and residentAdress like :residentAdress");
+            hql.append(" and residentAdress like :residentAdress");
         }
         if (residentAge!=null &&!"".equals(residentAge)){
-            hql.append("and residentAge like :residentAge");
+            hql.append(" and residentAge like :residentAge");
         }
-        hql.append("and residentDelete = :residentDelete");
+        hql.append(" and residentDelete = :residentDelete");
+
         Query query=s.createQuery(hql.toString()).setFirstResult(page.getRecordStart()).setMaxResults(page.getPageSize());
         if(residentAccount!=null &&!"".equals(residentAccount)){
             query.setParameter("residentAccount",residentAccount);
@@ -154,7 +164,7 @@ public class ResidentDaoImpl implements ResidentDao {
         if (residentAge!=null &&!"".equals(residentAge)){
             query.setParameter("residentAge","%"+residentAge+"%");
         }
-        query.setParameter("residentDelete",1);
+        query.setParameter("residentDelete",residentDelete);
         return query.list();
     }
 
@@ -169,6 +179,7 @@ public class ResidentDaoImpl implements ResidentDao {
         String residentPhone=resident.getResidentPhone();
         String residentAdress=resident.getResidentAdress();
         String residentAge=resident.getResidentAge();
+        int residentDelete=resident.getResidentDelete();
         if(residentAccount!=null &&!"".equals(residentAccount)){
             hql.append(" and residentAccount= :residentAccount");
         }
@@ -207,16 +218,13 @@ public class ResidentDaoImpl implements ResidentDao {
         if (residentAge!=null &&!"".equals(residentAge)){
             query.setParameter("residentAge","%"+residentAge+"%");
         }
-        query.setParameter("residentDelete",1);
+        query.setParameter("residentDelete", residentDelete);
         return (Long) query.uniqueResult();
     }
 
     @Override
     public boolean loginResident(Resident resident) {
         Session session=sessionFactory.getCurrentSession();
-//        String residentAccount=resident.getResidentAccount();
-//        String residentPassword=resident.getResidentPassword();
-//        System.out.println(residentAccount+residentPassword);
         String hql="select count(*) from Resident where residentAccount= :residentAccount and residentPassword= :residentPassword";
         Query query=session.createQuery(hql);
         query.setParameter("residentAccount",resident.getResidentAccount());

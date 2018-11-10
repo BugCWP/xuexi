@@ -31,7 +31,8 @@ public class CommunityServiceImpl implements CommunityService {
 
     @Override
     public boolean updateCommunity(Community community) {
-        return false;
+        communityDao.updateCommunity(community);
+        return true;
     }
 
     @Override

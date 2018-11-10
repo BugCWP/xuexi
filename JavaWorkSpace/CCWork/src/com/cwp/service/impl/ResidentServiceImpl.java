@@ -30,18 +30,19 @@ public class ResidentServiceImpl implements ResidentService {
 
     @Override
     public boolean deleteResident(Resident resident) {
-
-        return false;
+        residentDao.deleteResident(resident);
+        return true;
     }
 
     @Override
     public boolean updateResident(Resident resident) {
-        return false;
+        residentDao.updateResident(resident);
+        return true;
     }
 
     @Override
     public List<Resident> listResident(Resident resident, Page page) {
-        return null;
+        return residentDao.listResident(resident,page);
     }
 
     @Override

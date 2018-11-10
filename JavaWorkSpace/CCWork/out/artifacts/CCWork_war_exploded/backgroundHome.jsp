@@ -255,13 +255,26 @@
                         <div class="card-header">
                             <h3 class="card-title">居民管理</h3>
                             <div class="ml-auto"></div>
-                            <select class="form-control custom-select col-2 ml-auto" style="position: relative;left: -20px">
-                                <option value="" disabled="true" selected="true">全部社区</option>
-                            </select>
-                            <div class="input-group" style="position: relative;top: 0px;height: 35px;width: 200px">
-                                <input type="text" class="form-control" placeholder="根据信息搜索">
+
+                            <div class="input-group" style="position: relative;top: 0px;height: 40px;width: 550px">
+                                <select class="custom-select" style="height: 40px;width: 30px;" id="ResidentDeleteOrStay">
+                                    <option value="1" selected="true">正常</option>
+                                    <option value="0">冻结</option>
+                                </select>
+                                <select class="custom-select" style="height: 40px;width: 100px" id="ResidentCommunityList">
+                                    <option value="" selected="true">All Coummunity</option>
+                                </select>
+                                <select class="custom-select" style="height: 40px"id="ResidentFindType">
+                                    <option value="" selected="true">无类型</option>
+                                    <option value="residentName">姓名</option>
+                                    <option value="residentAge">年龄</option>
+                                    <option value="residentEmaill">邮箱</option>
+                                    <option value="residentPhone">电话</option>
+                                    <option value="residentAdress">住址</option>
+                                </select>
+                                <input type="text" class="form-control" placeholder="根据类型信息搜索" style="width: 130px" id="ResidentText">
                                 <span class="input-group-append">
-                                    <button class="btn btn-primary"><i class="fe fe-search" style="cursor: pointer"></i></button>
+                                    <button class="btn btn-primary" style="height: 40px" id="residentSearch"><i class="fe fe-search" style="cursor: pointer"></i></button>
                                 </span>
                             </div>
                         </div>
@@ -276,21 +289,22 @@
                                     <th>邮箱</th>
                                     <th>电话</th>
                                     <th>住址</th>
+                                    <th></th>
                                 </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="residentBody">
                                 <%--这里添加社区表信息--%>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+
                                 </tbody>
                             </table>
+                        </div>
+                        <div style="height: 100px"></div>
+                        <div class="btn-list" style="position:absolute;bottom: 20px;right: 10px">
+                            <a class="btn btn-secondary" id="residentlastpage"><i class="fe fe-arrow-left"></i></a>
+                            <span id="residentPageBtnNumber" style="position: relative;top: -2px;margin-right: 5px"></span>
+                            <a class="btn btn-secondary" id="residnetnextpage"><i class="fe fe-arrow-right"></i></a>
+                            <a class="btn btn-secondary" >总页数:<span id="residentPageSize"></span></a>
+                            <a class="btn btn-secondary">总条数:<span id="residentTotalCount"></span></a>
                         </div>
                     </div>
                 </div>

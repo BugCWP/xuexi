@@ -110,21 +110,21 @@ public class CommunityDaoImpl implements CommunityDao {
         String communityAdress=community.getCommunityAdress();
         Long communityId=community.getCommunityId();
         StringBuffer hql=new StringBuffer("select count(*) from Community where 1=1");
-        if (communityName!=null &&"".equals(communityName)){
+        if (communityName!=null &&!"".equals(communityName)){
             hql.append(" and communityName like :communityName");
         }
-        if (communityAdress!=null &&"".equals(communityAdress)){
+        if (communityAdress!=null &&!"".equals(communityAdress)){
             hql.append(" and communityAdress like :communityName");
         }
-        if (communityId!=null &&"".equals(communityId)){
-            hql.append(" and communityId like :communityId");
+        if (communityId!=null &&!"".equals(communityId)){
+            hql.append(" and communityId = :communityId");
         }
         hql.append(" and communityDelete = :communityDelete");
         Query query=s.createQuery(hql.toString());
-        if (communityName!=null &&"".equals(communityName)){
+        if (communityName!=null &&!"".equals(communityName)){
             query.setParameter("communityName","%"+communityName+"%");
         }
-        if (communityAdress!=null &&"".equals(communityAdress)){
+        if (communityAdress!=null &&!"".equals(communityAdress)){
             query.setParameter("communityAdress","%"+communityAdress+"%");
         }
         if (communityId!=null){

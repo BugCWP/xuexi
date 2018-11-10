@@ -76,8 +76,12 @@ public class CommunityAction extends ActionSupport implements ModelDriven<Commun
     //返回社区的总数量
     @Action(value = "CommunityTotalCount")
     public void getCommunityTotalCount() throws IOException{
+        HttpServletRequest request=ServletActionContext.getRequest();
+        String communityName=request.getParameter("communityTitle");
+        Community c=new Community();
+        c.setCommunityName(communityName);
         HttpServletResponse response=ServletActionContext.getResponse();
-        Long count=communityService.findTotalCommunity(community);
+        Long count=communityService.findTotalCommunity(c);
         Map jsonMap=new HashMap();
         jsonMap.put("communityTotalCount",count);
         String jsonString= JSONObject.fromObject(jsonMap).toString();
@@ -126,6 +130,23 @@ public class CommunityAction extends ActionSupport implements ModelDriven<Commun
         out.println(jsonstring);
         out.flush();
         out.close();
+    }
+
+    //修改社区
+    @Action(value = "updatecommunity")
+    public void updateCommunity(){
+        HttpServletRequest request=ServletActionContext.getRequest();
+        String id=request.getParameter("id");
+        String communityChangeName=request.getParameter("communityChangeName");
+        String communityChangeAdress=request.getParameter("communityChangeAdress");
+        String communityChangeIntroduction=request.getParameter("communityChangeIntroduction");
+        Community c=new Community();
+        c.setCommunityId(Long.parseLong(id));
+        c.setCommunityName(communityChangeName);
+        c.setCommunityAdress(communityChangeAdress);
+        c.setCommunityIntroduction(communityChangeIntroduction);
+        c.setCommunityDelete(1);
+        communityService.updateCommunity(c);
     }
 
     @Override

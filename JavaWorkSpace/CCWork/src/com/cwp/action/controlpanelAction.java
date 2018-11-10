@@ -53,13 +53,19 @@ public class controlpanelAction extends ActionSupport {
         Integer onlineResidentCountToday=LoginUserListener.onlineResidentCountToday;
 //        System.out.println(onlineResidentCountToday);
 //        获取用户数
-        Long residentCount=residentService.findTotalCount(new Resident());
+        Resident r=new Resident();
+        r.setResidentDelete(1);
+        Long residentCount=residentService.findTotalCount(r);
 //        System.out.println(residentCount);
 //        获取公告数
-        Long announcementCount=announcementService.findTotalCount(new Announcement());
+        Announcement a=new Announcement();
+        a.setAnnouncementDelete(1);
+        Long announcementCount=announcementService.findTotalCount(a);
 //        System.out.println(announcementCount);
 //        获取评论数
-        Long commentCount=commentService.findTotalComment(new Comment());
+        Comment comment=new Comment();
+        comment.setCommentDelete(1);
+        Long commentCount=commentService.findTotalComment(comment);
 //        System.out.println(commentCount);
 //        获取社区数
         Long communityCount=communityService.findTotalCommunity(new Community());

@@ -3,7 +3,7 @@ $(function () {
     // 获取社区列表
     $.post("/community/listAllCommunity",{},function (data) {
         for (var i=0;i<data.length;i++){
-           $("select").append("<option value='"+data[0].communityId+"'>"+data[0].communityName+"</option>");
+           $("select").append("<option value='"+data[i].communityId+"'>"+data[i].communityName+"</option>");
        }
     },"json")
 
