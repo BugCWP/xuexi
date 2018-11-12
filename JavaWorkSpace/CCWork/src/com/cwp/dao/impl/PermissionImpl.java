@@ -17,7 +17,7 @@ public class PermissionImpl implements PermissionDao{
        private SessionFactory sessionFactory;
 
     @Override
-    public boolean addCommunity(Permission permission) {
+    public boolean addPermission(Permission permission) {
         Session s=sessionFactory.getCurrentSession();
         permission.setPermissionDelete(1);
         s.save(permission);
@@ -25,26 +25,26 @@ public class PermissionImpl implements PermissionDao{
     }
 
     @Override
-    public boolean updateCommunity(Permission permission) {
+    public boolean updatePermission(Permission permission) {
         Session s=sessionFactory.getCurrentSession();
         s.update(permission);
         return true;
     }
 
     @Override
-    public boolean deleteCommunity(Permission permission) {
+    public boolean deletePermission(Permission permission) {
         Session s=sessionFactory.getCurrentSession();
         Long permissionId=permission.getPermissionId();
         String permissionName=permission.getPermissionName();
         String permissionLevel=permission.getPermissionLevel();
         Permission p=new Permission();
-        if (permissionId!=null&&"".equals(permissionId)){
+        if (permissionId!=null&&!"".equals(permissionId)){
             p=s.get(Permission.class,permission.getPermissionId());
         }
-        else if(permissionName!=null&&"".equals(permissionName)){
+        else if(permissionName!=null&&!"".equals(permissionName)){
             p=s.get(Permission.class,permission.getPermissionName());
         }
-        else if(permissionLevel!=null&&"".equals(permissionLevel)){
+        else if(permissionLevel!=null&&!"".equals(permissionLevel)){
             p=s.get(Permission.class,permission.getPermissionLevel());
         }
         p.setPermissionDelete(0);
@@ -53,45 +53,45 @@ public class PermissionImpl implements PermissionDao{
     }
 
     @Override
-    public Permission findCommunity(Permission permission) {
+    public Permission findPermission(Permission permission) {
         Session s=sessionFactory.getCurrentSession();
         Long permissionId=permission.getPermissionId();
         String permissionName=permission.getPermissionName();
         Permission p=new Permission();
-        if (permissionId!=null&&"".equals(permissionId)){
+        if (permissionId!=null&&!"".equals(permissionId)){
             p=s.get(Permission.class,permission.getPermissionId());
         }
-        else if(permissionName!=null&&"".equals(permissionName)){
+        else if(permissionName!=null&&!"".equals(permissionName)){
             p=s.get(Permission.class,permission.getPermissionName());
         }
         return p;
     }
 
     @Override
-    public List<Permission> listCommunity(Permission permission, Page page) {
+    public List<Permission> listPermission(Permission permission, Page page) {
         Session s=sessionFactory.getCurrentSession();
         Long permissionId=permission.getPermissionId();
         String permissionName=permission.getPermissionName();
         String permissionLevel=permission.getPermissionLevel();
         StringBuffer hql=new StringBuffer("from Permission where 1=1");
-        if (permissionId!=null&&"".equals(permissionId)){
-           hql.append("and permissionId= :permissionId");
+        if (permissionId!=null&&!"".equals(permissionId)){
+           hql.append(" and permissionId= :permissionId");
         }
-       if(permissionName!=null&&"".equals(permissionName)){
-            hql.append("and permissionName= :permissionName");
+       if(permissionName!=null&&!"".equals(permissionName)){
+            hql.append(" and permissionName= :permissionName");
         }
-       if(permissionLevel!=null&&"".equals(permissionLevel)){
-            hql.append("and permissionLevel = :permissionLevel");
+       if(permissionLevel!=null&&!"".equals(permissionLevel)){
+            hql.append(" and permissionLevel = :permissionLevel");
         }
-        hql.append("and permissionDelete =:permissionDelete");
+        hql.append(" and permissionDelete =:permissionDelete");
        Query query=s.createQuery(hql.toString()).setFirstResult(page.getRecordStart()).setMaxResults(page.getPageSize());
-        if (permissionId!=null&&"".equals(permissionId)){
+        if (permissionId!=null&&!"".equals(permissionId)){
            query.setParameter("permissionId",permissionId);
         }
-        if(permissionName!=null&&"".equals(permissionName)){
+        if(permissionName!=null&&!"".equals(permissionName)){
           query.setParameter("permissionName",permissionName);
         }
-        if(permissionLevel!=null&&"".equals(permissionLevel)){
+        if(permissionLevel!=null&&!"".equals(permissionLevel)){
            query.setParameter("permissionLevel",permissionLevel);
         }
         query.setParameter("permissionDelete",1);
@@ -99,34 +99,65 @@ public class PermissionImpl implements PermissionDao{
     }
 
     @Override
-    public Long findTotalCommunity(Permission permission) {
+    public Long findTotalPermission(Permission permission) {
         Session s=sessionFactory.getCurrentSession();
         Long permissionId=permission.getPermissionId();
         String permissionName=permission.getPermissionName();
         String permissionLevel=permission.getPermissionLevel();
         StringBuffer hql=new StringBuffer("from Permission where 1=1");
-        if (permissionId!=null&&"".equals(permissionId)){
+        if (permissionId!=null&&!"".equals(permissionId)){
             hql.append("and permissionId= :permissionId");
         }
-        if(permissionName!=null&&"".equals(permissionName)){
+        if(permissionName!=null&&!"".equals(permissionName)){
             hql.append("and permissionName= :permissionName");
         }
-        if(permissionLevel!=null&&"".equals(permissionLevel)){
+        if(permissionLevel!=null&&!"".equals(permissionLevel)){
             hql.append("and permissionLevel = :permissionLevel");
         }
         hql.append("and permissionDelete =:permissionDelete");
         Query query=s.createQuery(hql.toString());
-        if (permissionId!=null&&"".equals(permissionId)){
+        if (permissionId!=null&&!"".equals(permissionId)){
             query.setParameter("permissionId",permissionId);
         }
-        if(permissionName!=null&&"".equals(permissionName)){
+        if(permissionName!=null&&!"".equals(permissionName)){
             query.setParameter("permissionName",permissionName);
         }
-        if(permissionLevel!=null&&"".equals(permissionLevel)){
+        if(permissionLevel!=null&&!"".equals(permissionLevel)){
             query.setParameter("permissionLevel",permissionLevel);
         }
         query.setParameter("permissionDelete",1);
         return (Long)query.uniqueResult();
+    }
+
+    @Override
+    public List<Permission> allListPermission(Permission permission) {
+        Session s=sessionFactory.getCurrentSession();
+        Long permissionId=permission.getPermissionId();
+        String permissionName=permission.getPermissionName();
+        String permissionLevel=permission.getPermissionLevel();
+        StringBuffer hql=new StringBuffer("from Permission where 1=1");
+        if (permissionId!=null&&!"".equals(permissionId)){
+            hql.append(" and permissionId= :permissionId");
+        }
+        if(permissionName!=null&&!"".equals(permissionName)){
+            hql.append(" and permissionName= :permissionName");
+        }
+        if(permissionLevel!=null&&!"".equals(permissionLevel)){
+            hql.append(" and permissionLevel = :permissionLevel");
+        }
+        hql.append(" and permissionDelete =:permissionDelete");
+        Query query=s.createQuery(hql.toString());
+        if (permissionId!=null&&!"".equals(permissionId)){
+            query.setParameter("permissionId",permissionId);
+        }
+        if(permissionName!=null&&!"".equals(permissionName)){
+            query.setParameter("permissionName",permissionName);
+        }
+        if(permissionLevel!=null&&!"".equals(permissionLevel)){
+            query.setParameter("permissionLevel",permissionLevel);
+        }
+        query.setParameter("permissionDelete",1);
+        return query.list();
     }
 
     @Override

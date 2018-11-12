@@ -38,9 +38,9 @@ public class AnnouncementDaoImpl implements AnnouncementDao {
         Long announcementId=announcement.getAnnouncementId();
         String announcementTitle=announcement.getAnnouncementTitle();
         Announcement a=new Announcement();
-        if (announcementId!=null&&"".equals(announcementId)){
+        if (announcementId!=null&&!"".equals(announcementId)){
             a=session.get(Announcement.class,announcementId);
-        }else if(announcementTitle!=null &&"".equals(announcementTitle)){
+        }else if(announcementTitle!=null &&!"".equals(announcementTitle)){
             a=session.get(Announcement.class,announcementTitle);
         }
         a.setAnnouncementDelete(0);
@@ -54,9 +54,9 @@ public class AnnouncementDaoImpl implements AnnouncementDao {
         Long announcementId=announcement.getAnnouncementId();
         String announcementTitle=announcement.getAnnouncementTitle();
         Announcement a=new Announcement();
-        if (announcementId!=null&&"".equals(announcementId)){
+        if (announcementId!=null&&!"".equals(announcementId)){
             a=session.get(Announcement.class,announcementId);
-        }else if(announcementTitle!=null &&"".equals(announcementTitle)){
+        }else if(announcementTitle!=null &&!"".equals(announcementTitle)){
             a=session.get(Announcement.class,announcementTitle);
         }
         return a;
@@ -70,33 +70,33 @@ public class AnnouncementDaoImpl implements AnnouncementDao {
         String announcementTime=announcement.getAnnouncementTime();
         Long announcementPersion=announcement.getAnnouncementPersion();
         StringBuffer hql=new StringBuffer("from Announcement where 1=1");
-        if (announcementId!=null&&"".equals(announcementId)){
-            hql.append("and announcementId= :announcementId");
+        if (announcementId!=null&&!"".equals(announcementId)){
+            hql.append(" and announcementId= :announcementId");
         }
-        if (announcementTitle!=null&&"".equals(announcementTitle)){
-            hql.append("and announcementTitle like :announcementTitle");
+        if (announcementTitle!=null&&!"".equals(announcementTitle)){
+            hql.append(" and announcementTitle like :announcementTitle");
         }
-        if (announcementTime!=null &&"".equals(announcementTime)){
-            hql.append("and announcementTime = :announcementTime");
+        if (announcementTime!=null &&!"".equals(announcementTime)){
+            hql.append(" and announcementTime = :announcementTime");
         }
-        if (announcementPersion!=null&&"".equals(announcementPersion)){
-            hql.append("and announcementPersion = :announcementPersion");
+        if (announcementPersion!=null&&!"".equals(announcementPersion)){
+            hql.append(" and announcementPersion = :announcementPersion");
         }
-        hql.append("and announcementDelete =announcementDelete");
+        hql.append(" and announcementDelete = :announcementDelete");
         Query query=session.createQuery(hql.toString()).setFirstResult(page.getRecordStart()).setMaxResults(page.getPageSize());
-        if (announcementId!=null&&"".equals(announcementId)){
+        if (announcementId!=null&&!"".equals(announcementId)){
            query.setParameter("announcementId",announcementId);
         }
-        if (announcementTitle!=null&&"".equals(announcementTitle)){
+        if (announcementTitle!=null&&!"".equals(announcementTitle)){
             query.setParameter("announcementTitle",announcementTitle);
         }
-        if (announcementTime!=null &&"".equals(announcementTime)){
+        if (announcementTime!=null &&!"".equals(announcementTime)){
             query.setParameter("announcementTime",announcementTime);
         }
-        if (announcementPersion!=null&&"".equals(announcementPersion)){
+        if (announcementPersion!=null&&!"".equals(announcementPersion)){
             query.setParameter("announcementPersion",announcementPersion);
         }
-        query.setParameter("announcementDelete",1);
+        query.setParameter("announcementDelete",announcement.getAnnouncementDelete());
         return query.list();
     }
 
@@ -134,7 +134,7 @@ public class AnnouncementDaoImpl implements AnnouncementDao {
         if (announcementPersion!=null&&!"".equals(announcementPersion)){
             query.setParameter("announcementPersion",announcementPersion);
         }
-        query.setParameter("announcementDelete",1);
+        query.setParameter("announcementDelete",announcement.getAnnouncementDelete());
         return (Long) query.uniqueResult();
     }
 

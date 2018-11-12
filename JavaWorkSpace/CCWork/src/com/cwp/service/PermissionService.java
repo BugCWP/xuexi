@@ -14,6 +14,8 @@ public interface PermissionService {
     boolean updatePermission(Permission permission);
     //返回权限队列
     List<Permission> listPermission(Permission permission, Page page);
+    //返回所有队列
+    List<Permission> allListPermission(Permission permission);
     //返回权限单条信息
     Permission findPermission(Permission permission);
 }

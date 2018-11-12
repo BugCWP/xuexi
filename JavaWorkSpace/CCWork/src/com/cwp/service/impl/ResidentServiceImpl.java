@@ -48,7 +48,6 @@ public class ResidentServiceImpl implements ResidentService {
     @Override
     public Resident findResident(Resident resident) {
         Resident r=residentDao.findResident(resident);
-        System.out.println(r.getResidentAccount()+r.getResidentPassword());
         if (r.getResidentAccount()!=null&&!"".equals(r.getResidentAccount())){
             return r;
         }else {

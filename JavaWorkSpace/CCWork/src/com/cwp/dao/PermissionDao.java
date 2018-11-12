@@ -7,17 +7,19 @@ import java.util.List;
 
 public interface PermissionDao {
     //添加社区
-    boolean addCommunity(Permission permission);
+    boolean addPermission(Permission permission);
     //修改社区
-    boolean updateCommunity(Permission permission);
+    boolean updatePermission(Permission permission);
     //删除社区
-    boolean deleteCommunity(Permission permission);
+    boolean deletePermission(Permission permission);
     //查询单个社区
-    Permission findCommunity(Permission permission);
+    Permission findPermission(Permission permission);
     //查询社区列表
-    List<Permission> listCommunity(Permission permission, Page page);
+    List<Permission> listPermission(Permission permission, Page page);
     //查询社区数量
-    Long findTotalCommunity(Permission permission);
+    Long findTotalPermission(Permission permission);
+    //查询所有社区列表
+    List<Permission> allListPermission(Permission permission);
     //查询社区是否存在
     boolean isExisr(Permission permission);
 }

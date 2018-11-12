@@ -88,41 +88,18 @@
                             </a>
                             <%--个人信息栏--%>
                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/PersonalCenter.jsp">
                                     <i class="dropdown-icon fe fe-user"></i>个人信息
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="dropdown-icon fe fe-settings"></i>网站游览
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <span class="float-right"><span class="badge badge-primary">6</span></span>
-                                    <i class="dropdown-icon fe fe-mail"></i>收件箱
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="dropdown-icon fe fe-send"></i>信息
+                                <a class="dropdown-item" href="/Home.jsp">
+                                    <i class="dropdown-icon fe fe-globe"></i>网站游览
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">
-                                    <i class="dropdown-icon fe fe-help-circle"></i> 帮助?
-                                </a>
                                 <a class="dropdown-item" href="/resident/loginout">
                                     <i class="dropdown-icon fe fe-log-out"></i> 退出
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg order-lg-first">
-                        <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
-                            <li class="nav-item">
-                                <a href="/backgroundHome.jsp" class="nav-link active"><i class="fe fe-home"></i> Home</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -314,6 +291,14 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">管理人员</h3>
+                            <div class="input-group" style="position: absolute;top: 10px;height: 40px;width: 550px;right: 10px">
+                                <select class="custom-select" style="height: 40px"id="permissionFindType">
+                                </select>
+                                <input type="text" class="form-control" placeholder="根据姓名搜索" style="width: 130px" id="permissionText">
+                                <span class="input-group-append">
+                                    <button class="btn btn-primary" style="height: 40px" id="permissionSearch"><i class="fe fe-search" style="cursor: pointer"></i></button>
+                                </span>
+                            </div>
                         </div>
                         <div class="table-responsive">
                             <table class="table card-table table-vcenter text-nowrap">
@@ -325,16 +310,19 @@
                                     <th></th>
                                 </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="permissionBody">
                                 <%--这里添加社区表信息--%>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+
                                 </tbody>
                             </table>
+                        </div>
+                        <div style="height: 100px"></div>
+                        <div class="btn-list" style="position:absolute;bottom: 20px;right: 10px">
+                            <a class="btn btn-secondary" id="permissionlastpage"><i class="fe fe-arrow-left"></i></a>
+                            <span id="permissionPageBtnNumber" style="position: relative;top: -2px;margin-right: 5px"></span>
+                            <a class="btn btn-secondary" id="permissionnextpage"><i class="fe fe-arrow-right"></i></a>
+                            <a class="btn btn-secondary" >总页数:<span id="permissionPageSize"></span></a>
+                            <a class="btn btn-secondary">总条数:<span id="permissionTotalCount"></span></a>
                         </div>
                     </div>
                 </div>
@@ -344,6 +332,22 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">公告管理</h3>
+                            <div class="input-group" style="position: absolute;top: 10px;height: 40px;width: 550px;right: 10px">
+                                <select class="custom-select" style="height: 40px;width: 30px;" id="announcementDeleteOrStay">
+                                    <option value="1" selected="true">正常</option>
+                                    <option value="0">屏蔽</option>
+                                </select>
+                                <select class="custom-select" style="height: 40px"id="announcementFindType">
+                                    <option value="" selected="true">无类型</option>
+                                    <option value="announcementTitle">标题</option>
+                                    <option value="announcementTime">时间</option>
+                                    <option value="announcementResident">发布者</option>
+                                </select>
+                                <input type="text" class="form-control" placeholder="根据类型信息搜索" style="width: 130px" id="announcementText">
+                                <span class="input-group-append">
+                                    <button class="btn btn-primary" style="height: 40px" id="announcementSearch"><i class="fe fe-search" style="cursor: pointer"></i></button>
+                                </span>
+                            </div>
                         </div>
                         <div class="table-responsive">
                             <table class="table card-table table-vcenter text-nowrap">
@@ -356,17 +360,19 @@
                                     <th></th>
                                 </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="announcementBody">
                                 <%--这里添加社区表信息--%>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+
                                 </tbody>
                             </table>
+                        </div>
+                        <div style="height: 100px"></div>
+                        <div class="btn-list" style="position:absolute;bottom: 20px;right: 10px">
+                            <a class="btn btn-secondary" id="announcementlastpage"><i class="fe fe-arrow-left"></i></a>
+                            <span id="announcementPageBtnNumber" style="position: relative;top: -2px;margin-right: 5px"></span>
+                            <a class="btn btn-secondary" id="announcementnextpage"><i class="fe fe-arrow-right"></i></a>
+                            <a class="btn btn-secondary" >总页数:<span id="announcementPageSize"></span></a>
+                            <a class="btn btn-secondary">总条数:<span id="announcementTotalCount"></span></a>
                         </div>
                     </div>
                 </div>
@@ -376,6 +382,22 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">评论管理</h3>
+                            <div class="input-group" style="position: absolute;top: 10px;height: 40px;width: 550px;right: 10px">
+                                <select class="custom-select" style="height: 40px;width: 30px;" id="commentDeleteOrStay">
+                                    <option value="1" selected="true">正常</option>
+                                    <option value="0">屏蔽</option>
+                                </select>
+                                <select class="custom-select" style="height: 40px"id="commentFindType">
+                                    <option value="" selected="true">无类型</option>
+                                    <option value="announcementTitle">公告标题</option>
+                                    <option value="commentTime">时间</option>
+                                    <option value="commentResident">发布者</option>
+                                </select>
+                                <input type="text" class="form-control" placeholder="根据类型信息搜索" style="width: 130px" id="commentText">
+                                <span class="input-group-append">
+                                    <button class="btn btn-primary" style="height: 40px" id="commentSearch"><i class="fe fe-search" style="cursor: pointer"></i></button>
+                                </span>
+                            </div>
                         </div>
                         <div class="table-responsive">
                             <table class="table card-table table-vcenter text-nowrap">
@@ -388,17 +410,18 @@
                                     <th></th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <%--这里添加社区表信息--%>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
+                                <tbody id="commentBody">
+
                                 </tbody>
                             </table>
+                        </div>
+                        <div style="height: 100px"></div>
+                        <div class="btn-list" style="position:absolute;bottom: 20px;right: 10px">
+                            <a class="btn btn-secondary" id="commentlastpage"><i class="fe fe-arrow-left"></i></a>
+                            <span id="commentPageBtnNumber" style="position: relative;top: -2px;margin-right: 5px"></span>
+                            <a class="btn btn-secondary" id="commentnextpage"><i class="fe fe-arrow-right"></i></a>
+                            <a class="btn btn-secondary" >总页数:<span id="commentPageSize"></span></a>
+                            <a class="btn btn-secondary">总条数:<span id="commentTotalCount"></span></a>
                         </div>
                     </div>
                 </div>

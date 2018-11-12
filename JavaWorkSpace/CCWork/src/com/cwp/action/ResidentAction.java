@@ -129,7 +129,6 @@ public class ResidentAction extends ActionSupport implements ModelDriven<Residen
                 r.setResidentAdress(residentText);
             }
         }
-        System.out.println(r.getResidentDelete());
         Long count=residentService.findTotalCount(r);
         Map jsonMap=new HashMap();
         jsonMap.put("residentTotalCount",count);
@@ -231,7 +230,7 @@ public class ResidentAction extends ActionSupport implements ModelDriven<Residen
         residentService.updateResident(r2);
     }
 
-    //数组信息
+
     //单条信息
     @Action(value = "findresident")
     public void FindResident() throws IOException{

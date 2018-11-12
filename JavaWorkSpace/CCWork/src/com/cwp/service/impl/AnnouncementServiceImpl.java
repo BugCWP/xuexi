@@ -24,22 +24,26 @@ public class AnnouncementServiceImpl implements AnnouncementService {
 
     @Override
     public boolean deleteAnnouncement(Announcement announcement) {
-        return false;
+
+        return announcementDao.deleteAnnouncement(announcement);
     }
 
     @Override
     public boolean updateAnnouncement(Announcement announcement) {
-        return false;
+
+        return announcementDao.updateAnnouncement(announcement);
     }
 
     @Override
     public List<Announcement> listAnnouncement(Announcement announcement, Page page) {
-        return null;
+
+        return announcementDao.listAnnouncement(announcement,page);
     }
 
     @Override
     public Announcement findAnnouncement(Announcement announcement) {
-        return null;
+
+        return announcementDao.findAnnouncement(announcement);
     }
 
     @Override

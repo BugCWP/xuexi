@@ -7,7 +7,7 @@ import java.io.Serializable;
 *权限表
  */
 @Entity
-@Table(name = "permission")
+@Table(name = "permission_table")
 public class Permission implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

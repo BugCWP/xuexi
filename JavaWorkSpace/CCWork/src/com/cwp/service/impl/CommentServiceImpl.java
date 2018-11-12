@@ -24,22 +24,22 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public boolean deleteComment(Comment comment) {
-        return false;
+        return commentDao.deleteComment(comment);
     }
 
     @Override
     public boolean updateComment(Comment comment) {
-        return false;
+        return commentDao.updateComment(comment);
     }
 
     @Override
     public List<Comment> listComment(Comment comment, Page page) {
-        return null;
+        return commentDao.listComment(comment,page);
     }
 
     @Override
     public Comment findComment(Comment comment) {
-        return null;
+        return commentDao.findComment(comment);
     }
 
     @Override

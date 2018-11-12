@@ -36,7 +36,7 @@ public class CommentDaoImpl implements CommentDao {
         Session session=sessionFactory.getCurrentSession();
         Long commentId=comment.getCommentId();
         Comment c=new Comment();
-        if(commentId!=null&&"".equals(commentId)){
+        if(commentId!=null&&!"".equals(commentId)){
             c=session.get(Comment.class,commentId);
         }
         c.setCommentDelete(0);
@@ -49,7 +49,7 @@ public class CommentDaoImpl implements CommentDao {
         Session session=sessionFactory.getCurrentSession();
         Long commentId=comment.getCommentId();
         Comment c=new Comment();
-        if(commentId!=null&&"".equals(commentId)) {
+        if(commentId!=null&&!"".equals(commentId)) {
             c = session.get(Comment.class, commentId);
         }
         return c;
@@ -60,12 +60,16 @@ public class CommentDaoImpl implements CommentDao {
         Session session=sessionFactory.getCurrentSession();
         String  commentNumber=comment.getCommentNumber();
         Long commentPersion=comment.getCommentPersion();
+        String commentTime=comment.getCommentTime();
         StringBuffer hql=new StringBuffer("from Comment where 1=1");
-        if (commentNumber!=null&&"".equals(commentNumber)){
-            hql.append("and commentNumber = :commentNumber");
+        if (commentNumber!=null&&!"".equals(commentNumber)){
+            hql.append(" and commentNumber = :commentNumber");
         }
-        if (commentPersion!=null&&"".equals(commentPersion)){
-            hql.append("and commentPersion = :commentPersion");
+        if (commentPersion!=null&&!"".equals(commentPersion)){
+            hql.append(" and commentPersion = :commentPersion");
+        }
+        if (commentTime!=null&&!"".equals(commentTime)){
+            hql.append(" and commentTime = :commentTime");
         }
         hql.append("and commentDelete = :commentDelete");
         Query query=session.createQuery(hql.toString()).setFirstResult(page.getRecordStart()).setMaxResults(page.getPageSize());
@@ -75,7 +79,10 @@ public class CommentDaoImpl implements CommentDao {
         if (commentPersion!=null&&"".equals(commentPersion)){
             query.setParameter("commentPersion",commentPersion);
         }
-        query.setParameter("commentDelete",1);
+        if (commentTime!=null&&"".equals(commentTime)){
+            query.setParameter("commentTime",commentTime);
+        }
+        query.setParameter("commentDelete",comment.getCommentDelete());
         return query.list();
     }
 
@@ -99,7 +106,7 @@ public class CommentDaoImpl implements CommentDao {
         if (commentPersion!=null&&!"".equals(commentPersion)){
             query.setParameter("commentPersion",commentPersion);
         }
-        query.setParameter("commentDelete",1);
+        query.setParameter("commentDelete",comment.getCommentDelete());
         return (Long) query.uniqueResult();
     }
 
