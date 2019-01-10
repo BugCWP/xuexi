@@ -1,0 +1,34 @@
+.announcementDemolow{
+    height: 140px;
+    overflow: hidden;
+}
+#announcementBody{
+    position: relative;
+    width: 90%;
+    left: 10%;
+}
+.announcementdownbtn{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    bottom: 0px;
+    cursor: pointer;
+    background-color: white;
+}
+#uploadannouncement{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    overflow: hidden;
+    height: 20px;
+}
+#downupload{
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    width: 20%;
+    background-color: white;
+    cursor: pointer;
+    left: 40%;
+}

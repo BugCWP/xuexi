@@ -20,4 +20,6 @@ public interface AnnouncementDao {
     Long findTotalAnnouncement(Announcement announcement);
     //查询社区是否存在
     boolean isExisr(Announcement announcement);
+    //查询所有公告
+    List<Announcement> allListAnnouncement(Announcement announcement);
 }

@@ -1,0 +1,17 @@
+#announcemetBox{
+    width: 80%;
+    position: relative;
+    left: 10%;
+    margin-top: 30px;
+    background-color: white;
+}
+#inputComment{
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+#commentlist{
+    width: 80%;
+    position: relative;
+    left: 10%;
+}

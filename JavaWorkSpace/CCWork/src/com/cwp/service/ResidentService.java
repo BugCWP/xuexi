@@ -20,4 +20,6 @@ public interface ResidentService {
     Resident loginResident(Resident resident);
     //返回用户数量
     Long findTotalCount(Resident resident);
+    //返回所有用户
+    List<Resident> allListResident(Resident resident);
 }

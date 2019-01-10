@@ -71,15 +71,15 @@ public class CommentDaoImpl implements CommentDao {
         if (commentTime!=null&&!"".equals(commentTime)){
             hql.append(" and commentTime = :commentTime");
         }
-        hql.append("and commentDelete = :commentDelete");
+        hql.append(" and commentDelete = :commentDelete");
         Query query=session.createQuery(hql.toString()).setFirstResult(page.getRecordStart()).setMaxResults(page.getPageSize());
-        if (commentNumber!=null&&"".equals(commentNumber)){
+        if (commentNumber!=null&&!"".equals(commentNumber)){
            query.setParameter("commentNumber",commentNumber);
         }
-        if (commentPersion!=null&&"".equals(commentPersion)){
+        if (commentPersion!=null&&!"".equals(commentPersion)){
             query.setParameter("commentPersion",commentPersion);
         }
-        if (commentTime!=null&&"".equals(commentTime)){
+        if (commentTime!=null&&!"".equals(commentTime)){
             query.setParameter("commentTime",commentTime);
         }
         query.setParameter("commentDelete",comment.getCommentDelete());
@@ -110,4 +110,28 @@ public class CommentDaoImpl implements CommentDao {
         return (Long) query.uniqueResult();
     }
 
+    @Override
+    public List<Comment> allListComment(Comment comment) {
+        Session session=sessionFactory.getCurrentSession();
+        Long commentPersion=comment.getCommentPersion();
+        String commentNumber=comment.getCommentNumber();
+        StringBuffer hql=new StringBuffer("from Comment where 1=1");
+        if (commentPersion!=null&&!"".equals(commentPersion)){
+            hql.append(" and commentPersion = :commentPersion");
+            hql.append(" and commentDelete = :commentDelete");
+            Query query=session.createQuery(hql.toString());
+            query.setParameter("commentPersion",commentPersion);
+            query.setParameter("commentDelete",1);
+            return query.list();
+        }
+        if (commentNumber!=null&&!"".equals(commentNumber)){
+            hql.append(" and commentNumber = :commentNumber");
+            hql.append(" and commentDelete = :commentDelete");
+            Query query=session.createQuery(hql.toString());
+            query.setParameter("commentNumber",commentNumber);
+            query.setParameter("commentDelete",1);
+            return query.list();
+        }
+        return null;
+    }
 }

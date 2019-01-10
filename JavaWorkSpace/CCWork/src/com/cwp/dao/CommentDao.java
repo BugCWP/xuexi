@@ -16,6 +16,8 @@ public interface CommentDao {
     Comment findComment(Comment comment);
     //查询社区列表
     List<Comment> listComment(Comment comment, Page page);
+    //查询所有评论
+    List<Comment> allListComment(Comment comment);
     //查询社区数量
     Long findTotalComment(Comment comment);
 }

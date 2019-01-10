@@ -81,7 +81,7 @@
                         </div>
                     </form>
                     <div class="text-center text-muted">
-                        还没有账号？<a href="./register.html">注册</a>
+                        还没有账号？<a href="/register.jsp">注册</a>
                     </div>
                 </div>
             </div>

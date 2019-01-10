@@ -17,12 +17,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @ParentPackage("struts-default")
 @Namespace("/comment")
@@ -175,6 +174,25 @@ public class CommentAction extends ActionSupport implements ModelDriven<Comment>
         out.println(jsonString);
         out.flush();
         out.close();
+   }
+
+   @Action(value = "addcomment")
+   public void AddComment(){
+       HttpServletRequest request= ServletActionContext.getRequest();
+       HttpServletResponse response=ServletActionContext.getResponse();
+       response.setContentType("text/html;charset=utf-8");
+       String text=request.getParameter("text");
+       String id=request.getParameter("id");
+       Comment c=new Comment();
+       c.setCommentNumber(id);
+       HttpSession session=request.getSession();
+       Resident r=(Resident) session.getAttribute("user");
+       c.setCommentPersion(r.getResidentId());
+       c.setCommentTable(text);
+       SimpleDateFormat ft=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+       String time=ft.format(new Date());
+       c.setCommentTime(time);
+       commentService.addComment(c);
    }
 
     @Override

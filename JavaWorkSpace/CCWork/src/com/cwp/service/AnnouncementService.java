@@ -18,4 +18,6 @@ public interface AnnouncementService {
     Announcement findAnnouncement(Announcement announcement);
     //返回公告数
     Long findTotalCount(Announcement announcement);
+    //返回所有公告
+    List<Announcement> allListAnnouncement(Announcement announcement);
 }

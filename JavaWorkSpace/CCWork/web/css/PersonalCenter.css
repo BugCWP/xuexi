@@ -3,3 +3,137 @@
     width: 100%;
     display: none;
 }
+
+.commentbox{
+    width: 80%;
+    position: relative;
+    left: 10%;
+    margin-top: 20px;
+    background-color: white;
+}
+.commentTime{
+    font-size: 14px;
+    color:#9aa0ac;
+    position: absolute;
+    right: 30px;
+    top: 80px;
+}
+.commentDeletebtn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.commentPicture{
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.commentText{
+    font-size: 16px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.commentAnnouncementbox{
+    width: 100%;
+    border-top:1px solid #b9bbbe;
+    background-color: white;
+    display: none;
+}
+
+.commentAnnouncementTitle{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 700;
+}
+.commentAnnouncementTime{
+    margin-left: 30px;
+    margin-top: 5px;
+    font-size: 14px;
+    color:#9aa0ac;
+}
+.commentAnnouncementText{
+    font-size:16px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.commentAnnouncementPicture{
+    margin-left: 20px;
+}
+.commentshowbtn{
+    text-align: center;
+    cursor: pointer;
+}
+
+.announcementbox{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    background-color:white;
+    margin-top: 20px;
+}
+.announcementTitle{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.announcementTime{
+    font-size: 14px;
+    margin-left: 30px;
+    margin-top: 10px;
+    color:#9aa0ac;
+}
+.announcementText{
+    font-size:16px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.announcementDeletebtn{
+    position: absolute;
+    top: 40px;
+    right: 30px;
+}
+.announcementCommentBoxDiv{
+    display: none;
+}
+.announcementCommentbox{
+    width: 100%;
+    border-top:1px solid #b9bbbe;
+}
+.announcementCommentText{
+    margin-left: 40px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.announcementResidentAvatar{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.announcementResidentName{
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 17px;
+}
+.announcementCommentTime{
+    font-size: 14px;
+    margin-left: 40px;
+    margin-top: 20px;
+    color: #b9bbbe;
+}
+.announcementshowbtn{
+    text-align: center;
+}
+.commentPictureList{
+    height: 100px;
+}
+.commentAnnouncementPictureList{
+    height: 100px;
+}
+.bar {
+    height: 18px;
+    background: green;
+}

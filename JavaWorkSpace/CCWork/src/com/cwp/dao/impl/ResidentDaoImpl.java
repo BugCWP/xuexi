@@ -257,4 +257,65 @@ public class ResidentDaoImpl implements ResidentDao {
         }
         return false;
     }
+
+    @Override
+    public List<Resident> allListResident(Resident resident) {
+        Session s=sessionFactory.getCurrentSession();
+        StringBuffer hql=new StringBuffer("from Resident where 1=1");
+        String residentAccount=resident.getResidentAccount();
+        String residentName=resident.getResidentName();
+        String residentCommunity=resident.getResidentCommunity();
+        String residentPhone=resident.getResidentPhone();
+        String residentAdress=resident.getResidentAdress();
+        String residentAge=resident.getResidentAge();
+        Long residentPermission=resident.getResidentPermission();
+        int residentDelete=resident.getResidentDelete();
+        if(residentAccount!=null &&!"".equals(residentAccount)){
+            hql.append(" and residentAccount= :residentAccount");
+        }
+        if (residentName!=null&&!"".equals(residentName)){
+            hql.append(" and residentName like :residentName");
+        }
+        if (residentCommunity!=null && !"".equals(residentCommunity)){
+            hql.append(" and residentCommunity = :residentCommunity");
+        }
+        if (residentPhone!=null&&!"".equals(residentPhone)){
+            hql.append(" and residentPhone like :residentPhone");
+        }
+        if (residentAdress!=null&&!"".equals(residentAdress)){
+            hql.append(" and residentAdress like :residentAdress");
+        }
+        if (residentAge!=null &&!"".equals(residentAge)){
+            hql.append(" and residentAge like :residentAge");
+        }
+        if (residentPermission!=null){
+            hql.append(" and residentPermission = :residentPermission");
+        }
+        hql.append(" and residentDelete = :residentDelete");
+
+        Query query=s.createQuery(hql.toString());
+        if(residentAccount!=null &&!"".equals(residentAccount)){
+            query.setParameter("residentAccount",residentAccount);
+        }
+        if (residentName!=null&&!"".equals(residentName)){
+            query.setParameter("residentName","%"+residentName+"%");
+        }
+        if (residentCommunity!=null && !"".equals(residentCommunity)){
+            query.setParameter("residentCommunity",residentCommunity);
+        }
+        if (residentPhone!=null&&!"".equals(residentPhone)){
+            query.setParameter("residentPhone","%"+residentPhone+"%");
+        }
+        if (residentAdress!=null&&!"".equals(residentAdress)){
+            query.setParameter("residentAdress","%"+residentAdress+"%");
+        }
+        if (residentAge!=null &&!"".equals(residentAge)){
+            query.setParameter("residentAge","%"+residentAge+"%");
+        }
+        if (residentPermission!=null){
+            query.setParameter("residentPermission",residentPermission);
+        }
+        query.setParameter("residentDelete",1);
+        return query.list();
+    }
 }

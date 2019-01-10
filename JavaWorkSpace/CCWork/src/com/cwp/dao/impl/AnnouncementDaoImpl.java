@@ -139,6 +139,26 @@ public class AnnouncementDaoImpl implements AnnouncementDao {
     }
 
     @Override
+    public List<Announcement> allListAnnouncement(Announcement announcement) {
+        Session session=sessionFactory.getCurrentSession();
+        Long announcementId=announcement.getAnnouncementId();
+        String announcementTitle=announcement.getAnnouncementTitle();
+        String announcementTime=announcement.getAnnouncementTime();
+        Long announcementPersion=announcement.getAnnouncementPersion();
+        StringBuffer hql=new StringBuffer("from Announcement where 1=1");
+        if (announcementPersion!=null&&!"".equals(announcementPersion)){
+            hql.append(" and announcementPersion = :announcementPersion");
+        }
+        hql.append(" and announcementDelete = :announcementDelete");
+        Query query=session.createQuery(hql.toString());
+        if (announcementPersion!=null&&!"".equals(announcementPersion)){
+            query.setParameter("announcementPersion",announcementPersion);
+        }
+        query.setParameter("announcementDelete",1);
+        return query.list();
+    }
+
+    @Override
     public boolean isExisr(Announcement announcement) {
         Session session=sessionFactory.getCurrentSession();
         StringBuffer hql=new StringBuffer("select count(*) from Announcement where announcementTitle=:announcementTitle and announcementDelete= :announcementDelete");

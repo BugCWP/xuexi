@@ -1,12 +1,7 @@
 package com.cwp.action;
 
-import com.cwp.entity.Community;
-import com.cwp.entity.Page;
-import com.cwp.entity.Resident;
-import com.cwp.service.CommunityService;
-import com.cwp.service.EmailService;
-import com.cwp.service.GenerateNewPasswordService;
-import com.cwp.service.ResidentService;
+import com.cwp.entity.*;
+import com.cwp.service.*;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import net.sf.json.JSONArray;
@@ -43,9 +38,16 @@ public class ResidentAction extends ActionSupport implements ModelDriven<Residen
     @Autowired
     private CommunityService communityService;
 
+    @Autowired
+    private PermissionService permissionService;
+
+    @Autowired
+    private PictureService pictureService;
+
     //注册接口
     @Action(value = "register",results = {@Result(name = "success",type = "redirect",location = "/login.jsp")})
     public String registerResident(){
+        resident.setResidentPermission((long)1);
         boolean flag=residentService.addResident(resident);
         return SUCCESS;
     }
@@ -249,6 +251,8 @@ public class ResidentAction extends ActionSupport implements ModelDriven<Residen
         out.flush();
         out.close();
     }
+
+
     @Override
     public Resident getModel() {
         return resident;

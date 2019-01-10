@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.cwp.entity.Resident" %><%--
   Created by IntelliJ IDEA.
   User: 30277
   Date: 2018/11/6
@@ -45,6 +45,7 @@
 
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/home.js"></script>
+    <link href="css/home.css" rel="stylesheet" type="text/css">
 </head>
 <body class="">
     <div class="page">
@@ -57,53 +58,43 @@
                         </a>
                         <div class="d-flex order-lg-2 ml-auto">
                             <%--消息通知--%>
-                            <div class="dropdown d-none d-md-flex">
-                                <a class="nav-link icon" data-toggle="dropdown">
-                                    <i class="fe fe-bell"></i>
-                                    <%--有没有消息的标记小红点--%>
-                                    <span class="nav-unread"></span>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                    <%--收到的消息--%>
-                                    <a href="#" class="dropdown-item d-flex">
-                                        <span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/male/41.jpg)"></span>
-                                        <div>
-                                            <strong>Nathan</strong> pushed new commit: Fix page load performance issue.
-                                            <div class="small text-muted">10 minutes ago</div>
-                                        </div>
-                                    </a>
-                                    <div class="dropdown-divider"></div>
-                                    <a href="#" class="dropdown-item text-center text-muted-dark">全部设为已读</a>
-                                </div>
-                            </div>
+                            <%--<div class="dropdown d-none d-md-flex">--%>
+                                <%--<a class="nav-link icon" data-toggle="dropdown">--%>
+                                    <%--<i class="fe fe-bell"></i>--%>
+                                    <%--&lt;%&ndash;有没有消息的标记小红点&ndash;%&gt;--%>
+                                    <%--<span class="nav-unread"></span>--%>
+                                <%--</a>--%>
+                                <%--<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">--%>
+                                    <%--&lt;%&ndash;收到的消息&ndash;%&gt;--%>
+                                    <%--<a href="#" class="dropdown-item d-flex">--%>
+                                        <%--<span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/male/41.jpg)"></span>--%>
+                                        <%--<div>--%>
+                                            <%--<strong>Nathan</strong> pushed new commit: Fix page load performance issue.--%>
+                                            <%--<div class="small text-muted">10 minutes ago</div>--%>
+                                        <%--</div>--%>
+                                    <%--</a>--%>
+                                    <%--<div class="dropdown-divider"></div>--%>
+                                    <%--<a href="#" class="dropdown-item text-center text-muted-dark">全部设为已读</a>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
                             <div class="dropdown">
                                 <%--个人信息展示--%>
                                 <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                                    <span class="avatar" style="background-image: url(./demo/faces/female/25.jpg)"></span>
+                                    <span class="avatar"  id="personalheadpicture"></span>
                                     <span class="ml-2 d-none d-lg-block">
-                                         <span class="text-default">Jane Pearson</span>
-                                         <small class="text-muted d-block mt-1">Administrator</small>
+                                         <span class="text-default" id="personalheadname">Jane Pearson</span>
+                                         <small class="text-muted d-block mt-1" id="personalheadcommunity">Administrator</small>
                                     </span>
                                 </a>
                                     <%--个人信息栏--%>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="/PersonalCenter.jsp">
                                         <i class="dropdown-icon fe fe-user"></i>个人信息
                                     </a>
                                     <a class="dropdown-item" href="/backgroundHome.jsp">
-                                        <i class="dropdown-icon fe fe-settings"></i>网站管理
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        <span class="float-right"><span class="badge badge-primary">6</span></span>
-                                        <i class="dropdown-icon fe fe-mail"></i>收件箱
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        <i class="dropdown-icon fe fe-send"></i>信息
+                                      <i class="dropdown-icon fe fe-settings"></i>网站管理
                                     </a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">
-                                        <i class="dropdown-icon fe fe-help-circle"></i> 帮助?
-                                    </a>
                                     <a class="dropdown-item" href="/resident/loginout">
                                         <i class="dropdown-icon fe fe-log-out"></i> 退出
                                     </a>
@@ -119,56 +110,64 @@
                         <div class="col-lg order-lg-first">
                             <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                                 <li class="nav-item">
-                                    <a href="./index.html" class="nav-link"><i class="fe fe-home"></i> Home</a>
+                                    <a class="nav-link" id="homeDemo" href="Home.jsp"><i class="fe fe-home"></i> Home</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-box"></i> Interface</a>
-                                    <div class="dropdown-menu dropdown-menu-arrow">
-                                        <a href="./cards.html" class="dropdown-item ">Cards design</a>
-                                        <a href="./charts.html" class="dropdown-item ">Charts</a>
-                                        <a href="./pricing-cards.html" class="dropdown-item ">Pricing cards</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i> Components</a>
-                                    <div class="dropdown-menu dropdown-menu-arrow">
-                                        <a href="./maps.html" class="dropdown-item ">Maps</a>
-                                        <a href="./icons.html" class="dropdown-item ">Icons</a>
-                                        <a href="./store.html" class="dropdown-item ">Store</a>
-                                        <a href="./blog.html" class="dropdown-item ">Blog</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="javascript:void(0)" class="nav-link active" data-toggle="dropdown"><i class="fe fe-file"></i> Pages</a>
-                                    <div class="dropdown-menu dropdown-menu-arrow">
-                                        <a href="./profile.html" class="dropdown-item ">Profile</a>
-                                        <a href="./login.html" class="dropdown-item ">Login</a>
-                                        <a href="./register.html" class="dropdown-item ">Register</a>
-                                        <a href="./forgot-password.html" class="dropdown-item ">Forgot password</a>
-                                        <a href="./400.html" class="dropdown-item ">400 error</a>
-                                        <a href="./401.html" class="dropdown-item ">401 error</a>
-                                        <a href="./403.html" class="dropdown-item ">403 error</a>
-                                        <a href="./404.html" class="dropdown-item ">404 error</a>
-                                        <a href="./500.html" class="dropdown-item ">500 error</a>
-                                        <a href="./503.html" class="dropdown-item ">503 error</a>
-                                        <a href="./email.html" class="dropdown-item ">Email</a>
-                                        <a href="./empty.html" class="dropdown-item active">Empty page</a>
-                                        <a href="./rtl.html" class="dropdown-item ">RTL mode</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="./form-elements.html" class="nav-link"><i class="fe fe-check-square"></i> Forms</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./gallery.html" class="nav-link"><i class="fe fe-image"></i> Gallery</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="./docs/index.html" class="nav-link"><i class="fe fe-file-text"></i> Documentation</a>
-                                </li>
+                                <%--<li class="nav-item">--%>
+                                    <%--<a class="nav-link" id="chartDemo" href="Chart.jsp"><i class="fe fe-message-circle"></i>Chart</a>--%>
+                                <%--</li>--%>
                             </ul>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container">
+                <div id="uploadannouncement">
+                    <div class="card">
+                        <div class="card-body">
+                            <form enctype="multipart/form-data" action="announcementpicture/addannouncement" method="post">
+                                <label class="form-label">标题</label>
+                                <input type="text" name="announcementTitle" class="form-control">
+                                <label class="form-label">内容</label>
+                                <textarea name="announcementTable" class="form-control" cols="5"></textarea>
+                                <label class="form-label">图片</label>
+                                <input name="upload" type="file" class="btn btn-primary" value="">
+                                <input type="submit" value="发表" class="btn btn-primary">
+                            </form>
+                        </div>
+                    </div>
+                    <div id="downupload">
+                        <i class="fe fe-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="page-header"></div>
+                 <div class="row row-cards row-deck" id="announcementBody">
+                         <div class="col-lg-11">
+                             <div class="card announcementDemolow">
+                                     <div class="card-body d-flex flex-column">
+                                         <h4><a>Title</a></h4>
+                                        <div class="text-muted">
+                                         tabledhaskjdkjasdjaksdjksajkdajskakshdjksajkdsakjdkjaksdhjaksdhsakjhdkjsadjsadhajshdjksakasd
+                                         ashdjkashdkjsakhdjksadkjsakdsakjdjsakjdksakjhdjsakjdhjsadjskahdjkasjdksadkjsjadjsajdsakjdjsakdjk
+                                         asdkjsahjdsakhdjsajdkjas
+                                            ashdaisodasoidaisudiasoidasojldsajkdjsalkdlksajdlksajdksadaksl
+                                            dsajlkdjsalkldasdada
+                                        </div>
+                                     <div class="d-flex align-items-center pt-5 mt-auto">
+                                         <div class="avatar avatar-md mr-3" style="background-image: url(/noting.jpg)"></div>
+                                         <div>
+                                             <a class="text-default">name</a>
+                                             <small class="d-block text-muted">time</small>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="announcementdownbtn">
+                                     <i class="fe fe-chevron-down"></i>
+                                 </div>
+                             </div>
+                         </div>
+                 </div>
             </div>
         </div>
     </div>

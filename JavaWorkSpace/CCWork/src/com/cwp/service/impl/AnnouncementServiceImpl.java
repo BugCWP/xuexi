@@ -19,7 +19,7 @@ public class AnnouncementServiceImpl implements AnnouncementService {
 
     @Override
     public boolean addAnnouncement(Announcement announcement) {
-        return false;
+        return announcementDao.addAnnouncement(announcement);
     }
 
     @Override
@@ -49,5 +49,10 @@ public class AnnouncementServiceImpl implements AnnouncementService {
     @Override
     public Long findTotalCount(Announcement announcement) {
         return announcementDao.findTotalAnnouncement(announcement);
+    }
+
+    @Override
+    public List<Announcement> allListAnnouncement(Announcement announcement) {
+        return announcementDao.allListAnnouncement(announcement);
     }
 }

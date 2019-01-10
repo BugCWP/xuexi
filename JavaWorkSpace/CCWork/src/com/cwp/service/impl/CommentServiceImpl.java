@@ -19,7 +19,7 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public boolean addComment(Comment comment) {
-        return false;
+        return commentDao.addComment(comment);
     }
 
     @Override
@@ -45,5 +45,10 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public Long findTotalComment(Comment comment) {
         return commentDao.findTotalComment(comment);
+    }
+
+    @Override
+    public List<Comment> allListComment(Comment comment) {
+        return commentDao.allListComment(comment);
     }
 }

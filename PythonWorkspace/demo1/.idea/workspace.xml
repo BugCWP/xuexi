@@ -2,8 +2,123 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="619c355a-ab5e-4dbe-a81d-1ec11738cef0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helliword.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/action/AnnouncementPictureAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/action/PersonalAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/action/PictureAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/action/WebSocketDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/impl/PictureServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/AnnouncementPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/Chart.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/WEB-INF/lib/javax.websocket-api-1.0-rc4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/css/Chart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/css/announcementPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/js/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/js/announcementPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/js/jquery.fileupload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/js/jquery.iframe-transport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/js/jquery.ui.widget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/js/jquery.xdr-transport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/noting.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/nettyDemo01/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/nettyDemo01/lib/netty-all-5.0.0.Alpha2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/nettyDemo01/src/DiscardServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/nettyDemo01/src/DiscardServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/webSocketDemo01/lib/netty-all-4.1.31.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/webSocketDemo01/src/SimpleChatServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/webSocketDemo01/src/SimpleChatServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JavaWorkSpace/webSocketDemo01/src/SimpleChatServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/错误、调试和测试/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/错误、调试和测试/test01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/错误、调试和测试/test02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/错误、调试和测试/test03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/test01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/test03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/test04.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/test05.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/test06.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/test07.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/test08.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/test09.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/test10.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/test11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/test12.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/面向对象高级编程test/test2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/CCWork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/CCWork.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/Home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/PersonalCenter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/PersonalCenter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/AnnouncementAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/AnnouncementAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/CommentAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/CommentAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/ResidentAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/ResidentAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/AnnouncementDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/AnnouncementDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/CommentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/PictureDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/PictureDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/ResidentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/ResidentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/AnnouncementDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/AnnouncementDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/CommentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/CommentDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/PictureDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/PictureDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/ResidentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/ResidentDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/AnnouncementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/AnnouncementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/PictureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/PictureService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/ResidentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/ResidentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/AnnouncementServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/AnnouncementServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/CommentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/ResidentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/ResidentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/backgroundHome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/backgroundHome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/css/PersonalCenter.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/css/PersonalCenter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/js/PersonalCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/js/PersonalCenter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/js/backgroundHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/js/backgroundHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/artifacts/CCWork_war_exploded/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/action/AnnouncementAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/action/AnnouncementAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/action/CommentAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/action/CommentAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/action/ResidentAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/action/ResidentAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/AnnouncementDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/AnnouncementDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/CommentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/PictureDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/PictureDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/ResidentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/ResidentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/impl/AnnouncementDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/impl/AnnouncementDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/impl/CommentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/impl/CommentDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/impl/PictureDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/impl/PictureDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/impl/ResidentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/dao/impl/ResidentDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/AnnouncementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/AnnouncementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/PictureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/PictureService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/ResidentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/ResidentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/impl/AnnouncementServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/impl/AnnouncementServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/impl/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/impl/CommentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/impl/ResidentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/out/production/CCWork/com/cwp/service/impl/ResidentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/action/AnnouncementAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/action/AnnouncementAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/action/CommentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/action/CommentAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/action/ResidentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/action/ResidentAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/AnnouncementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/AnnouncementDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/CommentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/PictureDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/PictureDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/ResidentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/ResidentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/impl/AnnouncementDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/impl/AnnouncementDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/impl/CommentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/impl/CommentDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/impl/PictureDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/impl/PictureDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/impl/ResidentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/dao/impl/ResidentDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/AnnouncementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/AnnouncementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/PictureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/PictureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/ResidentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/ResidentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/impl/AnnouncementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/impl/AnnouncementServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/impl/ResidentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/src/com/cwp/service/impl/ResidentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/Home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/PersonalCenter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/PersonalCenter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/backgroundHome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/backgroundHome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/css/PersonalCenter.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/css/PersonalCenter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/js/PersonalCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/js/PersonalCenter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/js/backgroundHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/js/backgroundHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaWorkSpace/CCWork/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helliword.py" beforeDir="false" afterPath="$PROJECT_DIR$/面向对象高级编程test/helliword.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,46 +127,102 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/demo1$helliword.coverage" NAME="helliword Coverage Results" MODIFIED="1540980988284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo1$test11.coverage" NAME="test11 Coverage Results" MODIFIED="1547083546565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo1$test07.coverage" NAME="test07 Coverage Results" MODIFIED="1546959322361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo1$test12.coverage" NAME="test12 Coverage Results" MODIFIED="1547089774291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/面向对象高级编程test" />
+    <SUITE FILE_PATH="coverage/demo1$Unittests_in_test03_py.coverage" NAME="Unittests in test03.py Coverage Results" MODIFIED="1547102007976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/错误、调试和测试" />
+    <SUITE FILE_PATH="coverage/demo1$test06.coverage" NAME="test06 Coverage Results" MODIFIED="1546875879911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo1$test09.coverage" NAME="test09 Coverage Results" MODIFIED="1546961067514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo1$Unittests_for_test03_TestStudent_test_invalid.coverage" NAME="Unittests for test03.TestStudent.test_invalid Coverage Results" MODIFIED="1547101641016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/错误、调试和测试" />
+    <SUITE FILE_PATH="coverage/demo1$helliword.coverage" NAME="helliword Coverage Results" MODIFIED="1546698313946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo1$test03.coverage" NAME="test03 Coverage Results" MODIFIED="1546785784425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo1$test05.coverage" NAME="test05 Coverage Results" MODIFIED="1546788719561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo1$test04.coverage" NAME="test04 Coverage Results" MODIFIED="1546787001523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo1$test01.coverage" NAME="test01 Coverage Results" MODIFIED="1547099302787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/错误、调试和测试" />
+    <SUITE FILE_PATH="coverage/demo1$test08.coverage" NAME="test08 Coverage Results" MODIFIED="1546959628587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo1$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1546698302357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../../../.." />
+    <SUITE FILE_PATH="coverage/demo1$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1546784550158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo1$test10.coverage" NAME="test10 Coverage Results" MODIFIED="1546962187679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-525901187">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="4" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="py" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="Python" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="18" />
+          <entry key="py" value="1364" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="18" />
+          <entry key="Python" value="1364" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/helliword.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test11.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+            <state relative-caret-position="-123">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <marker date="1547083540521" expanded="true" signature="21:26" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test12.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/错误、调试和测试/test01.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/错误、调试和测试/test02.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" selection-start-line="1" selection-end-line="10" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/错误、调试和测试/test03.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -72,6 +243,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/helliword.py" />
+        <option value="$PROJECT_DIR$/test01.py" />
+        <option value="$PROJECT_DIR$/test2.py" />
+        <option value="$PROJECT_DIR$/test03.py" />
+        <option value="$PROJECT_DIR$/test04.py" />
+        <option value="$PROJECT_DIR$/test05.py" />
+        <option value="$PROJECT_DIR$/test06.py" />
+        <option value="$PROJECT_DIR$/test07.py" />
+        <option value="$PROJECT_DIR$/test08.py" />
+        <option value="$PROJECT_DIR$/test09.py" />
+        <option value="$PROJECT_DIR$/test10.py" />
+        <option value="$PROJECT_DIR$/test11.py" />
+        <option value="$PROJECT_DIR$/面向对象高级编程test/test12.py" />
+        <option value="$PROJECT_DIR$/错误、调试和测试/test01.py" />
+        <option value="$PROJECT_DIR$/错误、调试和测试/test02.py" />
+        <option value="$PROJECT_DIR$/错误、调试和测试/test03.py" />
       </list>
     </option>
   </component>
@@ -81,9 +267,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
-    <option name="y" value="30" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
     <option name="width" value="1890" />
     <option name="height" value="951" />
   </component>
@@ -95,7 +281,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,16 +288,32 @@
               <item name="demo1" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo1" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="demo1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo1" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo1" type="462c0819:PsiDirectoryNode" />
+              <item name="错误、调试和测试" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\30277\Documents\WorkSpace\GitHubWorkSpace\PythonWorkspace\demo1\面向对象高级编程test" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -126,7 +327,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Unnamed">
+  <component name="RunManager" selected="Python tests.Unittests in test03.py">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
       <module name="demo1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,7 +350,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="helliword" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test01" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="demo1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/错误、调试和测试" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/错误、调试和测试/test01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test11" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="demo1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -162,7 +385,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/helliword.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\30277\Documents\WorkSpace\GitHubWorkSpace\PythonWorkspace\demo1\面向对象高级编程test\test11.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -171,13 +394,73 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test12" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="demo1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/面向对象高级编程test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/面向对象高级编程test/test12.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test03.TestStudent.test_invalid" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="demo1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/错误、调试和测试" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test03.TestStudent.test_invalid&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test03.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="demo1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/错误、调试和测试" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/错误、调试和测试/test03.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python.helliword" />
+      <item itemvalue="Python.test11" />
+      <item itemvalue="Python.test12" />
+      <item itemvalue="Python.test01" />
+      <item itemvalue="Python tests.Unittests for test03.TestStudent.test_invalid" />
+      <item itemvalue="Python tests.Unittests in test03.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.helliword" />
+        <item itemvalue="Python tests.Unittests in test03.py" />
+        <item itemvalue="Python tests.Unittests for test03.TestStudent.test_invalid" />
+        <item itemvalue="Python.test01" />
+        <item itemvalue="Python.test12" />
+        <item itemvalue="Python.test11" />
       </list>
     </recent_temporary>
   </component>
@@ -194,30 +477,42 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_test03_TestStudent_test_invalid - 2019.01.10 at 14h 27m 21s.xml">
+      <configuration name="Unittests for test03.TestStudent.test_invalid" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test03_py - 2019.01.10 at 14h 29m 44s.xml">
+      <configuration name="Unittests in test03.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test03_py - 2019.01.10 at 14h 30m 19s.xml">
+      <configuration name="Unittests in test03.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24252222" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24090542" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32924694" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32924694" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16987741" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,10 +522,130 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/helliword.py">
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/helliword.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test01.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+        <state relative-caret-position="330">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test03.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding>
+            <marker date="1546785777866" expanded="true" signature="313:318" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test04.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test05.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test06.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <marker date="1546875879895" expanded="true" signature="12:17" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test07.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <folding>
+            <marker date="1546959327903" expanded="true" signature="32:42" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test08.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <marker date="1546959628577" expanded="true" signature="44:61" ph="..." />
+            <marker date="1546959628577" expanded="true" signature="75:161" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test09.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <marker date="1546961067502" expanded="true" signature="72:77" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test10.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test11.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-123">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <marker date="1547083540521" expanded="true" signature="21:26" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/面向对象高级编程test/test12.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/错误、调试和测试/test01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/错误、调试和测试/test02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/错误、调试和测试/test03.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
         </state>
       </provider>
     </entry>

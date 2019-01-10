@@ -71,4 +71,9 @@ public class ResidentServiceImpl implements ResidentService {
     public Long findTotalCount(Resident resident) {
         return residentDao.findTotalCount(resident);
     }
+
+    @Override
+    public List<Resident> allListResident(Resident resident) {
+        return residentDao.allListResident(resident);
+    }
 }

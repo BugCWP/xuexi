@@ -31,4 +31,7 @@ public interface ResidentDao {
 
     //登陆
     boolean loginResident(Resident resident);
+
+    //查询所有居民
+    List<Resident> allListResident(Resident resident);
 }

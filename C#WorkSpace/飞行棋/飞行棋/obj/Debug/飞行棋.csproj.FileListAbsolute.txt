@@ -1,0 +1,7 @@
+C:\Users\30277\Documents\WorkSpace\GitHubWorkSpace\C#WorkSpace\飞行棋\飞行棋\bin\Debug\飞行棋.exe.config
+C:\Users\30277\Documents\WorkSpace\GitHubWorkSpace\C#WorkSpace\飞行棋\飞行棋\bin\Debug\飞行棋.exe
+C:\Users\30277\Documents\WorkSpace\GitHubWorkSpace\C#WorkSpace\飞行棋\飞行棋\bin\Debug\飞行棋.pdb
+C:\Users\30277\Documents\WorkSpace\GitHubWorkSpace\C#WorkSpace\飞行棋\飞行棋\obj\Debug\飞行棋.csprojAssemblyReference.cache
+C:\Users\30277\Documents\WorkSpace\GitHubWorkSpace\C#WorkSpace\飞行棋\飞行棋\obj\Debug\飞行棋.csproj.CoreCompileInputs.cache
+C:\Users\30277\Documents\WorkSpace\GitHubWorkSpace\C#WorkSpace\飞行棋\飞行棋\obj\Debug\飞行棋.exe
+C:\Users\30277\Documents\WorkSpace\GitHubWorkSpace\C#WorkSpace\飞行棋\飞行棋\obj\Debug\飞行棋.pdb

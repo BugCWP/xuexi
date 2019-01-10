@@ -18,4 +18,6 @@ public interface CommentService {
     Comment findComment(Comment comment);
 //    返回评论数量
     Long findTotalComment(Comment comment);
+    //查询所有评论
+    List<Comment> allListComment(Comment comment);
 }

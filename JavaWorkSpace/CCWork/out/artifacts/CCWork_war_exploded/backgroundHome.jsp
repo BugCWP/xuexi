@@ -58,32 +58,32 @@
                     </a>
                     <div class="d-flex order-lg-2 ml-auto">
                         <%--消息通知--%>
-                        <div class="dropdown d-none d-md-flex">
-                            <a class="nav-link icon" data-toggle="dropdown">
-                                <i class="fe fe-bell"></i>
-                                <%--有没有消息的标记小红点--%>
-                                <span class="nav-unread"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                <%--收到的消息--%>
-                                <a href="#" class="dropdown-item d-flex">
-                                    <span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/male/41.jpg)"></span>
-                                    <div>
-                                        <strong>Nathan</strong> pushed new commit: Fix page load performance issue.
-                                        <div class="small text-muted">10 minutes ago</div>
-                                    </div>
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item text-center text-muted-dark">全部设为已读</a>
-                            </div>
-                        </div>
+                        <%--<div class="dropdown d-none d-md-flex">--%>
+                            <%--<a class="nav-link icon" data-toggle="dropdown">--%>
+                                <%--<i class="fe fe-bell"></i>--%>
+                                <%--&lt;%&ndash;有没有消息的标记小红点&ndash;%&gt;--%>
+                                <%--<span class="nav-unread"></span>--%>
+                            <%--</a>--%>
+                            <%--<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">--%>
+                                <%--&lt;%&ndash;收到的消息&ndash;%&gt;--%>
+                                <%--<a href="#" class="dropdown-item d-flex">--%>
+                                    <%--<span class="avatar mr-3 align-self-center" style="background-image: url(demo/faces/male/41.jpg)"></span>--%>
+                                    <%--<div>--%>
+                                        <%--<strong>Nathan</strong> pushed new commit: Fix page load performance issue.--%>
+                                        <%--<div class="small text-muted">10 minutes ago</div>--%>
+                                    <%--</div>--%>
+                                <%--</a>--%>
+                                <%--<div class="dropdown-divider"></div>--%>
+                                <%--<a href="#" class="dropdown-item text-center text-muted-dark">全部设为已读</a>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
                         <div class="dropdown">
                             <%--个人信息展示--%>
                             <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                                <span class="avatar" style="background-image: url()"></span>
+                                <span class="avatar" style="background-image: url()" id="personalheadpicture"></span>
                                 <span class="ml-2 d-none d-lg-block">
-                                         <span class="text-default">Jane Pearson</span>
-                                         <small class="text-muted d-block mt-1">Administrator</small>
+                                         <span class="text-default" id="personalheadname">Jane Pearson</span>
+                                         <small class="text-muted d-block mt-1" id="personalheadcommunity">Administrator</small>
                                     </span>
                             </a>
                             <%--个人信息栏--%>

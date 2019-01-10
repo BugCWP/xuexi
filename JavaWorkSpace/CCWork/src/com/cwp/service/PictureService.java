@@ -16,4 +16,6 @@ public interface PictureService {
     List<Picture> listPicture(Picture picture, Page page);
     //返回图片单条信息
     Picture findPicture(Picture picture);
+
+    List<Picture> allListPicture(Picture picture);
 }

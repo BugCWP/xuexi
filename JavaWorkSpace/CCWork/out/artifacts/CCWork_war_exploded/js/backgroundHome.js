@@ -1143,7 +1143,6 @@ $(function () {
 
     //确认修改
     $("#permissionBody").on('click','#permissionChangeOK',function () {
-        alert(11111);
         var permissionLevel=$("#permissionSelect").val();
         $.ajax({
             url:"permission/updateresidentpermission",
@@ -1177,6 +1176,25 @@ $(function () {
             }
         })
     })
+
+
+
+    getPersonalHead();
+    //获取头部
+    function getPersonalHead(){
+        $.ajax({
+            url: "personal/getpersonalhead",
+            type: "post",
+            dataType: "json",
+            async: false,
+            data: {},
+            success:function (data) {
+                $("#personalheadpicture").css("background-image","url("+data.picture.pictureUrl+")");
+                $("#personalheadname").text(data.resident.residentName);
+                $("#personalheadcommunity").text(data.community.communityName);
+            }
+        })
+    }
 
     // 表格切换模块
     $("#tablecommunitybtn").click(function () {
