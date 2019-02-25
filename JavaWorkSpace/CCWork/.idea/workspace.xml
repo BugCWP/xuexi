@@ -7,123 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e83e949e-3adb-4e69-a7ed-5f88101bcda4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/cwp/action/AnnouncementPictureAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/cwp/action/PersonalAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/cwp/action/PictureAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/cwp/action/WebSocketDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/cwp/service/impl/PictureServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/AnnouncementPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/Chart.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.websocket-api-1.0-rc4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/Chart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/announcementPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/Chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/announcementPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/jquery.fileupload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/jquery.iframe-transport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/jquery.ui.widget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/jquery.xdr-transport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/noting.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../nettyDemo01/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../nettyDemo01/lib/netty-all-5.0.0.Alpha2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../nettyDemo01/src/DiscardServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../nettyDemo01/src/DiscardServerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webSocketDemo01/lib/netty-all-4.1.31.Final.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webSocketDemo01/src/SimpleChatServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webSocketDemo01/src/SimpleChatServerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../webSocketDemo01/src/SimpleChatServerInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/错误、调试和测试/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/错误、调试和测试/test01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/错误、调试和测试/test02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/错误、调试和测试/test03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/test01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/test03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/test04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/test05.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/test06.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/test07.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/test08.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/test09.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/test10.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/test11.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/test12.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/test2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCWork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CCWork.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/Home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/PersonalCenter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/PersonalCenter.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/AnnouncementAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/AnnouncementAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/CommentAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/CommentAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/ResidentAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/action/ResidentAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/AnnouncementDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/AnnouncementDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/CommentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/PictureDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/PictureDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/ResidentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/ResidentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/AnnouncementDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/AnnouncementDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/CommentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/CommentDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/PictureDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/PictureDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/ResidentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/dao/impl/ResidentDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/AnnouncementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/AnnouncementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/PictureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/PictureService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/ResidentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/ResidentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/AnnouncementServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/AnnouncementServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/CommentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/ResidentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/WEB-INF/classes/com/cwp/service/impl/ResidentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/backgroundHome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/backgroundHome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/css/PersonalCenter.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/css/PersonalCenter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/js/PersonalCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/js/PersonalCenter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/js/backgroundHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/js/backgroundHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CCWork_war_exploded/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/action/AnnouncementAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/action/AnnouncementAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/action/CommentAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/action/CommentAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/action/ResidentAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/action/ResidentAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/AnnouncementDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/AnnouncementDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/CommentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/PictureDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/PictureDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/ResidentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/ResidentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/impl/AnnouncementDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/impl/AnnouncementDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/impl/CommentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/impl/CommentDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/impl/PictureDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/impl/PictureDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/impl/ResidentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/dao/impl/ResidentDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/AnnouncementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/AnnouncementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/PictureService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/PictureService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/ResidentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/ResidentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/impl/AnnouncementServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/impl/AnnouncementServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/impl/CommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/impl/CommentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/impl/ResidentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CCWork/com/cwp/service/impl/ResidentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/action/AnnouncementAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/action/AnnouncementAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/action/CommentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/action/CommentAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/action/ResidentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/action/ResidentAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/dao/AnnouncementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/dao/AnnouncementDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/dao/CommentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/dao/CommentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/dao/PictureDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/dao/PictureDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/dao/ResidentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/dao/ResidentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/dao/impl/AnnouncementDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/dao/impl/AnnouncementDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/dao/impl/CommentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/dao/impl/CommentDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/dao/impl/PictureDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/dao/impl/PictureDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/dao/impl/ResidentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/dao/impl/ResidentDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/service/AnnouncementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/service/AnnouncementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/service/PictureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/service/PictureService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/service/ResidentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/service/ResidentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/service/impl/AnnouncementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/service/impl/AnnouncementServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cwp/service/impl/ResidentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cwp/service/impl/ResidentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/PersonalCenter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/PersonalCenter.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/backgroundHome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/backgroundHome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/PersonalCenter.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/PersonalCenter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/PersonalCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/PersonalCenter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/backgroundHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/backgroundHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PythonWorkspace/demo1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PythonWorkspace/demo1/helliword.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../PythonWorkspace/demo1/面向对象高级编程test/helliword.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -170,8 +54,8 @@
     <session id="343230730">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="32" />
-          <entry key="project.open.time.10" value="4" />
+          <entry key="project.closed" value="33" />
+          <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.11" value="6" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
@@ -183,7 +67,7 @@
           <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="8" />
           <entry key="project.open.time.9" value="8" />
-          <entry key="project.opened" value="40" />
+          <entry key="project.opened" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -278,7 +162,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/cwp/action/AnnouncementAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
+            <state relative-caret-position="266">
               <caret line="268" selection-start-line="268" selection-end-line="268" />
             </state>
           </provider>
@@ -873,6 +757,7 @@
       <workItem from="1545118542170" duration="136000" />
       <workItem from="1546062750509" duration="12000" />
       <workItem from="1547104678827" duration="478000" />
+      <workItem from="1548731989421" duration="15000" />
     </task>
     <servers />
   </component>
@@ -885,13 +770,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="388472000" />
+    <option name="totallyTimeSpent" value="388487000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.26596606" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4939394" visible="true" weight="0.2700081" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Structure" order="3" sideWeight="0.5060606" side_tool="true" weight="0.2497979" />
@@ -1305,7 +1190,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cwp/action/AnnouncementAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
+        <state relative-caret-position="266">
           <caret line="268" selection-start-line="268" selection-end-line="268" />
         </state>
       </provider>
