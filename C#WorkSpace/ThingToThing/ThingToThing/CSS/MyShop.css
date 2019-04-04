@@ -1,0 +1,316 @@
+﻿body {
+}
+#Left{
+    position:absolute;
+    left:0px;
+    top:140px;
+    width:15%;
+    height:700px;
+   
+}
+#rightTianJia{
+    position:absolute;
+    left:15%;
+    top:140px;
+    height:750px;
+    width:85%;
+    
+}
+.Leftbtn{
+    width:100%;
+    height:120px;
+    text-align:center;
+   
+}
+.Leftbtn a{
+    text-decoration:none;
+    font-size:20px;
+    position:relative;
+    top:40px; 
+    color:black;
+    cursor:pointer;
+}
+.rightpage{
+    position:absolute;
+    width:100%;
+    height:750px;
+    background-color:rgba(0, 0, 0, 0.30);
+    overflow:hidden;
+}
+#ShopTianJiabtn {
+    background-color: white;
+    width: 16%;
+    height: 40%;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-bottom: 3%;
+    float: left
+}
+.ShopTianJiaing {
+    background-color: white;
+    width: 16%;
+    height: 40%;
+    margin-left: 1%;
+    margin-top: 1%;
+    margin-bottom:3%;
+    margin-right:2%;
+    float:left;
+}
+.pageBTN {
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    text-align:center;
+    padding-left:15px;
+    cursor:pointer;
+}
+#pagebtn{
+    width:40px;
+    text-align:center;
+}
+.ShopLiShibtn{
+    width:94%;
+    height:100px;
+    margin-left:2%;
+    margin-top:1%;
+    background-color:white;
+}
+#TianJiapage{
+    position:absolute;
+    left:15%;
+    top:140px;
+    width:85%;
+    height:750px;
+    background-color:red;
+    display:none;
+}
+#ThingImgpage{
+    position:absolute;
+    width:50%;
+    height:100%;
+    left:0;
+    top:0;
+    background-color:white;
+}
+#ThingXiaoXi {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    
+    background-color:white;
+}
+#ThingXiaoXiInput{
+    position:relative;
+    top:80px;
+    left:100px;
+    width:80%;
+    height:80%;
+}
+.ThingimgSuo{
+    width:100px;
+    height:100px;
+    margin-right:30px;
+    margin-top:10px;
+    float:left;
+}
+.ThingimgSuoimg {
+        width: 100px;
+        height: 100px;
+}
+.ThingimgDelect{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+   background-color:red;
+    display:inline-block;
+    z-index:2000;
+    position:relative;
+    left:90px;
+    top:-110px;
+}
+.ThingimgBorder{
+    border:7px solid black;
+}
+.ShopTianJiaImg{
+    width:100%;
+    height:60%;
+}
+.ShopTianJiaImg img{
+    width:100%;
+    height:100%;
+}
+.ShopThingName{
+    font-size:20px;
+    margin-left:15px;
+}
+.ShopThingType{
+    font-size:17px;
+    margin-left:25px;
+}
+.ShopThingIntroduction{
+    font-size:15px;
+    width:70%;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    margin-left:15px;
+}
+.ShopThingBtnXiuGai{
+    position:relative;
+    left:100px;
+}
+.ShopThingBtnShanChu{
+    position:relative;
+    left:110px;
+}
+.ShopLiShiimg{
+    position:relative;
+
+    width:80px;
+    height:80px;
+    background-color:black;
+   left:10px;
+   top:10px;
+   float:left;
+}
+.ShopLiShiimg img{
+    width:80px;
+    height:80px;
+}
+.ShopLiShiName{
+    position:relative;
+    font-size:25px;
+    float:left;
+    left:20px;
+    top:15px;
+}
+.ShopLiShiType{
+    position:relative;
+    float:left;
+    font-size:20px;
+   left:-30px;
+   top:50px;
+}
+.ShopLiShiTimetext{
+    position:relative;
+    float:left;
+    font-size:20px;
+    left:40px;
+    top:40px;
+}
+.ShopLiShiTime{
+    position:relative;
+    float:left;
+    font-size:20px;
+    left:40px;
+    top:40px;
+}
+.ShopLiShiDeleteZhuangtai{
+    position:relative;
+    float:left;
+    font-size:20px;
+    left:150px;
+    top:40px;
+}
+.ShopLiShiDelete{
+    position:relative;
+    float:left;
+    font-size:20px;
+    left:150px;
+    top:40px;
+}
+.ShopLiShiDeletered {
+    position: relative;
+    float: left;
+    font-size: 20px;
+    left: 150px;
+    top: 40px;
+    color:red;
+}
+.ShopLiShiXiangQing{
+    position:relative;
+    float:left;
+    font-size:18px;
+    left:200px;
+    top:30px;
+}
+#ThingXiuGaipage{
+    position: absolute;
+    left: 15%;
+    top: 140px;
+    width: 85%;
+    height: 750px;
+    display:none;
+}
+#XiuGaiLeft{
+    position:relative;
+    width:50%;
+    height:100%;
+    background-color:white;
+    float:left;
+}
+#XiuGaiRight {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    float:left;
+}
+#XiuGaiimg{
+    position:relative;
+    left:50px;
+    top:50px;
+    width:800px;
+    height:600px;
+}
+.XiuGaiimgdiv{
+    width:120px;
+    height:120px;
+    margin-top:20px;
+    margin-right:20px; 
+    float:left;
+}
+.XiuGaiimgdivx {
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+    margin-right: 20px;
+    float: left;
+}
+#XiuGaiimg img{
+    width:120px;
+    height:120px;
+}
+#XiuGaiinpt {
+    position: relative;
+    left: 100px;
+    top: 100px;
+    width: 500px;
+    height: 600px;
+   
+}
+.XiuGaiimgspan{
+    display:inline-block;
+    width:30px;
+    height:30px;
+    background-color:red;
+    border-radius:50%;
+    position:relative;
+    top:-125px;
+    left:95px;
+}
+.XiuGaiimgspanx {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    top: -125px;
+    left: 95px;
+}

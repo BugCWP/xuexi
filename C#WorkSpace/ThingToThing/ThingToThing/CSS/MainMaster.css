@@ -1,0 +1,25 @@
+﻿body {
+    overflow-x:hidden;
+}
+#mainbody{
+  width:103%;
+
+}
+#headmenu{
+    width:100%;
+    height:100px;
+    background-color:black;
+}
+#selectmenu {
+    width:100%;
+    height:40px;
+    background-color:rgba(0, 0, 0, 0.70);
+}
+#foot {
+    width: 100%;
+    height: 300px;
+    background-color: black;
+}
+#NavMenu1:hover{
+    background-color:black;
+}

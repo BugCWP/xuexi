@@ -1,0 +1,72 @@
+﻿body {
+}
+#mainPage{
+    width:70%;
+    margin-left:15%;
+}
+#mainShangPing{
+    width:100%;
+}
+.mainShangPingthing{
+    width:200px;
+    height:250px;
+    background-color:white;
+    float:left;
+    margin-left:20px;
+    margin-top:20px;
+   box-shadow:3px 3px 5px rgba(0, 0, 0, 0.50);
+}
+#mainBianHao {
+    height: 70px;
+   width:500px;
+    margin-top:50px;
+    margin-left: 30%;
+    margin-bottom: 50px;
+    background-color:white;
+}
+.pagenumberbtn{
+    border-radius:5px;
+    border:1px solid rgba(0, 0, 0, 0.20);
+    height:60px;
+    width:60px;
+    float:left;
+    color:rgba(0, 0, 0, 0.70);
+    font-size:30px;
+    text-align:center;
+    cursor:pointer;
+    padding-top:10px;
+    
+}
+.ShangPingImg{
+    width:100%;
+    height:50%;
+    background-color:black;
+}
+    .ShangPingImg img{
+        width:100%;
+        height:100%;
+    }
+.Thingname {
+        position: relative;
+        font-size: 20px;
+        left: 20px;
+    }
+.ThingType{
+    position:relative;
+    font-size:11px;
+    left:30px;
+}
+.ThingJian {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    font-size: 11px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.Thingbtn{
+    position:relative;
+    font-size:14px;
+    left:50px
+}

@@ -1,0 +1,72 @@
+﻿#RegisteredMain{
+    width:100%;
+    height:1000px;
+    background-color:white;
+}
+#Registeredbox{
+    width:40%;
+    height:900px;
+    background-color:rgba(0, 0, 0, 0.70);
+    position:absolute;
+    left:30%;
+    top:180px;
+    border-radius:10px;
+}
+#Registeredhead{
+    width:100%;
+    height:20%;
+    border-radius:10px;
+    
+}
+#Registeredtitle {
+    color: white;
+    font-size: 25px;
+    width:100%;
+    height: 60px;
+    position:absolute;
+    top:50px;
+    font-size:28px;
+}
+#Resgisteredinput{
+    color:white;
+}
+#Resgisteredinput label{
+    position:relative;
+    left:20%;
+ }
+ #Resgisteredinput input {
+        width: 60%;
+        position: relative;
+        left: 20%;
+}
+#UserAdressProvince{
+    position:relative;
+    left:20%;
+  
+    width:27%;
+}
+#UserAdressCity {
+    position: relative;
+    left: 26%;
+   
+    width: 27%;
+}
+#UserAdressDetailed{
+    position:relative;
+    left:20%;
+    top:10px;
+    width:60%;
+}
+#btn-Registered{
+    width:26%;
+    position:relative;
+    left:22%;
+    top:5px;
+}
+#btn-Clear{
+    width:26%;
+    position:relative;
+    left:24%;
+    top:5px;
+   
+}

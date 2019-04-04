@@ -1,0 +1,20 @@
+﻿body {
+}
+.pingjiaing {
+    width: 500px;
+    height: 100px;
+    
+}
+.PingJiaName{
+    font-size:24px;
+}
+.PingJiaTime{
+    font-size:15px;
+    margin-left:20px;
+}
+.PingJiaZhuTi{
+    font-size:17px;
+}
+.border{
+    border:3px solid black;
+}
