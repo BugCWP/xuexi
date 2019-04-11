@@ -45,7 +45,7 @@
     <Compile Include="adress\city.cs" />
     <Compile Include="adress\province.cs" />
     <Compile Include="adress\street.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="dataList.cs" />
     <Compile Include="gym\equipment.cs" />
     <Compile Include="gym\gymroom.cs" />
     <Compile Include="gym\gym_equipment.cs" />

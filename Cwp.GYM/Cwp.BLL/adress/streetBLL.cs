@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Cwp.Model.adress;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cwp.BLL
+namespace Cwp.BLL.adress
 {
-    public class Class1
+    public class streetBLL:EntityBLL<street>
     {
     }
 }

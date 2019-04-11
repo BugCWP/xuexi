@@ -2,7 +2,7 @@
   <div>
     <div>
       <el-row class="listbtnbox">
-        <el-col :span="2" class="listtitle">省</el-col>
+        <el-col :span="2" class="listtitle">市</el-col>
         <el-col :span="12">&nbsp;</el-col>
         <el-col :span="2">
           <template>
@@ -33,7 +33,8 @@
             :stripe="isstripe"
           >
             <el-table-column type="selection" width="80"></el-table-column>
-            <el-table-column prop="name" label="名称" width="900"></el-table-column>
+            <el-table-column prop="name" label="名称" width="400"></el-table-column>
+            <el-table-column prop="provincename" label="上级省" width="500"></el-table-column>
           </el-table>
         </el-col>
       </el-row>
@@ -56,7 +57,7 @@
 
 <script>
 export default {
-  name: "provinceList",
+  name: "cityList",
   data() {
     return {
       tableData: [],
@@ -85,7 +86,7 @@ export default {
       this.$emit("listionRouter", this.routerData);
     },
     loadData() {
-      var url = "http://localhost:50379/api/province/GetDataList?pageIndex="+this.pageIndex+"&pageSize="+this.pageSize+"&search";
+      var url = "http://localhost:50379/api/city/GetDataList?pageIndex="+this.pageIndex+"&pageSize="+this.pageSize+"&search";
       this.$axios
         .get(url)
         .then(resp=>{

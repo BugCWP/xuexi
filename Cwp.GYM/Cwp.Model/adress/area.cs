@@ -8,8 +8,9 @@ namespace Cwp.Model.adress
 {
     public class area
     {
-        public Guid id;
-        public string name;
-        public Guid cityid;
+        public Guid? id { get; set; }
+        public string name { get; set; }
+        public Guid? cityid { get; set; }
+        public string cityname { get; set; }
     }
 }

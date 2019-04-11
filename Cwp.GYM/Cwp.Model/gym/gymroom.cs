@@ -9,8 +9,8 @@ namespace Cwp.Model.gym
     //健身房表
     public class gymroom
     {
-        public Guid id;
-        public string name;
+        public Guid id { get; set; }
+        public string name { get; set; }
         //省地址
         public Guid provinceaddressid { get; set; }
         //市地址

@@ -52,9 +52,9 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="provinceList">省</el-menu-item>
-              <el-menu-item index="4-2">市</el-menu-item>
-              <el-menu-item index="4-3">区</el-menu-item>
-              <el-menu-item index="4-4">街道</el-menu-item>
+              <el-menu-item index="cityList">市</el-menu-item>
+              <el-menu-item index="areaList">区</el-menu-item>
+              <el-menu-item index="streetList">街道</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
@@ -72,12 +72,19 @@
 import gymList from "@/components/gym/gymListView";
 import gymEdit from "@/components/gym/gymEditView";
 import provinceList from "@/components/province/provinceListView";
+import cityList from "@/components/city/cityListView";
+import areaList from "@/components/area/areaListView";
+import streetList from "@/components/street/streetListView";
+
 export default {
   name: "Home",
   components: {
     gymList,
     gymEdit,
-    provinceList
+    provinceList,
+    cityList,
+    areaList,
+    streetList
   },
   data() {
     return {
@@ -98,16 +105,13 @@ export default {
       }
     },
     changedemo(data) {
-      console.log(data);
       this.demo = data.router;
       if (data.id != null && data.id != "") {
         this.$refs.child.EditId(data.id);
       }
     },
     meaunSelect(data) {
-        console.log(data);
-      this.demo=data;
-      alert(data);
+      this.demo = data;
     }
   }
 };

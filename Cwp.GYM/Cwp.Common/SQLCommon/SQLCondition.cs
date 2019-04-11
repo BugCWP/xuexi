@@ -143,7 +143,7 @@ namespace Cwp.Common.SQLCommon
                 string likeSql =" and name like %"+search+"% ";
                 sqlstring.Append(likeSql);
             }
-            string orderSql = " order by id offset "+(pageIndex-1)*pageSize+"rows fetch next"+pageSize+" rows only";
+            string orderSql = " order by id offset "+(pageIndex-1)*pageSize+" rows fetch next "+pageSize+" rows only";
             sqlstring.Append(orderSql);
             return sqlstring.ToString();
         } 

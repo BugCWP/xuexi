@@ -1,6 +1,7 @@
 ﻿using Cwp.Common;
 using Cwp.Common.ClassCommon;
 using Cwp.Common.SQLCommon;
+using Cwp.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -99,7 +100,7 @@ namespace Cwp.DAL.CURD
         {
             string sql = SQLCondition.SelectCondition<T>(model);
             SqlParameter[] sqlParameterList = SQLParameterCondition.sqlParameters<T>(model);
-            List<T> tList = ChangeToClass.DataTableToClass<T>(sqlHelp.getDatable(sql, sqlParameterList));
+            List<T> tList = ChangeToClass.DataTableToClass<T>(model,sqlHelp.getDatable(sql, sqlParameterList));
             return tList;
         }
 
@@ -112,12 +113,12 @@ namespace Cwp.DAL.CURD
         /// <param name="pageSize"></param>
         /// <param name="search"></param>
         /// <returns></returns>
-        public List<T> SelectPagingDataList<T>(T model,string pageIndex,string pageSize,string search)
+        public IList<T> SelectPagingDataList<T>(T model,string pageIndex,string pageSize,string search)
              where T:new()
         {
             string sql = SQLCondition.SelectPagingCondition<T>(model,int.Parse(pageIndex),int.Parse(pageSize),search);
             SqlParameter[] sqlParameterList = SQLParameterCondition.sqlParameters<T>(model);
-            List<T> tList = ChangeToClass.DataTableToClass<T>(sqlHelp.getDatable(sql, sqlParameterList));
+            IList<T> tList = ChangeToClass.DataTableToClass<T>(model,sqlHelp.getDatable(sql, sqlParameterList));
             return tList;
         }
 
@@ -132,6 +133,31 @@ namespace Cwp.DAL.CURD
             string sql = SQLCondition.SelectCount<T>(model);
             string count = sqlHelp.ExecuteScalar(sql).ToString();
             return count;
+        }
+
+        /// <summary>
+        /// 列表页查询
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="model"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <param name="search"></param>
+        /// <returns></returns>
+        public dataList<T> SelectDataList<T>(T model,string pageIndex,string pageSize,string search)
+            where T:new()
+        {
+            dataList<T> dataList = new dataList<T>();
+            IList<T> ts = SelectPagingDataList<T>(model,pageIndex,pageSize,search);
+            string count = SelectCount<T>(model);
+            int intCout = int.Parse(count);
+            int intPageSize = int.Parse(pageSize);
+            int intPageCount = intCout % intPageSize == 0 ? intCout / intPageSize : intCout / intPageSize + 1;
+            string pageCount = intPageCount.ToString();
+            dataList.list = ts;
+            dataList.Count = count;
+            dataList.pageCount = pageCount;
+            return dataList;
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Cwp.Model.adress
 {
     public class province
     {
-        public Guid id;
-        public string name;
+        public Guid? id { get; set; }
+        public string name { get; set; }
     }
 }
