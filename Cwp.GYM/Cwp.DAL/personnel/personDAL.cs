@@ -20,7 +20,14 @@ namespace Cwp.DAL.personnel
             person model = new person();
             model.accountnumber = account;
             person p = new curdHelp().SelectData<person>(model);
-            return p.password;
+            if (p != null)
+            {
+                return p.password;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

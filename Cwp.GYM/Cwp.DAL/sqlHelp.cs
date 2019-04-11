@@ -51,10 +51,21 @@ namespace Cwp.DAL
             con.Close();
             return res;
         }
+
+        public static object ExecuteScalar(string sql)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = sql;
+            cmd.CommandType = System.Data.CommandType.Text;
+            object res = cmd.ExecuteScalar();
+            con.Close();
+            return res;
+        }
+
         public static DataTable getDatable(string sql, SqlParameter[] ps)
         {
-
-
             SqlDataAdapter sda = new SqlDataAdapter(sql, con);
             sda.SelectCommand.Parameters.AddRange(ps);
             DataTable dt = new DataTable();

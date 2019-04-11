@@ -24,7 +24,7 @@ namespace Cwp.Common.SQLCommon
             StringBuilder sqlstring = new StringBuilder();
             foreach (var item in modeProperties)
             {
-                if (item.Value != null)
+                if (item.Value != null&&item.Value!="")
                 {
                     string sql = " and " + item.Key + "=@" + item.Key;
                     sqlstring.Append(sql);
@@ -121,6 +121,44 @@ namespace Cwp.Common.SQLCommon
             sqlstring = sqlstring.Remove(sqlstring.Length - 1, 1);
             sqlstring.Append(" where 0=0");
             sqlstring.Append(AndCondition<T>(changemodel));
+            return sqlstring.ToString();
+        }
+
+
+        /// <summary>
+        /// Select分页查找补足语句
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="model"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        public static string SelectPagingCondition<T>(T model,int pageIndex,int pageSize,string search)
+        {
+            StringBuilder sqlstring = new StringBuilder();
+            string selectSql = SelectCondition<T>(model);
+            sqlstring.Append(selectSql);
+            if (search!=null&&search!="")
+            {
+                string likeSql =" and name like %"+search+"% ";
+                sqlstring.Append(likeSql);
+            }
+            string orderSql = " order by id offset "+(pageIndex-1)*pageSize+"rows fetch next"+pageSize+" rows only";
+            sqlstring.Append(orderSql);
+            return sqlstring.ToString();
+        } 
+
+        /// <summary>
+        /// 数量查询sql补足
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public static string SelectCount<T>(T model)
+        {
+            StringBuilder sqlstring = new StringBuilder();
+            string countSql = "select count(*) from " + model.GetType().Name;
+            sqlstring.Append(countSql);
             return sqlstring.ToString();
         }
     }

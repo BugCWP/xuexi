@@ -22,7 +22,15 @@ namespace Cwp.Common.SQLCommon
         public static SqlParameter[] sqlParameters<T>(T model)
         {
             Dictionary<string, object> modeProperties = ForeachClass.ForeachClassProperties<T>(model);
-            SqlParameter[] sqlparameterlist = new SqlParameter[modeProperties.Count];
+            int count = 0;
+            foreach (var item in modeProperties)
+            {
+                if (item.Value != null)
+                {
+                    count++;
+                }
+            }
+            SqlParameter[] sqlparameterlist = new SqlParameter[count];
             int _i = 0;
             foreach (var item in modeProperties)
             {

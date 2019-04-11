@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CURD\CurdHelp.cs" />
+    <Compile Include="personnel\personDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sqlHelp.cs" />
   </ItemGroup>

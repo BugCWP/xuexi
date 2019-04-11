@@ -77,7 +77,14 @@ namespace Cwp.DAL.CURD
         public T SelectData<T>(T model)
             where T:new()
         {
-            return SelectDataList<T>(model)[0];
+            if (SelectDataList<T>(model).Count!=0)
+            {
+                return SelectDataList<T>(model)[0];
+            }
+            else
+            {
+                return default(T);
+            }
         }
 
 
@@ -94,6 +101,37 @@ namespace Cwp.DAL.CURD
             SqlParameter[] sqlParameterList = SQLParameterCondition.sqlParameters<T>(model);
             List<T> tList = ChangeToClass.DataTableToClass<T>(sqlHelp.getDatable(sql, sqlParameterList));
             return tList;
+        }
+
+        /// <summary>
+        /// 分页查询数据集
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="model"></param>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <param name="search"></param>
+        /// <returns></returns>
+        public List<T> SelectPagingDataList<T>(T model,string pageIndex,string pageSize,string search)
+             where T:new()
+        {
+            string sql = SQLCondition.SelectPagingCondition<T>(model,int.Parse(pageIndex),int.Parse(pageSize),search);
+            SqlParameter[] sqlParameterList = SQLParameterCondition.sqlParameters<T>(model);
+            List<T> tList = ChangeToClass.DataTableToClass<T>(sqlHelp.getDatable(sql, sqlParameterList));
+            return tList;
+        }
+
+        /// <summary>
+        /// 查询数量
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public string SelectCount<T>(T model)
+        {
+            string sql = SQLCondition.SelectCount<T>(model);
+            string count = sqlHelp.ExecuteScalar(sql).ToString();
+            return count;
         }
     }
 }
