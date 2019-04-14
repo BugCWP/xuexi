@@ -61,7 +61,7 @@
       </el-aside>
       <el-container>
         <el-main>
-          <component :is="demo" @listionRouter="changedemo"></component>
+          <component :is="demo" @listionRouter="changedemo" :editId="editId"></component>
         </el-main>
         <el-footer height="30px">welcome to GYM</el-footer>
       </el-container>
@@ -72,7 +72,9 @@
 import gymList from "@/components/gym/gymListView";
 import gymEdit from "@/components/gym/gymEditView";
 import provinceList from "@/components/province/provinceListView";
+import provinceEdit from "@/components/province/provinceEditView";
 import cityList from "@/components/city/cityListView";
+import cityEdit from "@/components/city/cityEditView";
 import areaList from "@/components/area/areaListView";
 import streetList from "@/components/street/streetListView";
 
@@ -82,7 +84,9 @@ export default {
     gymList,
     gymEdit,
     provinceList,
+    provinceEdit,
     cityList,
+    cityEdit,
     areaList,
     streetList
   },
@@ -91,7 +95,8 @@ export default {
       isCollapse: false,
       asideWidth: "200px",
       handleOpen: "2",
-      demo: "gymList"
+      demo: "gymList",
+      editId:""
     };
   },
   methods: {
@@ -106,9 +111,7 @@ export default {
     },
     changedemo(data) {
       this.demo = data.router;
-      if (data.id != null && data.id != "") {
-        this.$refs.child.EditId(data.id);
-      }
+      this.editId=data.id;
     },
     meaunSelect(data) {
       this.demo = data;

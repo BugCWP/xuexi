@@ -74,5 +74,11 @@ namespace Cwp.Common.SQLCommon
             }
             return sqlparameterlist;
         }
+
+        public static SqlParameter[] sqlParameters(string id)
+        {
+            SqlParameter[] sqlParameters = { new SqlParameter("@id", id) };
+            return sqlParameters;
+        }
     }
 }

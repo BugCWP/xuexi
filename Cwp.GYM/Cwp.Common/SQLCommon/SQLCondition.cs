@@ -84,6 +84,22 @@ namespace Cwp.Common.SQLCommon
         }
 
         /// <summary>
+        /// select补足语句 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public static string SelectCondition<T>()
+            where T:new()
+        {
+            StringBuilder sqlstring = new StringBuilder();
+            T t = new T();
+            string selectsql = "select * from " + t.GetType().Name + " where 0=0 and id=@id";
+            sqlstring.Append(selectsql);
+            return sqlstring.ToString();
+        }
+
+        /// <summary>
         /// delete补足语句
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -92,7 +108,7 @@ namespace Cwp.Common.SQLCommon
         public static string DeleteCondition<T>(T model)
         {
             StringBuilder sqlstring = new StringBuilder();
-            string deletesql = "delete * from " + model.GetType().Name + " where 0=0 ";
+            string deletesql = "delete from " + model.GetType().Name + " where 0=0 ";
             sqlstring.Append(deletesql);
             sqlstring.Append(AndCondition<T>(model));
             return sqlstring.ToString();
@@ -102,13 +118,14 @@ namespace Cwp.Common.SQLCommon
         /// update补充语句
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="changemodel"></param>
-        /// <param name="model"></param>
+        /// <param name="changemodel">要改变的model</param>
+        /// <param name="model">新model值</param>
         /// <returns></returns>
         public static string UpdateCondition<T>(T changemodel,T model)
         {
             StringBuilder sqlstring = new StringBuilder();
             string updatesql = "update " + model.GetType().Name + " set ";
+            sqlstring.Append(updatesql);
             Dictionary<string, object> modeProperties = ForeachClass.ForeachClassProperties<T>(model);
             foreach (var item in modeProperties)
             {
@@ -123,6 +140,7 @@ namespace Cwp.Common.SQLCommon
             sqlstring.Append(AndCondition<T>(changemodel));
             return sqlstring.ToString();
         }
+
 
 
         /// <summary>
@@ -140,7 +158,7 @@ namespace Cwp.Common.SQLCommon
             sqlstring.Append(selectSql);
             if (search!=null&&search!="")
             {
-                string likeSql =" and name like %"+search+"% ";
+                string likeSql =" and name like '%"+search+"%' ";
                 sqlstring.Append(likeSql);
             }
             string orderSql = " order by id offset "+(pageIndex-1)*pageSize+" rows fetch next "+pageSize+" rows only";
@@ -154,12 +172,19 @@ namespace Cwp.Common.SQLCommon
         /// <typeparam name="T"></typeparam>
         /// <param name="model"></param>
         /// <returns></returns>
-        public static string SelectCount<T>(T model)
+        public static string SelectCount<T>(T model,string search)
         {
             StringBuilder sqlstring = new StringBuilder();
-            string countSql = "select count(*) from " + model.GetType().Name;
+            string countSql = "select count(*) from " + model.GetType().Name+" where 0=0 ";
             sqlstring.Append(countSql);
+            if (search != null && search != "")
+            {
+                string likeSql = " and name like '%" + search + "%' ";
+                sqlstring.Append(likeSql);
+            }
             return sqlstring.ToString();
         }
+
+
     }
 }

@@ -130,6 +130,10 @@
       <Project>{8ff1e57e-019e-4dd5-8423-f54277978f32}</Project>
       <Name>Cwp.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Cwp.Common\Cwp.Common.csproj">
+      <Project>{D11CC954-C3AB-43A1-A532-649091CB2B3D}</Project>
+      <Name>Cwp.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Cwp.Model\Cwp.Model.csproj">
       <Project>{a1ed94c9-a465-4344-b2fe-aadcb8f6997d}</Project>
       <Name>Cwp.Model</Name>

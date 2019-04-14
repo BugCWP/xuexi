@@ -11,12 +11,12 @@
         </el-col>
         <el-col :span="2">
           <template>
-            <el-button type="text" icon="el-icon-delete" class="listbutton">删除</el-button>
+            <el-button type="text" icon="el-icon-delete" class="listbutton" @click="deletebtn">删除</el-button>
           </template>
         </el-col>
         <el-col :span="5">
           <el-input placeholder="请输入内容" v-model="search" size="medium">
-            <el-button slot="append" icon="el-icon-search"></el-button>
+            <el-button slot="append" icon="el-icon-search" @click="loadData"></el-button>
           </el-input>
         </el-col>
       </el-row>
@@ -31,6 +31,8 @@
             style="width: 100%"
             @selection-change="handleSelectionChange"
             :stripe="isstripe"
+            v-loading="loading"
+            @row-dblclick="goEdit"
           >
             <el-table-column type="selection" width="80"></el-table-column>
             <el-table-column prop="name" label="名称" width="900"></el-table-column>
@@ -69,30 +71,63 @@ export default {
       routerData: {
         router: "provinceEdit",
         id: ""
-      }
+      },
+      multipleSelection: [],
+      loading: false
     };
   },
   mounted() {
-      this.loadData();
+    this.loadData();
   },
   methods: {
-    handleSelectionChange() {},
+    handleSelectionChange(data) {
+      this.multipleSelection = data;
+    },
     handleCurrentChange(data) {
-       this.pageIndex=data;
-       this.loadData();
+      this.pageIndex = data;
+      this.loadData();
     },
     goAddPage() {
+      this.routerData.id="";
+      this.$emit("listionRouter", this.routerData);
+    },
+    goEdit(data){
+      this.routerData.id=data.id;
       this.$emit("listionRouter", this.routerData);
     },
     loadData() {
-      var url = "http://localhost:50379/api/province/GetDataList?pageIndex="+this.pageIndex+"&pageSize="+this.pageSize+"&search";
+      this.loading = true;
+      var url =
+        "/api/province/GetDataList?pageIndex=" +
+        this.pageIndex +
+        "&pageSize=" +
+        this.pageSize +
+        "&search="+this.search;
       this.$axios
         .get(url)
-        .then(resp=>{
-            this.tableData=resp.data.list;
-            this.total=parseInt(resp.data.Count);
+        .then(resp => {
+          this.tableData = resp.data.list;
+          this.total = parseInt(resp.data.Count);
+          this.loading = false;
         })
-        .catch();
+        .catch(err => {
+          this.loading = false;
+        });
+    },
+    deletebtn() {
+      var url = "/api/province/DeleteData";
+      this.$axios
+        .post(url, this.multipleSelection)
+        .then(resp => {
+          this.loadData();
+          this.$message({
+            message: "成功删除" + resp.data + "条省记录信息",
+            type: "success"
+          });
+        })
+        .catch(err => {
+          this.$message.error("删除失败");
+        });
     }
   }
 };

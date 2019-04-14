@@ -68,7 +68,7 @@ export default {
       search: "",
       isstripe: true,
       routerData: {
-        router: "provinceEdit",
+        router: "cityEdit",
         id: ""
       }
     };
