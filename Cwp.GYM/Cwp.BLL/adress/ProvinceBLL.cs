@@ -11,10 +11,6 @@ namespace Cwp.BLL.adress
 {
     public class ProvinceBLL:EntityBLL<province>
     {
-        //public dataList<province> GetProinces(string pageIndex,string pageSize,string search)
-        //{
-        //    dataList<province> provinces = new curdHelp().SelectDataList<province>(new province(),pageIndex,pageSize,search);
-        //    return provinces;
-        //}
+      
     }
 }

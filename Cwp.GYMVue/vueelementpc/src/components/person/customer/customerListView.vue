@@ -11,19 +11,23 @@
 <script>
 import cwplist from "@/components/cwplist/cwplistView";
 export default {
-  name: "provinceList",
+  name: "customerList",
   components:{
       "cwp-list":cwplist
   },
   data() {
     return {
-      title:"街道",
-      controllerName:'province',
+      title:"会员",
+      controllerName:'customer',
       columns:[
-        { prop: 'name', label: '名称', sortable: true },
+        { prop: 'name', label: '姓名', sortable: true },
+        { prop: 'age', label: '年龄', sortable: true },
+         { prop: 'sex', label: '性别', sortable: true },
+        { prop: 'phone', label: '电话', sortable: true },
+        { prop: 'email', label: '邮箱', sortable: true },
       ],
       routerData:{
-        router:'provinceEdit',
+        router:'customerEdit',
         id:''
       }
     };

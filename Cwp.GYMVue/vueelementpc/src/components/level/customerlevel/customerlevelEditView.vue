@@ -2,7 +2,7 @@
   <div>
     <div>
       <el-row class="listbtnbox">
-        <el-col :span="2" class="listtitle">市</el-col>
+        <el-col :span="2" class="listtitle">会员等级</el-col>
         <el-col :span="17">&nbsp;</el-col>
         <el-col :span="2">
           <template>
@@ -35,20 +35,45 @@
           <el-col class="section_title" :span="3">基本信息</el-col>
         </el-row>
         <el-row>
-          <el-col :span="8">
-            <el-form-item label="市名称" prop="name">
+          <el-col :span="7">
+            <el-form-item label="名称" prop="name">
               <el-input v-model="formData.name" clearable></el-input>
             </el-form-item>
           </el-col>
-          <el-col :span="8">
-            <el-form-item label="上级省" prop="provincename">
-                <cwp-lookup
-                :title="provincetitle"
-                :controllerName="provincecontrollerName"
-                :inputdata="formData.provincename"
-                :columns="provincecolumns"
-                @lookdata="getcityinput"
-              ></cwp-lookup>
+          <el-col :span="7">
+            <el-form-item label="时长" prop="leveltime">
+              <el-select v-model="formData.leveltime" placeholder="请选择">
+                <el-option
+                  v-for="item in options"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                ></el-option>
+              </el-select>
+            </el-form-item>
+          </el-col>
+          <el-col :span="7">
+            <el-form-item label="等级" prop="levelname">
+              <el-select v-model="formData.levelname" placeholder="请选择">
+                <el-option
+                  v-for="item in optionslevelname"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                ></el-option>
+              </el-select>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="7">
+            <el-form-item label="价格" prop="price">
+              <el-input v-model="formData.price" clearable></el-input>
+            </el-form-item>
+          </el-col>
+          <el-col :span="14">
+            <el-form-item label="说明" prop="price">
+              <el-input v-model="formData.remark" clearable type="textarea" autosize></el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -58,43 +83,60 @@
 </template>
 
 <script>
-import cwplookup from "@/components/cwplookup/cwplookupView";
 export default {
-  name: "cityEdit",
-  components: {
-    "cwp-lookup": cwplookup
-  },
+  name: "customerlevelEdit",
   data() {
     return {
-      controllerName:"city",
+      controllerName: "customerlevel",
       routerData: {
-        router: "cityList",
+        router: "customerlevelList",
         id: ""
       },
       formData: {
-        id: "",
         name: "",
-        provinceid: "",
-        provincename: ""
       },
       rules: {
-        name: [{ required: true, message: "请输入市名称", trigger: "change" }],
-        provincename: [{ required: true, message: "请选择省名称", trigger: "change" }]
+        name: [
+          { required: true, message: "请输入街道名称", trigger: "change" }
+        ],
+        leveltime: [
+          { required: false, message: "请选择时长", trigger: "change" }
+        ],
+        price: [{ required: false, message: "请输入价格", trigger: "change" }],
+        levelname: [
+          { required: false, message: "请选择等级", trigger: "change" }
+        ],
+        remark: [{ required: false, message: "请输入介绍", trigger: "change" }]
       },
       editId: "",
-      dialogVisible: false,
-      tableData: [],
-      pageSize: 5,
-      pageIndex: 1,
-      total: 0,
-      currentPage: 1,
-      search: "",
-      loading:false,
-      isstripe:true,
-      multipleSelection: [],
-      provincetitle:"省",
-      provincecontrollerName:'province',
-      provincecolumns: [{ prop: "name", label: "名称", sortable: true }],
+      options: [
+        {
+          value: "30",
+          label: "一个月"
+        },
+        {
+          value: "90",
+          label: "一季"
+        },
+        {
+          value: "180",
+          label: "半年"
+        },
+        {
+          value: "360",
+          label: "一年"
+        }
+      ],
+      optionslevelname: [
+        {
+          value: "1",
+          label: "普通会员"
+        },
+        {
+          value: "2",
+          label: "高级会员"
+        }
+      ]
     };
   },
   props: {
@@ -106,7 +148,7 @@ export default {
   },
   methods: {
     goAddPage() {
-      var url = "/api/"+this.controllerName+"/CreateData";
+      var url = "/api/" + this.controllerName + "/CreateData";
       this.$axios
         .post(url, this.formData)
         .then(resp => {
@@ -121,7 +163,7 @@ export default {
         });
     },
     goEdit() {
-      var url = "/api/"+this.controllerName+"/UpdateData";
+      var url = "/api/" + this.controllerName + "/UpdateData";
       this.$axios
         .post(url, this.formData)
         .then(resp => {
@@ -140,7 +182,7 @@ export default {
     },
     isEdit() {
       if (this.editId != null && this.editId != "") {
-        var url = "/api/"+this.controllerName+"/GetData?id=" + this.editId;
+        var url = "/api/" + this.controllerName + "/GetData?id=" + this.editId;
         this.$axios
           .get(url)
           .then(resp => {
@@ -156,9 +198,9 @@ export default {
         return true;
       }
     },
-    getcityinput(data){
-        this.formData.provincename = data.name;
-        this.formData.provinceid = data.id;
+    getareainput(data) {
+      this.formData.areaname = data.name;
+      this.formData.areaid = data.id;
     }
   }
 };
@@ -177,12 +219,6 @@ export default {
   width: 96%;
   margin: 20px;
 }
-.listDialogbox{
-  background-color: white;
-  height: 350px;
-  width: 90%;
-  margin: 20px;
-}
 .listtitle {
   line-height: 40px;
 }
@@ -191,7 +227,6 @@ export default {
 }
 .row_padding {
   padding-bottom: 40px;
-  padding-top: 10px;
-  margin-bottom: 20px;
+  padding-top: 20px;
 }
 </style>

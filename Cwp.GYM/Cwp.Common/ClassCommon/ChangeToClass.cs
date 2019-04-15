@@ -64,8 +64,11 @@ namespace Cwp.Common.ClassCommon
                     {
                         if (propertyClass.Name == property.Name)
                         {
-                            Type type=property.PropertyType;
-                            property.SetValue(t,Convert.ChangeType(propertyClass.Value,type), null);
+                            if (propertyClass.Value != null&& propertyClass.Value.ToString() !="")
+                            {
+                                Type type = property.PropertyType;
+                                property.SetValue(t, Convert.ChangeType(propertyClass.Value, type), null);
+                            }
                         }
                     }
                 }

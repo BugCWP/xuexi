@@ -22,8 +22,12 @@ namespace Cwp.GYM.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpGet]
-        public dataList<T> GetDataList(string pageIndex, string pageSize, string search)
+        public dataList<T> GetDataList(string pageIndex, string pageSize, string search=null, string paramList = null)
         {
+            if (paramList != null)
+            {
+                return null;
+            }
             return new S().GetDataList<T>(pageIndex, pageSize, search);
         }
 

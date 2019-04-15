@@ -12,21 +12,25 @@ namespace Cwp.Model.gym
         public Guid id { get; set; }
         public string name { get; set; }
         //省地址
-        public Guid provinceaddressid { get; set; }
+        public Guid? provinceid { get; set; }
+        public string provincename { get; set; }
         //市地址
-        public Guid cityadressid { get; set; }
+        public Guid? cityid { get; set; }
+        public string cityname { get; set; }
         //区地址
-        public Guid areaadressid { get; set; }
+        public Guid? areaid { get; set; }
+        public string areaname { get; set; }
         //街道地址
-        public Guid streetadressid { get; set; }
+        public Guid? streetid { get; set; }
+        public string streetname { get; set; }
         //详细地址
         public string specificaddress { get; set; }
         public string remark;
-        public bool status;
         //开始营业时间
         public string start_time { get; set; }
         //结束营业时间
         public string end_time { get; set; }
+        public Guid? code { get; set; }
 
     }
 }

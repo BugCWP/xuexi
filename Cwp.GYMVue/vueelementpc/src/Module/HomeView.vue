@@ -2,8 +2,13 @@
   <el-container>
     <el-header height="80px">
       <el-row>
-        <el-col :span="3" class="headLogo">GYM</el-col>
-        <el-col></el-col>
+        <el-col :span="3" class="headLogo">
+          GYM
+          <el-button type="text"  icon="el-icon-menu" @click="changeMenu" class="changemenubtn"></el-button>
+        </el-col>
+        <el-col :span="2">
+          
+        </el-col>
       </el-row>
     </el-header>
     <el-container>
@@ -20,10 +25,6 @@
           active-text-color="#f0f0f0"
           @select="meaunSelect"
         >
-          <el-menu-item index="1" @click="changeMenu">
-            <i class="el-icon-menu"></i>
-            <span slot="title">导航栏</span>
-          </el-menu-item>
           <el-submenu index="2">
             <template slot="title">
               <i class="el-icon-location"></i>
@@ -31,7 +32,8 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="gymList">健身房</el-menu-item>
-              <el-menu-item index="2-2">健身器材</el-menu-item>
+              <el-menu-item index="2-2">器材种类</el-menu-item>
+              <el-menu-item index="2-3">健身器材</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="3">
@@ -40,12 +42,33 @@
               <span slot="title">人员管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="3-1">客户</el-menu-item>
+              <el-menu-item index="customerList">会员</el-menu-item>
               <el-menu-item index="3-2">健身教练</el-menu-item>
               <el-menu-item index="3-3">员工</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
-          <el-submenu index="4">
+           <el-submenu index="4">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span slot="title">权限管理</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="customerlevelList">会员等级</el-menu-item>
+              <el-menu-item index="4-2">教练等级</el-menu-item>
+              <el-menu-item index="4-3">员工职位</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+           <el-submenu index="5">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span slot="title">课程管理</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="5-1">开设课程</el-menu-item>
+              <el-menu-item index="5-2">课程表</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="6">
             <template slot="title">
               <i class="el-icon-location"></i>
               <span slot="title">区域管理</span>
@@ -76,7 +99,13 @@ import provinceEdit from "@/components/province/provinceEditView";
 import cityList from "@/components/city/cityListView";
 import cityEdit from "@/components/city/cityEditView";
 import areaList from "@/components/area/areaListView";
+import areaEdit from "@/components/area/areaEditView";
 import streetList from "@/components/street/streetListView";
+import streetEdit from "@/components/street/streetEditView";
+import customerlevelList from "@/components/level/customerlevel/customerlevelListView";
+import customerlevelEdit from "@/components/level/customerlevel/customerlevelEditView";
+import customerList from "@/components/person/customer/customerListView";
+import customerEdit from "@/components/person/customer/customerEditView";
 
 export default {
   name: "Home",
@@ -88,7 +117,13 @@ export default {
     cityList,
     cityEdit,
     areaList,
-    streetList
+    areaEdit,
+    streetList,
+    streetEdit,
+    customerlevelList,
+    customerlevelEdit,
+    customerList,
+    customerEdit,
   },
   data() {
     return {
@@ -142,5 +177,9 @@ export default {
 .el-main {
   background-color: #f0f0f0;
   padding: 0;
+}
+.changemenubtn{
+  font-size: 20px;
+  color: white;
 }
 </style>

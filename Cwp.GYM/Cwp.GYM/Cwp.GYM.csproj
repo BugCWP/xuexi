@@ -102,6 +102,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\areaController.cs" />
     <Compile Include="Controllers\cityController.cs" />
+    <Compile Include="Controllers\customerController.cs" />
+    <Compile Include="Controllers\customerlevelController.cs" />
     <Compile Include="Controllers\EntityController.cs" />
     <Compile Include="Controllers\gymController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
