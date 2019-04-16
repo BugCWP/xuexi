@@ -9,9 +9,10 @@ namespace Cwp.Model.gym
     //设备表
     public class equipment
     {
-        public Guid id { get; set; }
+        public Guid? id { get; set; }
         public string name { get; set; }
-        public string code { get; set; }
-        public string path { get; set; }
+        public Guid? code { get; set; }
+        public string price { get; set; }
+        public string remark { get; set; }
     }
 }

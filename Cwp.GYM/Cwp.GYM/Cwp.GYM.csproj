@@ -102,12 +102,18 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\areaController.cs" />
     <Compile Include="Controllers\cityController.cs" />
+    <Compile Include="Controllers\coachController.cs" />
+    <Compile Include="Controllers\coachlevelController.cs" />
+    <Compile Include="Controllers\courseController.cs" />
     <Compile Include="Controllers\customerController.cs" />
     <Compile Include="Controllers\customerlevelController.cs" />
     <Compile Include="Controllers\EntityController.cs" />
+    <Compile Include="Controllers\equipmentController.cs" />
     <Compile Include="Controllers\gymController.cs" />
+    <Compile Include="Controllers\gym_equipmentController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\provinceController.cs" />
+    <Compile Include="Controllers\stafflevelController.cs" />
     <Compile Include="Controllers\streetController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -2,7 +2,7 @@
   <div>
     <div>
       <el-row class="listbtnbox">
-        <el-col :span="2" class="listtitle">会员等级</el-col>
+        <el-col :span="2" class="listtitle">健身器材</el-col>
         <el-col :span="17">&nbsp;</el-col>
         <el-col :span="2">
           <template>
@@ -36,44 +36,30 @@
         </el-row>
         <el-row>
           <el-col :span="7">
-            <el-form-item label="名称" prop="name">
-              <el-input v-model="formData.name" clearable></el-input>
+            <el-form-item label="健身房" prop="gym">
+              <cwp-lookup
+                :title="gymtitle"
+                :controllerName="gymcontrollerName"
+                :inputdata="formData.gymroomname"
+                :columns="gymcolumns"
+                @lookdata="getgyminput"
+              ></cwp-lookup>
             </el-form-item>
           </el-col>
           <el-col :span="7">
-            <el-form-item label="时长" prop="leveltime">
-              <el-select v-model="formData.leveltime" placeholder="请选择">
-                <el-option
-                  v-for="item in options"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value"
-                ></el-option>
-              </el-select>
+            <el-form-item label="器材名称" prop="equipment">
+              <cwp-lookup
+                :title="equipmenttitle"
+                :controllerName="equipmentcontrollerName"
+                :inputdata="formData.equipmentname"
+                :columns="equipmentcolumns"
+                @lookdata="getequipmentinput"
+              ></cwp-lookup>
             </el-form-item>
           </el-col>
           <el-col :span="7">
-            <el-form-item label="等级" prop="levelname">
-              <el-select v-model="formData.levelname" placeholder="请选择">
-                <el-option
-                  v-for="item in optionslevelname"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value"
-                ></el-option>
-              </el-select>
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row>
-          <el-col :span="7">
-            <el-form-item label="价格" prop="price">
-              <el-input v-model="formData.price" clearable></el-input>
-            </el-form-item>
-          </el-col>
-          <el-col :span="14">
-            <el-form-item label="说明" prop="price">
-              <el-input v-model="formData.remark" clearable type="textarea" autosize></el-input>
+            <el-form-item label="数量" prop="amount">
+              <el-input-number v-model="formData.amount" :min="1" label="器材数量"></el-input-number>
             </el-form-item>
           </el-col>
         </el-row>
@@ -83,59 +69,39 @@
 </template>
 
 <script>
+import cwplookup from "@/components/cwplookup/cwplookupView";
+
 export default {
-  name: "customerlevelEdit",
+  name: "streetEdit",
+  components: {
+    "cwp-lookup": cwplookup
+  },
   data() {
     return {
-      controllerName: "customerlevel",
+      controllerName: "gym_equipment",
       routerData: {
-        router: "customerlevelList",
+        router: "gym_equipmentList",
         id: ""
       },
       formData: {
-        name: "",
+        name: ""
       },
       rules: {
-        name: [
-          { required: true, message: "请输入街道名称", trigger: "change" }
+        gym: [{ required: false, message: "请选择健身房", trigger: "change" }],
+        equipment: [
+          { required: false, message: "请选择健身器材", trigger: "change" }
         ],
-        leveltime: [
-          { required: false, message: "请选择时长", trigger: "change" }
-        ],
-        price: [{ required: false, message: "请输入价格", trigger: "change" }],
-        levelname: [
-          { required: false, message: "请选择等级", trigger: "change" }
-        ],
-        remark: [{ required: false, message: "请输入介绍", trigger: "change" }]
+        amount: [{ required: false, message: "请输入数量", trigger: "change" }]
       },
       editId: "",
-      options: [
-        {
-          value: "30",
-          label: "一个月"
-        },
-        {
-          value: "90",
-          label: "一季"
-        },
-        {
-          value: "180",
-          label: "半年"
-        },
-        {
-          value: "360",
-          label: "一年"
-        }
-      ],
-      optionslevelname: [
-        {
-          value: "普通会员",
-          label: "普通会员"
-        },
-        {
-          value: "高级会员",
-          label: "高级会员"
-        }
+      gymtitle: "健身房",
+      gymcontrollerName: "gym",
+      gymcolumns: [{ prop: "name", label: "名称", sortable: true }],
+      equipmenttitle: "健身器材",
+      equipmentcontrollerName: "equipment",
+      equipmentcolumns: [
+        { prop: "name", label: "名称", sortable: true },
+        { prop: "price", label: "价格", sortable: true }
       ]
     };
   },
@@ -198,9 +164,13 @@ export default {
         return true;
       }
     },
-    getareainput(data) {
-      this.formData.areaname = data.name;
-      this.formData.areaid = data.id;
+    getgyminput(data) {
+      this.formData.gymroomname = data.name;
+      this.formData.gymroomid = data.id;
+    },
+    getequipmentinput(data) {
+      this.formData.equipmentname = data.name;
+      this.formData.equipmentid = data.id;
     }
   }
 };

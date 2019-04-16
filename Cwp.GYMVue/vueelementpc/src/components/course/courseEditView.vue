@@ -2,8 +2,8 @@
   <div>
     <div>
       <el-row class="listbtnbox">
-        <el-col :span="2" class="listtitle">会员等级</el-col>
-        <el-col :span="17">&nbsp;</el-col>
+        <el-col :span="3" class="listtitle">员工职位等级</el-col>
+        <el-col :span="16">&nbsp;</el-col>
         <el-col :span="2">
           <template>
             <el-button
@@ -41,10 +41,10 @@
             </el-form-item>
           </el-col>
           <el-col :span="7">
-            <el-form-item label="时长" prop="leveltime">
-              <el-select v-model="formData.leveltime" placeholder="请选择">
+            <el-form-item label="课程种类" prop="coursetype">
+              <el-select v-model="formData.coursetype" placeholder="请选择">
                 <el-option
-                  v-for="item in options"
+                  v-for="item in optionscoursetype"
                   :key="item.value"
                   :label="item.label"
                   :value="item.value"
@@ -53,10 +53,10 @@
             </el-form-item>
           </el-col>
           <el-col :span="7">
-            <el-form-item label="等级" prop="levelname">
-              <el-select v-model="formData.levelname" placeholder="请选择">
+            <el-form-item label="会员等级" prop="customerlevel">
+              <el-select v-model="formData.customerlevel" placeholder="请选择">
                 <el-option
-                  v-for="item in optionslevelname"
+                  v-for="item in optionscustomerlevel"
                   :key="item.value"
                   :label="item.label"
                   :value="item.value"
@@ -67,67 +67,89 @@
         </el-row>
         <el-row>
           <el-col :span="7">
-            <el-form-item label="价格" prop="price">
+            <el-form-item label="教练等级" prop="coachlevel">
+              <el-select v-model="formData.coachlevel" placeholder="请选择">
+                <el-option
+                  v-for="item in optionscoachlevel"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                ></el-option>
+              </el-select>
+            </el-form-item>
+          </el-col>
+          <el-col :span="7">
+            <el-form-item label="课程费" prop="price">
               <el-input v-model="formData.price" clearable></el-input>
             </el-form-item>
           </el-col>
-          <el-col :span="14">
-            <el-form-item label="说明" prop="price">
-              <el-input v-model="formData.remark" clearable type="textarea" autosize></el-input>
+          <el-col :span="7">
+            <el-form-item label="报酬费" prop="remuneration">
+              <el-input v-model="formData.remuneration" clearable></el-input>
             </el-form-item>
           </el-col>
         </el-row>
+        <el-col :span="7"></el-col>
+        <el-col :span="14">
+          <el-form-item label="说明" prop="price">
+            <el-input v-model="formData.remark" clearable type="textarea" autosize></el-input>
+          </el-form-item>
+        </el-col>
       </el-form>
     </div>
   </div>
 </template>
 
 <script>
+import cwplookup from "@/components/cwplookup/cwplookupView";
 export default {
-  name: "customerlevelEdit",
+  name: "courseEdit",
+  components: {
+    "cwp-lookup": cwplookup
+  },
   data() {
     return {
-      controllerName: "customerlevel",
+      controllerName: "course",
       routerData: {
-        router: "customerlevelList",
+        router: "courseList",
         id: ""
       },
       formData: {
-        name: "",
+        name: ""
       },
       rules: {
         name: [
           { required: true, message: "请输入街道名称", trigger: "change" }
         ],
-        leveltime: [
-          { required: false, message: "请选择时长", trigger: "change" }
+        coursetype: [
+          { required: false, message: "请选择课程种类", trigger: "change" }
         ],
-        price: [{ required: false, message: "请输入价格", trigger: "change" }],
-        levelname: [
-          { required: false, message: "请选择等级", trigger: "change" }
+        customerlevel: [
+          { required: false, message: "请选择会员等级", trigger: "change" }
+        ],
+        coachlevel: [
+          { required: false, message: "请选择教练等级", trigger: "change" }
+        ],
+        price: [
+          { required: false, message: "请输入课程费", trigger: "change" }
+        ],
+        remuneration: [
+          { required: false, message: "请输入报酬费", trigger: "change" }
         ],
         remark: [{ required: false, message: "请输入介绍", trigger: "change" }]
       },
       editId: "",
-      options: [
+      optionscoursetype: [
         {
-          value: "30",
-          label: "一个月"
+          value: "私教课程",
+          label: "私教课程"
         },
         {
-          value: "90",
-          label: "一季"
-        },
-        {
-          value: "180",
-          label: "半年"
-        },
-        {
-          value: "360",
-          label: "一年"
+          value: "通用课程",
+          label: "通用课程"
         }
       ],
-      optionslevelname: [
+      optionscustomerlevel: [
         {
           value: "普通会员",
           label: "普通会员"
@@ -136,6 +158,27 @@ export default {
           value: "高级会员",
           label: "高级会员"
         }
+      ],
+      optionscoachlevel: [
+        {
+          value: "高级",
+          label: "高级"
+        },
+        {
+          value: "中级",
+          label: "中级"
+        },
+        {
+          value: "初级",
+          label: "初级"
+        }
+      ],
+      staffleveltitle: "上级职位",
+      stafflevelcontrollerName: "stafflevel",
+      stafflevelcolumns: [
+        { prop: "name", label: "名称", sortable: true },
+        { prop: "stafflevelname", label: "上级领导", sortable: true },
+        { prop: "wage", label: "工资", sortable: true }
       ]
     };
   },
@@ -198,9 +241,9 @@ export default {
         return true;
       }
     },
-    getareainput(data) {
-      this.formData.areaname = data.name;
-      this.formData.areaid = data.id;
+    getstafflevelinput(data) {
+      this.formData.stafflevelid = data.id;
+      this.formData.stafflevelname = data.name;
     }
   }
 };

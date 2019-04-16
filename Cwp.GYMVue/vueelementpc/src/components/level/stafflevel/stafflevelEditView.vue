@@ -2,8 +2,8 @@
   <div>
     <div>
       <el-row class="listbtnbox">
-        <el-col :span="2" class="listtitle">会员等级</el-col>
-        <el-col :span="17">&nbsp;</el-col>
+        <el-col :span="3" class="listtitle">员工职位等级</el-col>
+        <el-col :span="16">&nbsp;</el-col>
         <el-col :span="2">
           <template>
             <el-button
@@ -41,19 +41,12 @@
             </el-form-item>
           </el-col>
           <el-col :span="7">
-            <el-form-item label="时长" prop="leveltime">
-              <el-select v-model="formData.leveltime" placeholder="请选择">
-                <el-option
-                  v-for="item in options"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value"
-                ></el-option>
-              </el-select>
-            </el-form-item>
+              <el-form-item label="工资(月)" prop="wage">
+                <el-input v-model="formData.wage" clearable></el-input>
+              </el-form-item>
           </el-col>
           <el-col :span="7">
-            <el-form-item label="等级" prop="levelname">
+            <el-form-item label="权限等级" prop="levelname">
               <el-select v-model="formData.levelname" placeholder="请选择">
                 <el-option
                   v-for="item in optionslevelname"
@@ -67,8 +60,14 @@
         </el-row>
         <el-row>
           <el-col :span="7">
-            <el-form-item label="价格" prop="price">
-              <el-input v-model="formData.price" clearable></el-input>
+            <el-form-item label="上级领导" prop="stafflevel">
+              <cwp-lookup
+                :title="staffleveltitle"
+                :controllerName="stafflevelcontrollerName"
+                :inputdata="formData.stafflevelname"
+                :columns="stafflevelcolumns"
+                @lookdata="getstafflevelinput"
+              ></cwp-lookup>
             </el-form-item>
           </el-col>
           <el-col :span="14">
@@ -83,59 +82,56 @@
 </template>
 
 <script>
+import cwplookup from "@/components/cwplookup/cwplookupView";
 export default {
-  name: "customerlevelEdit",
+  name: "stafflevelEdit",
+  components: {
+    "cwp-lookup": cwplookup
+  },
   data() {
     return {
-      controllerName: "customerlevel",
+      controllerName: "stafflevel",
       routerData: {
-        router: "customerlevelList",
+        router: "stafflevelList",
         id: ""
       },
       formData: {
-        name: "",
+        name: ""
       },
       rules: {
         name: [
           { required: true, message: "请输入街道名称", trigger: "change" }
         ],
-        leveltime: [
-          { required: false, message: "请选择时长", trigger: "change" }
-        ],
-        price: [{ required: false, message: "请输入价格", trigger: "change" }],
+        wage: [{ required: false, message: "请输入工资", trigger: "change" }],
         levelname: [
-          { required: false, message: "请选择等级", trigger: "change" }
+          { required: false, message: "请选择权限", trigger: "change" }
+        ],
+        stafflevel: [
+          { required: false, message: "请选择上级领导", trigger: "change" }
         ],
         remark: [{ required: false, message: "请输入介绍", trigger: "change" }]
       },
       editId: "",
-      options: [
-        {
-          value: "30",
-          label: "一个月"
-        },
-        {
-          value: "90",
-          label: "一季"
-        },
-        {
-          value: "180",
-          label: "半年"
-        },
-        {
-          value: "360",
-          label: "一年"
-        }
-      ],
       optionslevelname: [
         {
-          value: "普通会员",
-          label: "普通会员"
+          value: "1",
+          label: "高层权限"
         },
         {
-          value: "高级会员",
-          label: "高级会员"
+          value: "2",
+          label: "中层权限"
+        },
+        {
+          value: "3",
+          label: "底层权限"
         }
+      ],
+      staffleveltitle: "上级职位",
+      stafflevelcontrollerName: "stafflevel",
+      stafflevelcolumns: [
+        { prop: "name", label: "名称", sortable: true },
+        { prop: "stafflevelname", label: "上级领导", sortable: true },
+        { prop: "wage", label: "工资", sortable: true }
       ]
     };
   },
@@ -198,9 +194,9 @@ export default {
         return true;
       }
     },
-    getareainput(data) {
-      this.formData.areaname = data.name;
-      this.formData.areaid = data.id;
+    getstafflevelinput(data) {
+      this.formData.stafflevelid = data.id;
+      this.formData.stafflevelname = data.name;
     }
   }
 };

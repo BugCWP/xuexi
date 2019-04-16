@@ -9,7 +9,7 @@ namespace Cwp.Model.gym
     //健身房表
     public class gymroom
     {
-        public Guid id { get; set; }
+        public Guid? id { get; set; }
         public string name { get; set; }
         //省地址
         public Guid? provinceid { get; set; }
@@ -30,7 +30,11 @@ namespace Cwp.Model.gym
         public string start_time { get; set; }
         //结束营业时间
         public string end_time { get; set; }
+        //注册时间
+        public string entrytime { get; set; }
         public Guid? code { get; set; }
+        public string phone { get; set; }
+        public string email { get; set; }
 
     }
 }

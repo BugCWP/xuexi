@@ -52,7 +52,8 @@
               </div>
             </el-col>
           </el-row>
-          <span slot="footer" class="dialog-footer">
+          <div slot="footer" class="dialog-footer">
+            <el-row>
             <el-col :span="16">&nbsp;</el-col>
             <el-col :span="4">
               <el-button type="primary" @click="chancebtn">确定</el-button>
@@ -60,7 +61,8 @@
             <el-col :span="4">
               <el-button @click="closedialog">取消</el-button>
             </el-col>
-          </span>
+            </el-row>
+          </div>
         </div>
       </div>
     </el-dialog>

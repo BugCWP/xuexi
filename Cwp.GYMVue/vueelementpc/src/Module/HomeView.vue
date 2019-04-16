@@ -32,8 +32,8 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="gymList">健身房</el-menu-item>
-              <el-menu-item index="2-2">器材种类</el-menu-item>
-              <el-menu-item index="2-3">健身器材</el-menu-item>
+              <el-menu-item index="equipmentList">器材种类</el-menu-item>
+              <el-menu-item index="gym_equipmentList">健身器材</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="3">
@@ -43,7 +43,7 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="customerList">会员</el-menu-item>
-              <el-menu-item index="3-2">健身教练</el-menu-item>
+              <el-menu-item index="coachList">健身教练</el-menu-item>
               <el-menu-item index="3-3">员工</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
@@ -54,8 +54,8 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="customerlevelList">会员等级</el-menu-item>
-              <el-menu-item index="4-2">教练等级</el-menu-item>
-              <el-menu-item index="4-3">员工职位</el-menu-item>
+              <el-menu-item index="coachlevelList">教练等级</el-menu-item>
+              <el-menu-item index="stafflevelList">员工职位</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
            <el-submenu index="5">
@@ -64,7 +64,7 @@
               <span slot="title">课程管理</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="5-1">开设课程</el-menu-item>
+              <el-menu-item index="courseList">开设课程</el-menu-item>
               <el-menu-item index="5-2">课程表</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
@@ -106,6 +106,18 @@ import customerlevelList from "@/components/level/customerlevel/customerlevelLis
 import customerlevelEdit from "@/components/level/customerlevel/customerlevelEditView";
 import customerList from "@/components/person/customer/customerListView";
 import customerEdit from "@/components/person/customer/customerEditView";
+import coachlevelList from "@/components/level/coachlevel/coachlevelListView";
+import coachlevelEdit from "@/components/level/coachlevel/coachlevelEditView";
+import stafflevelList from "@/components/level/stafflevel/stafflevelListView";
+import stafflevelEdit from "@/components/level/stafflevel/stafflevelEditView";
+import courseList from "@/components/course/courseListView";
+import courseEdit from "@/components/course/courseEditView";
+import coachList from "@/components/person/coach/coachListView";
+import coachEdit from "@/components/person/coach/coachEditView";
+import equipmentList from "@/components/equipment/equipmentListView";
+import equipmentEdit from "@/components/equipment/equipmentEditView";
+import gym_equipmentList from "@/components/gym_equipment/gym_equipmentListView";
+import gym_equipmentEdit from "@/components/gym_equipment/gym_equipmentEditView";
 
 export default {
   name: "Home",
@@ -124,6 +136,18 @@ export default {
     customerlevelEdit,
     customerList,
     customerEdit,
+    coachlevelList,
+    coachlevelEdit,
+    stafflevelList,
+    stafflevelEdit,
+    courseList,
+    courseEdit,
+    coachList,
+    coachEdit,
+    equipmentList,
+    equipmentEdit,
+    gym_equipmentList,
+    gym_equipmentEdit,
   },
   data() {
     return {

@@ -2,8 +2,8 @@
   <div>
     <div>
       <el-row class="listbtnbox">
-        <el-col :span="2" class="listtitle">{{title}}</el-col>
-        <el-col :span="12">&nbsp;</el-col>
+        <el-col :span="3" class="listtitle">{{title}}</el-col>
+        <el-col :span="11">&nbsp;</el-col>
         <el-col :span="2">
           <template>
             <el-button

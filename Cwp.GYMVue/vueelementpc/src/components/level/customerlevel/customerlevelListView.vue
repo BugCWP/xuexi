@@ -11,7 +11,7 @@
 <script>
 import cwplist from "@/components/cwplist/cwplistView";
 export default {
-  name: "streetList",
+  name: "customerlevelList",
   components: {
     "cwp-list": cwplist
   },

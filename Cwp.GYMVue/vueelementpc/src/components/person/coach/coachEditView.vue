@@ -145,13 +145,13 @@
             </el-form-item>
           </el-col>
           <el-col :span="7">
-            <el-form-item label="会员类别" prop="customerlevel">
+            <el-form-item label="教练等级" prop="coachlevel">
               <cwp-lookup
-                :title="customerleveltitle"
-                :controllerName="customerlevelcontrollerName"
-                :inputdata="formData.customerlevelname"
-                :columns="customerlevelcolumns"
-                @lookdata="getcustomerlevelinput"
+                :title="coachleveltitle"
+                :controllerName="coachlevelcontrollerName"
+                :inputdata="formData.coachlevelname"
+                :columns="coachlevelcolumns"
+                @lookdata="getcoachlevelinput"
               ></cwp-lookup>
             </el-form-item>
           </el-col>
@@ -179,15 +179,15 @@
 import cwplookup from "@/components/cwplookup/cwplookupView";
 
 export default {
-  name: "customerEdit",
+  name: "coachEdit",
   components: {
     "cwp-lookup": cwplookup
   },
   data() {
     return {
-      controllerName: "customer",
+      controllerName: "coach",
       routerData: {
-        router: "customerList",
+        router: "coachList",
         id: ""
       },
       formData: {
@@ -233,11 +233,10 @@ export default {
           label: "女"
         }
       ],
-      customerleveltitle: "会员类别",
-      customerlevelcontrollerName: "customerlevel",
-      customerlevelcolumns: [
+      coachleveltitle: "教练等级",
+      coachlevelcontrollerName: "coachlevel",
+      coachlevelcolumns: [
         { prop: "name", label: "名称", sortable: true },
-        { prop: "price", label: "价格", sortable: true },
         { prop: "levelname", label: "等级", sortable: true }
       ],
       dialogFormVisible: false,
@@ -326,9 +325,9 @@ export default {
       this.formData.streetid = data.id;
       this.formData.streetname = data.name;
     },
-    getcustomerlevelinput(data) {
-      this.formData.customerlevelid = data.id;
-      this.formData.customerlevelname = data.name;
+    getcoachlevelinput(data) {
+      this.formData.coachlevelid = data.id;
+      this.formData.coachlevelname = data.name;
     },
     changepassword() {
       if (this.passwordData.password != this.password) {

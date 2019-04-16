@@ -11,24 +11,21 @@
 <script>
 import cwplist from "@/components/cwplist/cwplistView";
 export default {
-  name: "customerList",
+  name: "gym_equipmentList",
   components: {
     "cwp-list": cwplist
   },
   data() {
     return {
-      title: "会员",
-      controllerName: "customer",
+      title: "健身器材",
+      controllerName: "gym_equipment",
       columns: [
-        { prop: "name", label: "姓名", sortable: true },
-        { prop: "age", label: "年龄", sortable: true },
-        { prop: "sex", label: "性别", sortable: true },
-        { prop: "customerlevelname", label: "会员等级", sortable: true },
-        { prop: "phone", label: "电话", sortable: true },
-        { prop: "email", label: "邮箱", sortable: true }
+        { prop: "gymroomname", label: "健身房", sortable: true },
+        { prop: "equipmentname", label: "健身器材", sortable: true },
+        { prop: "amount", label: "数量", sortable: true }
       ],
       routerData: {
-        router: "customerEdit",
+        router: "gym_equipmentEdit",
         id: ""
       }
     };

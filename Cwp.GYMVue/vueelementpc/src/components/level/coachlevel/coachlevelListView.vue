@@ -11,24 +11,21 @@
 <script>
 import cwplist from "@/components/cwplist/cwplistView";
 export default {
-  name: "customerList",
+  name: "coachlevelList",
   components: {
     "cwp-list": cwplist
   },
   data() {
     return {
-      title: "会员",
-      controllerName: "customer",
+      title: "健身教练等级",
+      controllerName: "coachlevel",
       columns: [
-        { prop: "name", label: "姓名", sortable: true },
-        { prop: "age", label: "年龄", sortable: true },
-        { prop: "sex", label: "性别", sortable: true },
-        { prop: "customerlevelname", label: "会员等级", sortable: true },
-        { prop: "phone", label: "电话", sortable: true },
-        { prop: "email", label: "邮箱", sortable: true }
+        { prop: "name", label: "名称", sortable: true },
+        { prop: "levelname", label: "等级", sortable: true },
+        { prop: "remark", label: "介绍", sortable: true }
       ],
       routerData: {
-        router: "customerEdit",
+        router: "coachlevelEdit",
         id: ""
       }
     };

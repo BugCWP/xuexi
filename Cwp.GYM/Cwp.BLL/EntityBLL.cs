@@ -5,8 +5,10 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 namespace Cwp.BLL
 {
@@ -17,10 +19,28 @@ namespace Cwp.BLL
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public dataList<T> GetDataList<T>(string pageIndex, string pageSize, string search)
+        public dataList<T> GetDataList<T>(string pageIndex, string pageSize, string search,string paramList)
             where T:new()
         {
-            dataList<T> dataList = new curdHelp().SelectDataList<T>(new T(), pageIndex, pageSize, search);
+            T t = new T();
+            if (paramList != null)
+            {
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                Dictionary<string, object> jsonDy =(Dictionary<string,object>)serializer.DeserializeObject(paramList);
+                PropertyInfo[] propertys = t.GetType().GetProperties();
+                foreach (var item in propertys)
+                {
+                    foreach (var dy in jsonDy)
+                    {
+                        if (item.Name == dy.Key)
+                        {
+                            Type type = item.PropertyType;
+                            item.SetValue(t,new Guid(dy.Value.ToString()), null);
+                        }
+                    }
+                }
+            }
+            dataList<T> dataList = new curdHelp().SelectDataList<T>(t, pageIndex, pageSize, search);
             return dataList;
         }
 

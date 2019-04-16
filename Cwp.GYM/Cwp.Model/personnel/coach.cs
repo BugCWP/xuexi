@@ -9,8 +9,9 @@ namespace Cwp.Model.personnel
     //教练model
     public class coach:person
     {
-        public Guid personid { get; set; }
-        public Guid coachlevelid { get; set; }
+        public Guid? coachlevelid { get; set; }
+        public string coachlevelname { get; set; }
+        //注册时间
         public string entrytime { get; set; }
     }
 }

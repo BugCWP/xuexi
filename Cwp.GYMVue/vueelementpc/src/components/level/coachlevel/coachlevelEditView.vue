@@ -2,8 +2,8 @@
   <div>
     <div>
       <el-row class="listbtnbox">
-        <el-col :span="2" class="listtitle">会员等级</el-col>
-        <el-col :span="17">&nbsp;</el-col>
+        <el-col :span="3" class="listtitle">健身教练等级</el-col>
+        <el-col :span="16">&nbsp;</el-col>
         <el-col :span="2">
           <template>
             <el-button
@@ -41,19 +41,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="7">
-            <el-form-item label="时长" prop="leveltime">
-              <el-select v-model="formData.leveltime" placeholder="请选择">
-                <el-option
-                  v-for="item in options"
-                  :key="item.value"
-                  :label="item.label"
-                  :value="item.value"
-                ></el-option>
-              </el-select>
-            </el-form-item>
-          </el-col>
-          <el-col :span="7">
-            <el-form-item label="等级" prop="levelname">
+            <el-form-item label="权限等级" prop="levelname">
               <el-select v-model="formData.levelname" placeholder="请选择">
                 <el-option
                   v-for="item in optionslevelname"
@@ -66,14 +54,9 @@
           </el-col>
         </el-row>
         <el-row>
-          <el-col :span="7">
-            <el-form-item label="价格" prop="price">
-              <el-input v-model="formData.price" clearable></el-input>
-            </el-form-item>
-          </el-col>
           <el-col :span="14">
             <el-form-item label="说明" prop="price">
-              <el-input v-model="formData.remark" clearable type="textarea" autosize></el-input>
+              <el-input v-model="formData.remark" clearable type="textarea" autosize :rows="4"></el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -84,57 +67,39 @@
 
 <script>
 export default {
-  name: "customerlevelEdit",
+  name: "coachlevelEdit",
   data() {
     return {
-      controllerName: "customerlevel",
+      controllerName: "coachlevel",
       routerData: {
-        router: "customerlevelList",
+        router: "coachlevelList",
         id: ""
       },
       formData: {
-        name: "",
+        name: ""
       },
       rules: {
         name: [
           { required: true, message: "请输入街道名称", trigger: "change" }
         ],
-        leveltime: [
-          { required: false, message: "请选择时长", trigger: "change" }
-        ],
-        price: [{ required: false, message: "请输入价格", trigger: "change" }],
         levelname: [
           { required: false, message: "请选择等级", trigger: "change" }
         ],
         remark: [{ required: false, message: "请输入介绍", trigger: "change" }]
       },
       editId: "",
-      options: [
-        {
-          value: "30",
-          label: "一个月"
-        },
-        {
-          value: "90",
-          label: "一季"
-        },
-        {
-          value: "180",
-          label: "半年"
-        },
-        {
-          value: "360",
-          label: "一年"
-        }
-      ],
       optionslevelname: [
         {
-          value: "普通会员",
-          label: "普通会员"
+          value: "高级",
+          label: "高级"
         },
         {
-          value: "高级会员",
-          label: "高级会员"
+          value: "中级",
+          label: "中级"
+        },
+        {
+          value: "初级",
+          label: "初级"
         }
       ]
     };
@@ -197,10 +162,6 @@ export default {
       } else {
         return true;
       }
-    },
-    getareainput(data) {
-      this.formData.areaname = data.name;
-      this.formData.areaid = data.id;
     }
   }
 };

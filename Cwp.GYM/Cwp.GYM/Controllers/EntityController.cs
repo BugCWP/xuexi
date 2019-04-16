@@ -24,11 +24,7 @@ namespace Cwp.GYM.Controllers
         [HttpGet]
         public dataList<T> GetDataList(string pageIndex, string pageSize, string search=null, string paramList = null)
         {
-            if (paramList != null)
-            {
-                return null;
-            }
-            return new S().GetDataList<T>(pageIndex, pageSize, search);
+            return new S().GetDataList<T>(pageIndex, pageSize, search,paramList);
         }
 
         /// <summary>

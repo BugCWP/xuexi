@@ -54,7 +54,22 @@ namespace Cwp.Common.SQLCommon
         {
             Dictionary<string, object> modeProperties = ForeachClass.ForeachClassProperties<T>(model);
             Dictionary<string, object> changemodeProperties = ForeachClass.ForeachClassProperties<T>(changemodel);
-            SqlParameter[] sqlparameterlist = new SqlParameter[modeProperties.Count];
+            int count = 0;
+            foreach (var item in modeProperties)
+            {
+                if (item.Value != null)
+                {
+                    count++;
+                }
+            }
+            foreach (var item in changemodeProperties)
+            {
+                if (item.Value != null)
+                {
+                    count++;
+                }
+            }
+            SqlParameter[] sqlparameterlist = new SqlParameter[count];
             int _i = 0;
             foreach (var item in modeProperties)
             {
