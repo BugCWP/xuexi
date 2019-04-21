@@ -9,12 +9,13 @@ namespace Cwp.Model.personnel
     //店员
     public class staff:person
     {
-        public Guid personid { get; set; }
         //职位
-        public Guid stafflevlid { get; set; }
+        public Guid? stafflevelid { get; set; }
+        public string stafflevelname { get; set; }
         //所在健身房
-        public Guid gymid { get; set; }
+        public Guid? gymid { get; set; }
+        public string gymname { get; set; }
         //入职时间
-        public Guid entrytime { get; set; }
+        public string entrytime { get; set; }
     }
 }

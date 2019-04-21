@@ -2,8 +2,19 @@
   <div>
     <div>
       <el-row class="listbtnbox">
-        <el-col :span="2" class="listtitle">健身房</el-col>
-        <el-col :span="17">&nbsp;</el-col>
+        <el-col :span="2" class="listtitle">员工</el-col>
+        <el-col :span="15">&nbsp;</el-col>
+        <el-col :span="2">
+          <template>
+            <el-button
+              type="text"
+              icon="el-icon-edit"
+              class="listbutton"
+              @click="dialogFormVisible=true"
+              v-if="!isEditOrCreate()"
+            >修改密码</el-button>
+          </template>
+        </el-col>
         <el-col :span="2">
           <template>
             <el-button
@@ -36,28 +47,25 @@
         </el-row>
         <el-row>
           <el-col :span="7">
-            <el-form-item label="名称" prop="name">
+            <el-form-item label="姓名" prop="name">
               <el-input v-model="formData.name" clearable></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="7">
-            <el-form-item label="开始营业" prop="sex">
-              <el-time-picker
-                v-model="formData.start_time"
-                :picker-options="{selectableRange: '00:00:00 - 23:59:59'}"
-                placeholder="开始营业时间"
-                value-format="HH:mm"
-              ></el-time-picker>
+            <el-form-item label="性别" prop="sex">
+              <el-select v-model="formData.sex" placeholder="请选择">
+                <el-option
+                  v-for="item in optionssex"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                ></el-option>
+              </el-select>
             </el-form-item>
           </el-col>
           <el-col :span="7">
-            <el-form-item label="结束营业" prop="sex">
-              <el-time-picker
-                v-model="formData.end_time"
-                :picker-options="{selectableRange: '00:00:00 - 23:59:59'}"
-                placeholder="结束营业时间"
-                value-format="HH:mm"
-              ></el-time-picker>
+            <el-form-item label="年龄" prop="age">
+              <el-input v-model="formData.age" clearable></el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -131,9 +139,33 @@
               <el-input v-model="formData.email" clearable></el-input>
             </el-form-item>
           </el-col>
-          <el-col :span="14">
-             <el-form-item label="介绍" prop="remark">
-              <el-input type="textarea" autosize v-model="formData.remark" clearable></el-input>
+          <el-col :span="7">
+            <el-form-item label="账号" prop="accountnumber">
+              <el-input v-model="formData.accountnumber" clearable></el-input>
+            </el-form-item>
+          </el-col>
+          <el-col :span="7">
+            <el-form-item label="员工职位" prop="stafflevel">
+              <cwp-lookup
+                :title="staffleveltitle"
+                :controllerName="stafflevelcontrollerName"
+                :inputdata="formData.stafflevelname"
+                :columns="stafflevelcolumns"
+                @lookdata="getstafflevelinput"
+              ></cwp-lookup>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="7">
+            <el-form-item label="会员类别" prop="gym">
+              <cwp-lookup
+                :title="gymtitle"
+                :controllerName="gymcontrollerName"
+                :inputdata="formData.gymname"
+                :columns="gymcolumns"
+                @lookdata="getgyminput"
+              ></cwp-lookup>
             </el-form-item>
           </el-col>
         </el-row>
@@ -160,15 +192,15 @@
 import cwplookup from "@/components/cwplookup/cwplookupView";
 
 export default {
-  name: "gymEdit",
+  name: "staffEdit",
   components: {
     "cwp-lookup": cwplookup
   },
   data() {
     return {
-      controllerName: "gym",
+      controllerName: "staff",
       routerData: {
-        router: "gymList",
+        router: "staffList",
         id: ""
       },
       formData: {
@@ -214,18 +246,29 @@ export default {
           label: "女"
         }
       ],
-      coachleveltitle: "教练等级",
-      coachlevelcontrollerName: "coachlevel",
-      coachlevelcolumns: [
-        { prop: "name", label: "名称", sortable: true },
-        { prop: "levelname", label: "等级", sortable: true }
+      staffleveltitle: "员工职位",
+      stafflevelcontrollerName: "stafflevel",
+      stafflevelcolumns: [
+        { prop: "name", label: "职位", sortable: true },
+        { prop: "stafflevelname", label: "上级职位", sortable: true },
+        { prop: "wage", label: "工资", sortable: true }
       ],
       dialogFormVisible: false,
       passwordData: {
         password: "",
         id: ""
       },
-      password: ""
+      password: "",
+      gymltitle: "健身房",
+      gymcontrollerName: "gym",
+      gymcolumns: [
+        { prop: "name", label: "名称", sortable: true },
+        { prop: "provincename", label: "省", sortable: true },
+        { prop: "cityname", label: "市", sortable: true },
+        { prop: "areaname", label: "区", sortable: true },
+        { prop: "streetname", label: "街道", sortable: true },
+        { prop: "specificaddress", label: "详细地址", sortable: true }
+      ]
     };
   },
   props: {
@@ -305,6 +348,34 @@ export default {
     getstreetinput(data) {
       this.formData.streetid = data.id;
       this.formData.streetname = data.name;
+    },
+    getstafflevelinput(data) {
+      this.formData.stafflevelid = data.id;
+      this.formData.stafflevelname = data.name;
+    },
+    getgyminput(data) {
+      this.formData.gymid = data.id;
+      this.formData.gymname = data.name;
+    },
+    changepassword() {
+      if (this.passwordData.password != this.password) {
+        this.$message.error("两次输入密码不一致");
+      } else {
+        this.passwordData.id = this.editId;
+        var url = "/api/" + this.controllerName + "/UpdateData";
+        this.$axios
+          .post(url, this.passwordData)
+          .then(resp => {
+            this.$message({
+              message: "修改密码成功",
+              type: "success"
+            });
+            this.goback();
+          })
+          .catch(err => {
+            this.$message.error("修改密码失败");
+          });
+      }
     }
   }
 };
@@ -319,7 +390,7 @@ export default {
 }
 .listbox {
   background-color: white;
-  height: 350px;
+  height: 400px;
   width: 96%;
   margin: 20px;
 }

@@ -51,8 +51,10 @@
     <Compile Include="adress\streetBLL.cs" />
     <Compile Include="EntityBLL.cs" />
     <Compile Include="gym\courseBLL.cs" />
+    <Compile Include="gym\customer_courseBLL.cs" />
     <Compile Include="gym\equipmentBLL.cs" />
     <Compile Include="gym\gymBLL.cs" />
+    <Compile Include="gym\gym_courseBLL.cs" />
     <Compile Include="gym\gym_equipmentBLL.cs" />
     <Compile Include="level\coachlevelBLL.cs" />
     <Compile Include="level\customerlevelBLL.cs" />
@@ -60,6 +62,7 @@
     <Compile Include="person\coachBLL.cs" />
     <Compile Include="person\customerBLL.cs" />
     <Compile Include="person\personBLL.cs" />
+    <Compile Include="person\staffBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

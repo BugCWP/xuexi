@@ -4,6 +4,7 @@
     :controllerName="controllerName"
     :columns="columns"
     :routerData="routerData"
+    :readOnly="true"
     @listionRouter="goEdit"
   ></cwp-list>
 </template>

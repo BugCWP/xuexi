@@ -44,7 +44,7 @@
             <el-menu-item-group>
               <el-menu-item index="customerList">会员</el-menu-item>
               <el-menu-item index="coachList">健身教练</el-menu-item>
-              <el-menu-item index="3-3">员工</el-menu-item>
+              <el-menu-item index="staffList">员工</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
            <el-submenu index="4">
@@ -65,7 +65,7 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="courseList">开设课程</el-menu-item>
-              <el-menu-item index="5-2">课程表</el-menu-item>
+              <el-menu-item index="gym_courseList">课程表</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
           <el-submenu index="6">
@@ -94,6 +94,7 @@
 <script>
 import gymList from "@/components/gym/gymListView";
 import gymEdit from "@/components/gym/gymEditView";
+import gymReadOnly from "@/components/gym/gymReadOnly";
 import provinceList from "@/components/province/provinceListView";
 import provinceEdit from "@/components/province/provinceEditView";
 import cityList from "@/components/city/cityListView";
@@ -106,6 +107,7 @@ import customerlevelList from "@/components/level/customerlevel/customerlevelLis
 import customerlevelEdit from "@/components/level/customerlevel/customerlevelEditView";
 import customerList from "@/components/person/customer/customerListView";
 import customerEdit from "@/components/person/customer/customerEditView";
+import customerReadOnly from "@/components/person/customer/customerReadOnly";
 import coachlevelList from "@/components/level/coachlevel/coachlevelListView";
 import coachlevelEdit from "@/components/level/coachlevel/coachlevelEditView";
 import stafflevelList from "@/components/level/stafflevel/stafflevelListView";
@@ -114,16 +116,23 @@ import courseList from "@/components/course/courseListView";
 import courseEdit from "@/components/course/courseEditView";
 import coachList from "@/components/person/coach/coachListView";
 import coachEdit from "@/components/person/coach/coachEditView";
+import coachReadOnly from "@/components/person/coach/coachReadOnly";
 import equipmentList from "@/components/equipment/equipmentListView";
 import equipmentEdit from "@/components/equipment/equipmentEditView";
 import gym_equipmentList from "@/components/gym_equipment/gym_equipmentListView";
 import gym_equipmentEdit from "@/components/gym_equipment/gym_equipmentEditView";
+import staffList from "@/components/person/staff/staffListView";
+import staffEdit from "@/components/person/staff/staffEditView";
+import gym_courseList from "@/components/gym_course/gym_courseListView";
+import gym_courseEdit from "@/components/gym_course/gym_courseEditView";
+import gym_courseReadOnly from "@/components/gym_course/gym_courseReadOnly"
 
 export default {
   name: "Home",
   components: {
     gymList,
     gymEdit,
+    gymReadOnly,
     provinceList,
     provinceEdit,
     cityList,
@@ -136,6 +145,7 @@ export default {
     customerlevelEdit,
     customerList,
     customerEdit,
+    customerReadOnly,
     coachlevelList,
     coachlevelEdit,
     stafflevelList,
@@ -144,10 +154,16 @@ export default {
     courseEdit,
     coachList,
     coachEdit,
+    coachReadOnly,
     equipmentList,
     equipmentEdit,
     gym_equipmentList,
     gym_equipmentEdit,
+    staffList,
+    staffEdit,
+    gym_courseList,
+    gym_courseEdit,
+    gym_courseReadOnly,
   },
   data() {
     return {
@@ -185,7 +201,7 @@ export default {
 }
 .el-aside {
   background-color: #d3dce6;
-  height: 490px;
+  height:100%;
 }
 .el-footer {
   background-color: #b3c0d1;
@@ -205,5 +221,8 @@ export default {
 .changemenubtn{
   font-size: 20px;
   color: white;
+}
+.el-container{
+  height: 100%;
 }
 </style>

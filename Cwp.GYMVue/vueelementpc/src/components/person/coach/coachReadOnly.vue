@@ -2,7 +2,7 @@
   <div>
     <div>
       <el-row class="listbtnbox">
-        <el-col :span="6" class="listtitle">健身房:{{formData.name}}</el-col>
+        <el-col :span="6" class="listtitle">教练:{{formData.name}}</el-col>
         <el-col :span="13">&nbsp;</el-col>
         <el-col :span="2">
           <template>
@@ -22,60 +22,63 @@
           <el-form :model="formData" ref="form" :rules="rules" label-width="120px">
             <el-row>
               <el-col :span="7">
-                <div class="readonlytext">健身房名称:{{formData.name}}</div>
-              </el-col>
-              <el-col :span="7">
-                <div class="readonlytext">开始营业时间：{{formData.start_time}}</div>
-              </el-col>
-              <el-col :span="7">
-                <div class="readonlytext">结束营业时间:{{formData.end_time}}</div>
-              </el-col>
-            </el-row>
-            <el-row>
-              <el-col :span="7">
-                <div class="readonlytext">所在省:{{formData.provincename}}</div>
-              </el-col>
-              <el-col :span="7">
-                <div class="readonlytext">所在市:{{formData.cityname}}</div>
-              </el-col>
-              <el-col :span="7">
-                <div class="readonlytext">所在区:{{formData.areaname}}</div>
-              </el-col>
-            </el-row>
-            <el-row>
-              <el-col :span="7">
-                <div class="readonlytext">所在街道:{{formData.streetname}}</div>
-              </el-col>
-              <el-col :span="7">
-                <div class="readonlytext">详细地址:{{formData.specificaddress}}</div>
+                <div class="readonlytext">姓名:{{formData.name}}</div>
               </el-col>
               <el-col :span="7">
                 <div class="readonlytext">电话:{{formData.phone}}</div>
               </el-col>
+              <el-col :span="7">
+                <div class="readonlytext">邮箱:{{formData.email}}</div>
+              </el-col>
             </el-row>
             <el-row>
               <el-col :span="7">
-                <div class="readonlytext">邮箱:{{formData.email}}</div>
+                <div class="readonlytext">性别:{{formData.sex}}</div>
+              </el-col>
+              <el-col :span="7">
+                <div class="readonlytext">年龄:{{formData.age}}</div>
+              </el-col>
+              <el-col :span="7">
+                <div class="readonlytext">账号:{{formData.accountnumber}}</div>
+              </el-col>
+            </el-row>
+            <el-row>
+              <el-col :span="7">
+                <div class="readonlytext">省地址:{{formData.provincename}}</div>
+              </el-col>
+              <el-col :span="7">
+                <div class="readonlytext">市地址：{{formData.cityname}}</div>
+              </el-col>
+              <el-col :span="7">
+                <div class="readonlytext">区地址:{{formData.areaname}}</div>
+              </el-col>
+            </el-row>
+            <el-row>
+              <el-col :span="7">
+                <div class="readonlytext">街道地址:{{formData.streetname}}</div>
+              </el-col>
+              <el-col :span="7">
+                <div class="readonlytext">详细地址:{{formData.specificaddress}}</div>
+              </el-col>
+            </el-row>
+
+            <el-row>
+              <el-col :span="7">
+                <div class="readonlytext">教练等级:{{formData.coachlevelname}}</div>
               </el-col>
               <el-col :span="7">
                 <div class="readonlytext">注册时间:{{formData.entrytime}}</div>
               </el-col>
             </el-row>
-            <el-row>
-              <el-col :span="7">
-                <div class="readonlytext">介绍:{{formData.remark}}</div>
-              </el-col>
-            </el-row>
           </el-form>
         </el-tab-pane>
-        <el-tab-pane label="器材" name="second">
-          <cwp-list-table :controllerName="gym_equipment" :columns="gym_equipmentcolumns" :paramList="{'gymroomid':editId}" :loaddata="secondload"></cwp-list-table>
-        </el-tab-pane>
-        <el-tab-pane label="职员" name="third">
-             <cwp-list-table :controllerName="staff" :columns="staffcolumns" :paramList="{'gymroomid':editId}" :loaddata="thirdload"></cwp-list-table>
-        </el-tab-pane>
-        <el-tab-pane label="课程" name="fourth">
-             <cwp-list-table :controllerName="course" :columns="coursecolumns" :paramList="{'gymroomid':editId}" :loaddata="fourthload"></cwp-list-table>
+        <el-tab-pane label="参加课程" name="second">
+          <cwp-list-table
+            :controllerName="coursement"
+            :columns="coursecolumns"
+            :paramList="{'coachid':editId}"
+            :loaddata="secondload"
+          ></cwp-list-table>
         </el-tab-pane>
       </el-tabs>
     </div>
@@ -90,13 +93,13 @@ export default {
   },
   data() {
     return {
-      controllerName: "gym",
+      controllerName: "coach",
       routerData: {
-        router: "gymEdit",
+        router: "coachEdit",
         id: ""
       },
       routerDataList: {
-        router: "gymList",
+        router: "coachList",
         id: ""
       },
       editId: "",
@@ -104,30 +107,17 @@ export default {
         name: ""
       },
       activeName: "first",
-      gym_equipment: "gym_equipment",
-      gym_equipmentcolumns: [
-        { prop: "gymroomname", label: "健身房", sortable: true },
-        { prop: "equipmentname", label: "健身器材", sortable: true },
-        { prop: "amount", label: "数量", sortable: true }
-      ],
-      secondload:false,
-      staff:"staff",
-      staffcolumns: [
-        { prop: "name", label: "姓名", sortable: true },
-        { prop: "gymname", label: "健身房", sortable: true },
-        { prop: "stafflevelname", label: "职位", sortable: true }
-      ],
-      thirdload:false,
-      course:"gym_course",
+      coursement: "gym_course",
       coursecolumns: [
         { prop: "coursename", label: "课程名", sortable: true },
+        { prop: "gymname", label: "健身房", sortable: true },
         { prop: "coachname", label: "教练", sortable: true },
         { prop: "startstatus", label: "课程状态", sortable: true },
-        { prop: "starttime", label: "开始时间", sortable: true },
-        { prop: "duration", label: "时长", sortable: true },
-        { prop: "amount", label: "人数", sortable: true },
+        { prop: "starttime", label: "开课时间", sortable: true,type:"datetime" },
+        { prop: "duration", label: "时长(分)", sortable: true },
+        { prop: "amount", label: "人数", sortable: true }
       ],
-      fourthload:false,
+      secondload: false
     };
   },
   props: {
@@ -138,10 +128,10 @@ export default {
     this.isEdit();
   },
   methods: {
-   async isEdit() {
+    async isEdit() {
       if (this.editId != null && this.editId != "") {
         var url = "/api/" + this.controllerName + "/GetData?id=" + this.editId;
-       await this.$axios
+        await this.$axios
           .get(url)
           .then(resp => {
             this.formData = resp.data;
@@ -156,22 +146,12 @@ export default {
     goback() {
       this.$emit("listionRouter", this.routerDataList);
     },
-    handleClick(data){
-        if(data.name=="second"){
-            this.secondload=true;
-        }else{
-            this.secondload=false;
-        }
-        if(data.name=="third"){
-            this.thirdload=true;
-        }else{
-            this.thirdload=false;
-        }
-        if(data.name=="fourth"){
-            this.fourthload=true;
-        }else{
-            this.fourthload=false;
-        }
+    handleClick(data) {
+      if (data.name == "second") {
+        this.secondload = true;
+      } else {
+        this.secondload = false;
+      }
     }
   }
 };
@@ -203,7 +183,7 @@ export default {
 .readonlytext {
   padding-top: 20px;
 }
-.cwp-list-table{
-    padding: 0;
+.cwp-list-table {
+  padding: 0;
 }
 </style>

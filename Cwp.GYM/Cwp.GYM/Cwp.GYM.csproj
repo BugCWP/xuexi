@@ -107,12 +107,16 @@
     <Compile Include="Controllers\courseController.cs" />
     <Compile Include="Controllers\customerController.cs" />
     <Compile Include="Controllers\customerlevelController.cs" />
+    <Compile Include="Controllers\customer_courseController.cs" />
     <Compile Include="Controllers\EntityController.cs" />
     <Compile Include="Controllers\equipmentController.cs" />
     <Compile Include="Controllers\gymController.cs" />
+    <Compile Include="Controllers\gym_courseController.cs" />
     <Compile Include="Controllers\gym_equipmentController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\provinceController.cs" />
+    <Compile Include="Controllers\registerController.cs" />
+    <Compile Include="Controllers\staffController.cs" />
     <Compile Include="Controllers\stafflevelController.cs" />
     <Compile Include="Controllers\streetController.cs" />
     <Compile Include="Global.asax.cs">

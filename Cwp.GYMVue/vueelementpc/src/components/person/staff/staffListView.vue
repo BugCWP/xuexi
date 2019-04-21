@@ -4,7 +4,6 @@
     :controllerName="controllerName"
     :columns="columns"
     :routerData="routerData"
-    :readOnly="true"
     @listionRouter="goEdit"
   ></cwp-list>
 </template>
@@ -12,24 +11,24 @@
 <script>
 import cwplist from "@/components/cwplist/cwplistView";
 export default {
-  name: "customerList",
+  name: "staffList",
   components: {
     "cwp-list": cwplist
   },
   data() {
     return {
-      title: "会员",
-      controllerName: "customer",
+      title: "员工",
+      controllerName: "staff",
       columns: [
         { prop: "name", label: "姓名", sortable: true },
         { prop: "age", label: "年龄", sortable: true },
         { prop: "sex", label: "性别", sortable: true },
-        { prop: "customerlevelname", label: "会员等级", sortable: true },
-        { prop: "phone", label: "电话", sortable: true },
-        { prop: "email", label: "邮箱", sortable: true }
+        { prop: "gymname", label: "健身房", sortable: true },
+        { prop: "stafflevelname", label: "职位", sortable: true },
+        { prop: "phone", label: "电话", sortable: true }
       ],
       routerData: {
-        router: "customerEdit",
+        router: "staffEdit",
         id: ""
       }
     };

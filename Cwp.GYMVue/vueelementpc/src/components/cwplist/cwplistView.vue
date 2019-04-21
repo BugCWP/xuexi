@@ -54,7 +54,14 @@
               :label="column.label"
               :width="column.width?column.width:''"
               :sortable="column.sortable ? 'custom' : false"
-            ></el-table-column>
+            >
+              <template slot-scope="scope">
+                <template
+                  v-if="column.type==='datetime'"
+                >{{scope.row[column.prop]|moment('YYYY-MM-DD HH:mm')}}</template>
+                <template v-else>{{scope.row[column.prop]}}</template>
+              </template>
+            </el-table-column>
           </el-table>
         </el-col>
       </el-row>
@@ -103,8 +110,12 @@ export default {
     title: {
       type: String
     },
-    routerData:{
-        type:Object
+    routerData: {
+      type: Object
+    },
+    readOnly: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -136,8 +147,14 @@ export default {
       this.$emit("listionRouter", this.routerData);
     },
     goEdit(data) {
-      this.routerData.id = data.id;
-      this.$emit("listionRouter", this.routerData);
+      if (this.readOnly) {
+        this.routerData.router = this.controllerName + "ReadOnly";
+        this.routerData.id = data.id;
+        this.$emit("listionRouter", this.routerData);
+      } else {
+        this.routerData.id = data.id;
+        this.$emit("listionRouter", this.routerData);
+      }
     },
     loadData() {
       this.loading = true;
