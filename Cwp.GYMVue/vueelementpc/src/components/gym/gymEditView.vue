@@ -3,7 +3,10 @@
     <div>
       <el-row class="listbtnbox">
         <el-col :span="2" class="listtitle">健身房</el-col>
-        <el-col :span="17">&nbsp;</el-col>
+        <el-col :span="15">&nbsp;</el-col>
+        <el-col :span="2">
+          <cwp-img-upload v-show="editId!=''"></cwp-img-upload>
+        </el-col>
         <el-col :span="2">
           <template>
             <el-button
@@ -132,7 +135,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="14">
-             <el-form-item label="介绍" prop="remark">
+            <el-form-item label="介绍" prop="remark">
               <el-input type="textarea" autosize v-model="formData.remark" clearable></el-input>
             </el-form-item>
           </el-col>
@@ -158,11 +161,13 @@
 
 <script>
 import cwplookup from "@/components/cwplookup/cwplookupView";
+import cwpimgupload from "@/components/cwpimg/cwpImgUpload";
 
 export default {
   name: "gymEdit",
   components: {
-    "cwp-lookup": cwplookup
+    "cwp-lookup": cwplookup,
+    "cwp-img-upload": cwpimgupload
   },
   data() {
     return {

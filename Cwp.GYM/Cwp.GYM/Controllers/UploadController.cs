@@ -12,21 +12,21 @@ namespace Cwp.GYM.Controllers
 {
     public class UploadController : ApiController
     {
-        [HttpPost]
-        [Route("api/Upload/ImgUpload")]
-        public Task<Hashtable> ImgUpload()
-        {
-            //检查是否是 multipart/form-data
-            if (!Request.Content.IsMimeMultipartContent("form-data"))
-            {
-                throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
-            }
+        //[HttpPost]
+        //[Route("api/Upload/ImgUpload")]
+        //public Task<Hashtable> ImgUpload()
+        //{
+        //    //检查是否是 multipart/form-data
+        //    if (!Request.Content.IsMimeMultipartContent("form-data"))
+        //    {
+        //        throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
+        //    }
 
-            //文件保存目录
-            const string saveTempPath = "~/UploadFiles/";
-            var dirTempPath = HttpContext.Current.Server.MapPath(saveTempPath);
+        //    //文件保存目录
+        //    const string saveTempPath = "~/UploadFiles/";
+        //    var dirTempPath = HttpContext.Current.Server.MapPath(saveTempPath);
 
 
-        }
+        //}
     }
 }

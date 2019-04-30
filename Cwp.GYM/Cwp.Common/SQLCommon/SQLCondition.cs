@@ -24,7 +24,7 @@ namespace Cwp.Common.SQLCommon
             StringBuilder sqlstring = new StringBuilder();
             foreach (var item in modeProperties)
             {
-                if (item.Value != null&&item.Value!="")
+                if (item.Value != null&&item.Value.ToString()!="")
                 {
                     string sql = " and " + item.Key + "=@" + item.Key;
                     sqlstring.Append(sql);

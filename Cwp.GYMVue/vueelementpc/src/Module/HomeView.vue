@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header height="80px">
+    <el-header height="60px">
       <el-row>
         <el-col :span="3" class="headLogo">
           GYM
@@ -197,7 +197,7 @@ export default {
 <style>
 .el-header {
   background-color: slategray;
-  line-height: 100px;
+  line-height: 60px;
 }
 .el-aside {
   background-color: #d3dce6;
