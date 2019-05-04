@@ -48,6 +48,7 @@
     <Compile Include="ClassCommon\ChangeToClass.cs" />
     <Compile Include="ClassCommon\ForeachClass.cs" />
     <Compile Include="CodeCommon\Base64.cs" />
+    <Compile Include="CodeCommon\MyTool.cs" />
     <Compile Include="CodeCommon\RegularExpressionsCommon.cs" />
     <Compile Include="CodeCommon\UtilCommon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

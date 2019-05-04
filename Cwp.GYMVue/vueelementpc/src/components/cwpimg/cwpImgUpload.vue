@@ -15,6 +15,7 @@
         :on-preview="handlePictureCardPreview"
         :on-remove="handleRemove"
         :file-list="fileList"
+        :data="uploadImgData"
       >
         <i class="el-icon-plus"></i>
       </el-upload>
@@ -35,10 +36,14 @@ export default {
     return {
       dialogshow: false,
       dialogVisible: false,
-      updateurl:"http://localhost:50379/ashx/"+"imgupdate.ashx",
+      controllerName:"picturepath",
+      updateurl: "http://localhost:50379/ashx/" + "imgupdate.ashx",
       fileList: [],
       dialogImageUrl: "",
-      headers:[{'Access-Control-Allow-Origin': '*'}]
+      headers: [{ "Access-Control-Allow-Origin": "*" }],
+      uploadImgData: {
+        data: ""
+      }
     };
   },
   props: {
@@ -54,12 +59,21 @@ export default {
       type: String,
       default: ""
     },
-    imgcode: {
-      type: String,
-      default: ""
+    paramList: {
+      type: Object,
+      default: () => null
+    },
+    imgcode:{
+      type:String,
+      default:""
     }
   },
-  mounted() {},
+  mounted() {
+    this.getImgPath();
+    if (imgcode != "") {
+      this.uploadImgData.data = this.imgcode;
+    }
+  },
   methods: {
     dialogVisiblechange() {
       if (this.dialogshow) {
@@ -79,6 +93,23 @@ export default {
     },
     handlePictureCardPreview(file) {
       console.log(file);
+    },
+    async getImgPath() {
+      var url =
+        "/api/" +
+        this.controllerName +
+        "/GetDataList? ";
+      if (this.params != null) {
+        url = url + "&paramList=" + JSON.stringify(this.params);
+          await this.$axios
+          .get(url)
+          .then(resp => {
+          
+          })
+          .catch(err => {
+         
+          });
+      }
     }
   }
 };

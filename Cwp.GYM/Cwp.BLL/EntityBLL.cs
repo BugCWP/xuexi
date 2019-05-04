@@ -45,6 +45,36 @@ namespace Cwp.BLL
         }
 
         /// <summary>
+        /// 获取列表页信息
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public List<T> GetDataList<T>(string paramList)
+            where T : new()
+        {
+            T t = new T();
+            if (paramList != null)
+            {
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                Dictionary<string, object> jsonDy = (Dictionary<string, object>)serializer.DeserializeObject(paramList);
+                PropertyInfo[] propertys = t.GetType().GetProperties();
+                foreach (var item in propertys)
+                {
+                    foreach (var dy in jsonDy)
+                    {
+                        if (item.Name == dy.Key)
+                        {
+                            Type type = item.PropertyType;
+                            item.SetValue(t, new Guid(dy.Value.ToString()), null);
+                        }
+                    }
+                }
+            }
+            List<T> dataList = new curdHelp().SelectDataList<T>(t);
+            return dataList;
+        }
+
+        /// <summary>
         /// 新建数据
         /// </summary>
         /// <typeparam name="T"></typeparam>

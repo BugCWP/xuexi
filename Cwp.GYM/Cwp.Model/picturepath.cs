@@ -10,6 +10,7 @@ namespace Cwp.Model
     {
         public Guid id { get; set; }
         public Guid code { get; set; }
-        public string picture { get; set; }
+        public string name { get; set; }
+        public string path { get; set; }
     }
 }

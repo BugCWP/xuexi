@@ -28,6 +28,18 @@ namespace Cwp.GYM.Controllers
         }
 
         /// <summary>
+        /// 获取列表api
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public List<T> GetDataList(string search = null, string paramList = null)
+        {
+            return new S().GetDataList<T>(paramList);
+        }
+
+        /// <summary>
         /// 新建数据api
         /// </summary>
         /// <param name="model"></param>

@@ -5,7 +5,11 @@
         <el-col :span="2" class="listtitle">健身房</el-col>
         <el-col :span="15">&nbsp;</el-col>
         <el-col :span="2">
-          <cwp-img-upload v-show="editId!=''"></cwp-img-upload>
+          <cwp-img-upload
+            v-show="editId!=''"
+            :paramList="{'code':formData.code}"
+            :imgcode="formData.code"
+          ></cwp-img-upload>
         </el-col>
         <el-col :span="2">
           <template>
