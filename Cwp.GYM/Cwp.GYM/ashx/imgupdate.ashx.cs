@@ -1,4 +1,6 @@
-﻿using Cwp.Common.CodeCommon;
+﻿using Cwp.BLL;
+using Cwp.Common.CodeCommon;
+using Cwp.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,14 +21,19 @@ namespace Cwp.GYM.ashx
             context.Response.ContentType = "text/plain";
             var pfile = context.Request.Files["file"];
             string imgBaseStr = "";
+            var data = context.Request.Form["data"];
             MyTool mytool = new MyTool();
             if (pfile != null)
             {
-                //    imgBaseStr = new Base64().ImgToBase64String(pfile.FileName);
                 string newfilename = mytool.GetMD5(pfile.InputStream) + Path.GetExtension(pfile.FileName);
                 string newpath = context.Request.MapPath("/images/") + DateTime.Now.ToString("yyyyMMdd");
                 mytool.CreateDirectory(newpath);
                 string path = Path.Combine(newpath, newfilename);
+                picturepath pp = new picturepath();
+                pp.name = newfilename;
+                pp.path = path;
+                pp.code =new Guid(data.Replace("\"",""));
+                string result = new picturepathBLL().CreateData<picturepath>(pp);
                 pfile.SaveAs(path);
             }
             context.Response.Write(imgBaseStr);

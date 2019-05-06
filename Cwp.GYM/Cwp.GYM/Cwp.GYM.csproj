@@ -100,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ashx\imgdown.ashx.cs">
+      <DependentUpon>imgdown.ashx</DependentUpon>
+    </Compile>
     <Compile Include="ashx\imgupdate.ashx.cs">
       <DependentUpon>imgupdate.ashx</DependentUpon>
     </Compile>
@@ -117,6 +120,7 @@
     <Compile Include="Controllers\gym_courseController.cs" />
     <Compile Include="Controllers\gym_equipmentController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\picturepathController.cs" />
     <Compile Include="Controllers\provinceController.cs" />
     <Compile Include="Controllers\registerController.cs" />
     <Compile Include="Controllers\staffController.cs" />
@@ -129,6 +133,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ashx\imgupdate.ashx" />
+    <Content Include="ashx\imgdown.ashx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

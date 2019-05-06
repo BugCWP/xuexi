@@ -4,6 +4,7 @@ import Login from "@/Module/LoginView";
 import Home from "@/Module/HomeView";
 import Register from "@/Module/RegisterView";
 import gymList from "@/components/gym/gymListView";
+import gymhome from "@/Module/GymHomeView";
 
 Vue.use(Router);
 
@@ -37,6 +38,11 @@ export default new Router({
       path: '/gymList/edit/:id?',
       name: 'gymEdit',
       component: () => import('@/components/gym/gymEditView')
+    },
+    {
+      path:'/gymhome',
+      name:'gymHome',
+      component:gymhome
     }
   ]
 });

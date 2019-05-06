@@ -7,8 +7,8 @@
         <el-col :span="2">
           <cwp-img-upload
             v-show="editId!=''"
-            :paramList="{'code':formData.code}"
-            :imgcode="formData.code"
+            :ThingcontrollerName="controllerName"
+            :Thingid="editId"
           ></cwp-img-upload>
         </el-col>
         <el-col :span="2">

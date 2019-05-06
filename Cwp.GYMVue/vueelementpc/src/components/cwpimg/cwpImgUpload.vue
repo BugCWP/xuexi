@@ -36,14 +36,21 @@ export default {
     return {
       dialogshow: false,
       dialogVisible: false,
-      controllerName:"picturepath",
+      controllerName: "picturepath",
       updateurl: "http://localhost:50379/ashx/" + "imgupdate.ashx",
-      fileList: [],
+      fileList: [
+        {
+          name:"111",
+          url:"D:\\MyFile\\picture\\e5c6b11a06c94e0da7fe6252b9a48916.jpeg"
+        }
+      ],
       dialogImageUrl: "",
       headers: [{ "Access-Control-Allow-Origin": "*" }],
       uploadImgData: {
         data: ""
-      }
+      },
+      formData: {},
+      paramList: []
     };
   },
   props: {
@@ -55,24 +62,17 @@ export default {
       type: String,
       default: "50%"
     },
-    controllerName: {
+    ThingcontrollerName: {
       type: String,
       default: ""
     },
-    paramList: {
-      type: Object,
-      default: () => null
-    },
-    imgcode:{
-      type:String,
-      default:""
+    Thingid: {
+      type: String,
+      default: ""
     }
   },
   mounted() {
-    this.getImgPath();
-    if (imgcode != "") {
-      this.uploadImgData.data = this.imgcode;
-    }
+    this.getFoemData();
   },
   methods: {
     dialogVisiblechange() {
@@ -94,21 +94,36 @@ export default {
     handlePictureCardPreview(file) {
       console.log(file);
     },
-    async getImgPath() {
-      var url =
-        "/api/" +
-        this.controllerName +
-        "/GetDataList? ";
-      if (this.params != null) {
-        url = url + "&paramList=" + JSON.stringify(this.params);
-          await this.$axios
+    getFoemData() {
+      var that = this;
+      if (this.Thingid != null && this.Thingid != "") {
+        var url =
+          "/api/" + this.ThingcontrollerName + "/GetData?id=" + this.Thingid;
+        this.$axios
           .get(url)
           .then(resp => {
-          
+            that.formData = resp.data;
+            that.uploadImgData.data = JSON.stringify(that.formData.code);
+            that.getImgPath();
           })
-          .catch(err => {
-         
-          });
+          .catch();
+      }
+    },
+    getImgPath() {
+      var that = this;
+      var url = "/api/" + this.controllerName + "/GetDataList? ";
+      if (this.formData != null) {
+        this.paramList=[];
+        this.paramList.push({'code':this.formData.code});
+        url = url + " paramList=" + JSON.stringify(this.paramList);
+        this.$axios
+          .get(url)
+          .then(resp => {
+            for (var i = 0; i < resp.length; i++) {
+              that.fileList.push({ name: resp[i].name, url: resp[i].path });
+            }
+          })
+          .catch(err => {});
       }
     }
   }

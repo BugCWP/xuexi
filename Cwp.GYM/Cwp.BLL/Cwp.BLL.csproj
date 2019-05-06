@@ -63,6 +63,7 @@
     <Compile Include="person\customerBLL.cs" />
     <Compile Include="person\personBLL.cs" />
     <Compile Include="person\staffBLL.cs" />
+    <Compile Include="picturepathBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
