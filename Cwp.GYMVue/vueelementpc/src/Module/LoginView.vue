@@ -12,8 +12,8 @@
         </el-row>
         <el-row>
           <el-col :span="18">
-            <el-form-item label="账号" prop="accountNumber">
-              <el-input placeholder="Please input Username" v-model="form.accountNumber"></el-input>
+            <el-form-item label="账号" prop="account">
+              <el-input placeholder="Please input Username" v-model="form.account"></el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -36,14 +36,11 @@
           </el-col>
         </el-row>
         <el-row>
-          <el-col :span="8">
+          <el-col :span="14">
             <div>&nbsp;</div>
           </el-col>
           <el-col :span="6">
             <el-button type="primary" @click="userLogin">登陆</el-button>
-          </el-col>
-          <el-col :span="2">
-            <el-button @click="goRegistered">注册</el-button>
           </el-col>
         </el-row>
       </el-form>
@@ -58,14 +55,12 @@ export default {
   data() {
     return {
       form: {
-        accountNumber: "",
+        account: "",
         password: ""
       },
       remumberPass: false,
       rules: {
-        accountNumber: [
-          { required: true, message: "账号不能为空", trigger: "blur" }
-        ],
+        account: [{ required: true, message: "账号不能为空", trigger: "blur" }],
         password: [{ required: true, message: "密码不能为空", trigger: "blur" }]
       }
     };
@@ -73,17 +68,23 @@ export default {
   methods: {
     userLogin() {
       let url = "http://localhost:50379/api/Login/personLogin";
-      let data = this.$qs.stringify({
-        account: this.form.accountNumber,
-        password: this.form.password
-      });
+      var that = this;
       this.$axios
-        .post(url, data)
+        .post(url, this.form)
         .then(function(response) {
-          console.log(response);
+          if (response.data == "success") {
+            that.$router.push({
+              name: "gymHome",
+              query: {
+                id: that.form.account
+              }
+            });
+          } else {
+            that.$message.error("登陆失败，请输入正确的账号与密码");
+          }
         })
         .catch(function(error) {
-          console.log(error);
+          that.$message.error("登陆失败，请输入正确的账号与密码");
         });
     },
     goRegistered() {

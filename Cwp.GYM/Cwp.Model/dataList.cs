@@ -8,7 +8,7 @@ namespace Cwp.Model
 {
     public class dataList<T>
     {
-       public IEnumerable<T> list { get; set; }
+       public IList<T> list { get; set; }
        public string pageCount { get; set; }
        public string Count { get; set; }
     }

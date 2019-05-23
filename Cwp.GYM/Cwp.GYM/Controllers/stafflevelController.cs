@@ -1,4 +1,5 @@
 ﻿using Cwp.BLL.level;
+using Cwp.Model;
 using Cwp.Model.level;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,6 @@ namespace Cwp.GYM.Controllers
 {
     public class stafflevelController : EntityController<stafflevel,stafflevelBLL>
     {
-       
+        
     }
 }

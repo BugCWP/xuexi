@@ -14,6 +14,7 @@ namespace Cwp.BLL
 {
     public class EntityBLL<T>
     {
+
         /// <summary>
         /// 获取列表页信息
         /// </summary>
@@ -73,7 +74,18 @@ namespace Cwp.BLL
             List<T> dataList = new curdHelp().SelectDataList<T>(t);
             return dataList;
         }
-
+        /// <summary>
+        /// 获取所有列表信息
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public List<T> GetDataAllList<T>()
+            where T:new()
+        {
+            T t = new T();
+            List<T> dataList = new curdHelp().SelectDataList<T>(t);
+            return dataList;
+        }
         /// <summary>
         /// 新建数据
         /// </summary>
@@ -109,6 +121,11 @@ namespace Cwp.BLL
         {
             T t = new T();
             return new curdHelp().SelectData<T>(id);
+        }
+        public T GetData<T>(T fromData)
+            where T:new()
+        {
+            return new curdHelp().SelectData<T>(fromData);
         }
 
         /// <summary>

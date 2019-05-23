@@ -19,7 +19,7 @@ namespace Cwp.BLL.person
             string result = "";
             if (passwordSQL==password)
             {
-                
+                result = "success";
             }
             return result;
         }

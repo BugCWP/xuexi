@@ -10,11 +10,13 @@ namespace Cwp.DAL
 {
     public class sqlHelp
     {
-        public static string connstring = "Data Source=DESKTOP-U3PTEKD\\SQLEXPRESS;Initial Catalog=GYM;Persist Security Info=True;User ID=sa;Password=p@ssw0rd";
-        public static SqlConnection con = new SqlConnection(connstring);
+        //public static string connstring = "Data Source=DESKTOP-U3PTEKD\\SQLEXPRESS;Initial Catalog=GYM;Persist Security Info=True;User ID=sa;Password=p@ssw0rd";
+        //public static SqlConnection con = new SqlConnection(connstring);
 
         public static int ExecuteNonQuery(string sql, SqlParameter[] ps)
         {
+            string connstring = "Data Source=DESKTOP-U3PTEKD\\SQLEXPRESS;Initial Catalog=GYM;Persist Security Info=True;User ID=sa;Password=p@ssw0rd";
+            SqlConnection con = new SqlConnection(connstring);
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
@@ -28,6 +30,8 @@ namespace Cwp.DAL
 
         public static SqlDataReader ExecuteReader(string sql, SqlParameter[] ps)
         {
+            string connstring = "Data Source=DESKTOP-U3PTEKD\\SQLEXPRESS;Initial Catalog=GYM;Persist Security Info=True;User ID=sa;Password=p@ssw0rd";
+            SqlConnection con = new SqlConnection(connstring);
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
@@ -41,6 +45,8 @@ namespace Cwp.DAL
 
         public static object ExecuteScalar(string sql, SqlParameter[] ps)
         {
+            string connstring = "Data Source=DESKTOP-U3PTEKD\\SQLEXPRESS;Initial Catalog=GYM;Persist Security Info=True;User ID=sa;Password=p@ssw0rd";
+            SqlConnection con = new SqlConnection(connstring);
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
@@ -54,6 +60,8 @@ namespace Cwp.DAL
 
         public static object ExecuteScalar(string sql)
         {
+            string connstring = "Data Source=DESKTOP-U3PTEKD\\SQLEXPRESS;Initial Catalog=GYM;Persist Security Info=True;User ID=sa;Password=p@ssw0rd";
+            SqlConnection con = new SqlConnection(connstring);
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
@@ -66,21 +74,36 @@ namespace Cwp.DAL
 
         public static DataTable getDatable(string sql, SqlParameter[] ps)
         {
-            SqlDataAdapter sda = new SqlDataAdapter(sql, con);
-            sda.SelectCommand.Parameters.AddRange(ps);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-
-            return dt;
+            string connstring = "Data Source=DESKTOP-U3PTEKD\\SQLEXPRESS;Initial Catalog=GYM;Persist Security Info=True;User ID=sa;Password=p@ssw0rd";
+            SqlConnection con = new SqlConnection(connstring);
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter(sql, con);
+                sda.SelectCommand.Parameters.AddRange(ps);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                return dt;
+            }
+            catch (Exception e)
+            {
+                throw (e);
+            }
         }
         public static DataTable getDatable(string sql)
         {
-
-            SqlDataAdapter sda = new SqlDataAdapter(sql, con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-
-            return dt;
+            string connstring = "Data Source=DESKTOP-U3PTEKD\\SQLEXPRESS;Initial Catalog=GYM;Persist Security Info=True;User ID=sa;Password=p@ssw0rd";
+            SqlConnection con = new SqlConnection(connstring);
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter(sql, con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                return dt;
+            }
+            catch (Exception e)
+            {
+                throw (e);
+            }
         }
     }
 }

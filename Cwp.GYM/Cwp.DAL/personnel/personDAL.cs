@@ -17,9 +17,9 @@ namespace Cwp.DAL.personnel
         /// <returns></returns>
         public string SelectPassword(string account)
         {
-            person model = new person();
+            staff model = new staff();
             model.accountnumber = account;
-            person p = new curdHelp().SelectData<person>(model);
+            staff p = new curdHelp().SelectData<staff>(model);
             if (p != null)
             {
                 return p.password;

@@ -27,6 +27,11 @@
                 <template v-else>{{scope.row[column.prop]}}</template>
               </template>
             </el-table-column>
+            <el-table-column fixed="right" label="操作" width="100" v-if="btnagree">
+              <template slot-scope="scope">
+                <el-button type="success" @click="handleClick(scope.row)">同意</el-button>
+              </template>
+            </el-table-column>
           </el-table>
         </el-col>
       </el-row>
@@ -67,6 +72,10 @@ export default {
     loaddata: {
       type: Boolean,
       default: false
+    },
+    btnagree:{
+      type:Boolean,
+      default:false
     }
   },
   data() {
@@ -111,8 +120,8 @@ export default {
       }
     }
   },
-  watch:{
-      'loaddata':'loadData',
+  watch: {
+    loaddata: "loadData"
   }
 };
 </script>

@@ -1,4 +1,5 @@
 ﻿using Cwp.BLL.person;
+using Cwp.Model.personnel;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,9 @@ namespace Cwp.GYM.Controllers
     {
         //登录验证
         [HttpPost]
-        public string  personLogin([FromBody]JObject obj)
+        public string  personLogin([FromBody]loginModel obj)
         {
-            return new personBLL().personLogin(obj["account"].ToString(), obj["password"].ToString());
+            return new personBLL().personLogin(obj.account, obj.password);
         }
     }
 }

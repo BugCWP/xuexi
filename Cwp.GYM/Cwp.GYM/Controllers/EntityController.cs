@@ -22,9 +22,9 @@ namespace Cwp.GYM.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpGet]
-        public dataList<T> GetDataList(string pageIndex, string pageSize, string search=null, string paramList = null)
+        public dataList<T> GetDataList(string pageIndex, string pageSize, string search = null, string paramList = null)
         {
-            return new S().GetDataList<T>(pageIndex, pageSize, search,paramList);
+            return new S().GetDataList<T>(pageIndex, pageSize, search, paramList);
         }
 
         /// <summary>
@@ -37,6 +37,16 @@ namespace Cwp.GYM.Controllers
         public List<T> GetDataList(string search = null, string paramList = null)
         {
             return new S().GetDataList<T>(paramList);
+        }
+
+        /// <summary>
+        /// 获取所有列表值
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public List<T> GetDataAllList()
+        {
+            return new S().GetDataAllList<T>();
         }
 
         /// <summary>
@@ -72,6 +82,11 @@ namespace Cwp.GYM.Controllers
         public T GetData(string id)
         {
             return new S().GetData<T>(id);
+        }
+        [HttpPost]
+        public T GetData([FromBody]T fromData)
+        {
+            return new S().GetData<T>(fromData);
         }
 
         /// <summary>
