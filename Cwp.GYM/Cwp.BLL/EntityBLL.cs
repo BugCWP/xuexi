@@ -20,7 +20,7 @@ namespace Cwp.BLL
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public dataList<T> GetDataList<T>(string pageIndex, string pageSize, string search,string paramList)
+        public virtual dataList<T> GetDataList<T>(string pageIndex, string pageSize, string search,string paramList)
             where T:new()
         {
             T t = new T();
@@ -50,7 +50,7 @@ namespace Cwp.BLL
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public List<T> GetDataList<T>(string paramList)
+        public virtual List<T> GetDataList<T>(string paramList)
             where T : new()
         {
             T t = new T();
@@ -79,7 +79,7 @@ namespace Cwp.BLL
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public List<T> GetDataAllList<T>()
+        public virtual List<T> GetDataAllList<T>()
             where T:new()
         {
             T t = new T();
@@ -92,7 +92,7 @@ namespace Cwp.BLL
         /// <typeparam name="T"></typeparam>
         /// <param name="model"></param>
         /// <returns></returns>
-        public string CreateData<T>(T model)
+        public virtual string CreateData<T>(T model)
         {
            int resut= new curdHelp().CreateData<T>(model);
             return resut.ToString();
@@ -103,11 +103,18 @@ namespace Cwp.BLL
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public string DeleteData<T>(JObject jObject)
+        public virtual string DeleteData<T>(JObject jObject)
             where T:new()
         {
             List<T> modelList = ChangeToClass.JObjectToClass<T>(jObject);
             int resut = new curdHelp().DeleteDataList<T>(modelList);
+            return resut.ToString();
+        }
+
+        public virtual string DeleteData<T>(T model)
+           where T : new()
+        {
+            int resut = new curdHelp().DeleteData<T>(model);
             return resut.ToString();
         }
 
@@ -116,13 +123,13 @@ namespace Cwp.BLL
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public T GetData<T>(string id)
+        public virtual T GetData<T>(string id)
             where T:new()
         {
             T t = new T();
             return new curdHelp().SelectData<T>(id);
         }
-        public T GetData<T>(T fromData)
+        public virtual T GetData<T>(T fromData)
             where T:new()
         {
             return new curdHelp().SelectData<T>(fromData);
@@ -133,7 +140,7 @@ namespace Cwp.BLL
         /// </summary>
         /// <param name="fromData"></param>
         /// <returns></returns>
-        public string UpdateData<T>(T fromData)
+        public virtual string UpdateData<T>(T fromData)
             where T:new()
         {
             return new curdHelp().UpdateData<T>(fromData).ToString();

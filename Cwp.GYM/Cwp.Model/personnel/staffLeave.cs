@@ -11,11 +11,14 @@ namespace Cwp.Model.personnel
     /// </summary>
     public class staffLeave
     {
-        public Guid? id;
-        public Guid? staffid;
-        public string start_date;
-        public string end_date;
-        public string status;
-        public string remark;
+        public Guid? id { get; set; }
+        public Guid? gymid { get; set; }
+        public Guid? gymidname { get; set; }
+        public Guid? staffid { get; set; }
+        public string staffidname { get; set; }
+        public string start_date { get; set; }
+        public string end_date { get; set; }
+        public string status { get; set; }
+        public string remark { get; set; }
     }
 }

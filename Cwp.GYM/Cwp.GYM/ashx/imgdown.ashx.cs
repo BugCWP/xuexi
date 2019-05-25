@@ -21,7 +21,7 @@ namespace Cwp.GYM.ashx
         {
             var code = context.Request["code"];
             List<picturepath> picturepaths = new picturepathBLL().getALLPicturePathList(code);
-            List<string> base64list = new List<string>();
+            List<imgurlmodel> base64list = new List<imgurlmodel>();
             StringBuilder sb = new StringBuilder();
             foreach (picturepath p in picturepaths)
             {
@@ -33,7 +33,10 @@ namespace Cwp.GYM.ashx
                     Byte[] image = new Byte[fileLength];
                     fs.Read(image,0,fileLength);
                     string strbase64 = Convert.ToBase64String(image);
-                    base64list.Add(strbase64);
+                    imgurlmodel imgurlmodel = new imgurlmodel();
+                    imgurlmodel.id = p.id;
+                    imgurlmodel.url = strbase64;
+                    base64list.Add(imgurlmodel);
                 }
                 catch
                 {

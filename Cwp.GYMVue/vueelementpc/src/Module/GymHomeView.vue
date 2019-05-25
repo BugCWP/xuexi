@@ -28,10 +28,10 @@
     </el-header>
     <el-main>
       <gym-home-index v-if="index=='1'"></gym-home-index>
-      <gym-home-staff v-if="index=='2'" :thisgymid="gymid"></gym-home-staff>
+      <gym-home-staff v-if="index=='2'" :thisgymid="gymid" :thisstaffid="staffdata.gymid"></gym-home-staff>
       <gym-home-equipment v-if="index=='3'" :thisgymid="gymid"></gym-home-equipment>
-      <gym-course v-if="index=='4'"></gym-course>
-      <gym-person v-if="index=='5'"></gym-person>
+      <gym-course v-if="index=='4'" :thisgymid="gymid"></gym-course>
+      <gym-person v-if="index=='5'" :thisid="staffdata.id"></gym-person>
     </el-main>
   </el-container>
 </template>
@@ -101,7 +101,7 @@ export default {
       this.$axios
         .get(url)
         .then(resp => {
-          that.staffbase = "data:image/png;base64," + resp.data[0];
+          that.staffbase = "data:image/png;base64," + resp.data[0].url;
         })
         .catch(err => {});
     }

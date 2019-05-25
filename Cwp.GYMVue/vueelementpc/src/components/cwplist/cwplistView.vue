@@ -2,7 +2,7 @@
   <div>
     <div>
       <el-row class="listbtnbox">
-        <el-col :span="3" class="listtitle">{{title}}</el-col>
+        <el-col :span="3" class="listtitle" v-if="titledisabled">{{title}}</el-col>
         <el-col :span="11">&nbsp;</el-col>
         <el-col :span="2">
           <template>
@@ -21,7 +21,7 @@
               type="text"
               icon="el-icon-delete"
               class="listbutton"
-              @click="deletebtn"
+              @click="deletebtnclick"
               v-if="this.deletebtn"
             >删除</el-button>
           </template>
@@ -60,6 +60,26 @@
                   v-if="column.type==='datetime'"
                 >{{scope.row[column.prop]|moment('YYYY-MM-DD HH:mm')}}</template>
                 <template v-else>{{scope.row[column.prop]}}</template>
+              </template>
+            </el-table-column>
+            <el-table-column fixed="right" label="操作" width="150" v-if="btnagree">
+              <template slot-scope="scope">
+                <div style="display:inline-block">
+                  <el-button
+                    type="success"
+                    @click="handleClickagree(scope.row)"
+                    v-if="scope.row['status']=='待审核'"
+                    size="mini"
+                  >同意</el-button>
+                </div>
+                <div style="display:inline-block">
+                  <el-button
+                    type="danger"
+                    @click="handleClicknotagree(scope.row)"
+                    v-if="scope.row['status']=='待审核'"
+                    size="mini"
+                  >不同意</el-button>
+                </div>
               </template>
             </el-table-column>
           </el-table>
@@ -116,6 +136,18 @@ export default {
     readOnly: {
       type: Boolean,
       default: false
+    },
+    titledisabled: {
+      type: Boolean,
+      default: true
+    },
+    paramList: {
+      type: Object,
+      default: () => null
+    },
+    btnagree: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -167,6 +199,9 @@ export default {
         this.pageSize +
         "&search=" +
         this.search;
+      if (this.paramList != null) {
+        url = url + "&paramList=" + JSON.stringify(this.paramList);
+      }
       this.$axios
         .get(url)
         .then(resp => {
@@ -178,7 +213,7 @@ export default {
           this.loading = false;
         });
     },
-    deletebtn() {
+    deletebtnclick() {
       var url = "/api/" + this.controllerName + "/DeleteData";
       this.$axios
         .post(url, this.multipleSelection)
@@ -191,6 +226,38 @@ export default {
         })
         .catch(err => {
           this.$message.error("删除失败");
+        });
+    },
+    handleClickagree(value) {
+      value.status="通过";
+      var url = "/api/" + this.controllerName + "/UpdateData";
+      this.$axios
+        .post(url, value)
+        .then(resp => {
+          this.loadData();
+          this.$message({
+            message: "审核成功",
+            type: "success"
+          });
+        })
+        .catch(err => {
+          this.$message.error("审核失败");
+        });
+    },
+    handleClicknotagree(value) {
+      value.status="驳回";
+      var url = "/api/" + this.controllerName + "/UpdateData";
+      this.$axios
+        .post(url, value)
+        .then(resp => {
+          this.loadData();
+          this.$message({
+            message: "审核成功",
+            type: "success"
+          });
+        })
+        .catch(err => {
+          this.$message.error("审核失败");
         });
     }
   }

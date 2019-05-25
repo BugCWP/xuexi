@@ -52,12 +52,7 @@
         </el-footer>
       </el-container>
       <el-container v-if="index==2">
-        <cwp-list-table
-          :controllerName="'staffLeave'"
-          :columns="staffLeavecolumns"
-          :paramList="{'courseid':editId}"
-          :loaddata="secondload"
-        ></cwp-list-table>
+        <staff-leave :titledisabled="false" :paramList="paramList" :btnagree="true"></staff-leave>
       </el-container>
       <el-container v-if="index==3"></el-container>
     </el-main>
@@ -66,9 +61,11 @@
 
 <script>
 import cwplisttable from "@/components/cwplist/cwplisttableView";
+import staffLeave from "@/components/staffLeave/staffLeaveListView";
 export default {
   components: {
-    "cwp-list-table": cwplisttable
+    "cwp-list-table": cwplisttable,
+    "staff-leave": staffLeave
   },
   data() {
     return {
@@ -80,27 +77,17 @@ export default {
       search: "",
       total: 0,
       stafflevelid: "",
-      staffLeavecolumns: [
-        { prop: "coursename", label: "课程名", sortable: true },
-        { prop: "gymname", label: "健身房", sortable: true },
-        { prop: "coachname", label: "教练", sortable: true },
-        { prop: "startstatus", label: "课程状态", sortable: true },
-        {
-          prop: "starttime",
-          label: "开课时间",
-          sortable: true,
-          type: "datetime"
-        },
-        { prop: "duration", label: "时长(分)", sortable: true },
-        { prop: "amount", label: "人数", sortable: true }
-      ]
+      paramList: []
     };
   },
   props: {
-    thisgymid: String
+    thisgymid: String,
+    thisstaffid: String
   },
   mounted() {
     this.getstafflevel();
+    this.paramList=[];
+    this.paramList={'gymid':this.thisgymid};
     if (this.thisgymid != "") {
       this.stafflevelid = "{'gymid':'" + this.thisgymid + "'}";
       this.getstaffcard();

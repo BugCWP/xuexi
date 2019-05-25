@@ -43,6 +43,16 @@ export default new Router({
       path:'/gymhome',
       name:'gymHome',
       component:gymhome
+    },
+    {
+      path:'/customerHome',
+      name:'customerHome',
+      component:()=>import('@/Module/CustomeHomeView')
+    },
+    {
+      path:'/coachHome',
+      name:'coachHome',
+      component:()=>import('@/Module/CoachHomeView')
     }
   ]
 });
