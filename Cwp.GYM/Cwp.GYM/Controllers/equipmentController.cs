@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace Cwp.GYM.Controllers
 {
-    public class equipmentController : EntityController<equipment,equipmentBLL>
+    public class equipmentController : EntityController<equipment, equipmentBLL>
     {
         /// <summary>
         /// 获取列表api和图片
@@ -23,5 +23,7 @@ namespace Cwp.GYM.Controllers
         {
             return new equipmentBLL().GetDataListAndImg(pageIndex, pageSize, search, paramList);
         }
+
+       
     }
 }

@@ -10,8 +10,6 @@ namespace Cwp.DAL
 {
     public class sqlHelp
     {
-        //public static string connstring = "Data Source=DESKTOP-U3PTEKD\\SQLEXPRESS;Initial Catalog=GYM;Persist Security Info=True;User ID=sa;Password=p@ssw0rd";
-        //public static SqlConnection con = new SqlConnection(connstring);
 
         public static int ExecuteNonQuery(string sql, SqlParameter[] ps)
         {

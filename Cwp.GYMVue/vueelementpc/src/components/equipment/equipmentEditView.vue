@@ -3,7 +3,14 @@
     <div>
       <el-row class="listbtnbox">
         <el-col :span="3" class="listtitle">器材种类</el-col>
-        <el-col :span="16">&nbsp;</el-col>
+        <el-col :span="15">&nbsp;</el-col>
+        <el-col :span="2">
+          <cwp-img-upload
+            v-show="editId!=''"
+            :ThingcontrollerName="controllerName"
+            :Thingid="editId"
+          ></cwp-img-upload>
+        </el-col>
         <el-col :span="2">
           <template>
             <el-button
@@ -59,8 +66,12 @@
 </template>
 
 <script>
+import cwpimgupload from "@/components/cwpimg/cwpImgUpload";
 export default {
   name: "equipmentEdit",
+  components: {
+    "cwp-img-upload": cwpimgupload
+  },
   data() {
     return {
       controllerName: "equipment",
@@ -75,9 +86,7 @@ export default {
         name: [
           { required: true, message: "请输入街道名称", trigger: "change" }
         ],
-        price: [
-          { required: false, message: "请输入价格", trigger: "change" }
-        ],
+        price: [{ required: false, message: "请输入价格", trigger: "change" }],
         remark: [{ required: false, message: "请输入介绍", trigger: "change" }]
       },
       editId: ""
@@ -93,6 +102,7 @@ export default {
   methods: {
     goAddPage() {
       var url = "/api/" + this.controllerName + "/CreateData";
+      this.formData.code =this.guid(); 
       this.$axios
         .post(url, this.formData)
         .then(resp => {
@@ -141,6 +151,25 @@ export default {
       } else {
         return true;
       }
+    },
+    guid() {
+      return (
+        this.S4() +
+        this.S4() +
+        "-" +
+        this.S4() +
+        "-" +
+        this.S4() +
+        "-" +
+        this.S4() +
+        "-" +
+        this.S4() +
+        this.S4() +
+        this.S4()
+      );
+    },
+    S4(c) {
+      return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
     }
   }
 };

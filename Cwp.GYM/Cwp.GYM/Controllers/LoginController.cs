@@ -20,5 +20,15 @@ namespace Cwp.GYM.Controllers
         {
             return new personBLL().personLogin(obj.account, obj.password);
         }
+        [HttpPost]
+        public string customerLogin([FromBody]loginModel obj)
+        {
+            return new personBLL().customerLogin(obj.account, obj.password);
+        }
+        [HttpPost]
+        public string coachLogin([FromBody]loginModel obj)
+        {
+            return new personBLL().coachLogin(obj.account, obj.password);
+        }
     }
 }

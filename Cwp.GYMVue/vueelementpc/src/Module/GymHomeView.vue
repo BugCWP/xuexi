@@ -5,9 +5,9 @@
         <el-col :span="3" class="headLogo">GYM</el-col>
         <el-col :span="6"></el-col>
         <el-col :span="2">&nbsp;</el-col>
-        <el-col :span="2">
+        <!-- <el-col :span="2">
           <el-button type="text" class="navbtn" @click="changeIndex('1')">首页</el-button>
-        </el-col>
+        </el-col> -->
         <el-col :span="2">
           <el-button type="text" class="navbtn" @click="changeIndex('2')">员工管理</el-button>
         </el-col>
@@ -27,7 +27,7 @@
       </el-row>
     </el-header>
     <el-main>
-      <gym-home-index v-if="index=='1'"></gym-home-index>
+      <gym-home-index v-if="index=='1'" :thisgymid="gymid"></gym-home-index>
       <gym-home-staff v-if="index=='2'" :thisgymid="gymid" :thisstaffid="staffdata.gymid"></gym-home-staff>
       <gym-home-equipment v-if="index=='3'" :thisgymid="gymid"></gym-home-equipment>
       <gym-course v-if="index=='4'" :thisgymid="gymid"></gym-course>

@@ -24,20 +24,33 @@ namespace Cwp.GYM.ashx
             MyTool mytool = new MyTool();
             if (pfile != null)
             {
-                string newfilename = mytool.GetMD5(pfile.InputStream) + Path.GetExtension(pfile.FileName);
+                string newfilename = mytool.GetMD5(pfile.InputStream) +Guid.NewGuid()+ Path.GetExtension(pfile.FileName);
                 string newpath = context.Request.MapPath("/images/") + DateTime.Now.ToString("yyyyMMdd");
                 mytool.CreateDirectory(newpath);
                 string path = Path.Combine(newpath, newfilename);
                 picturepath pp1 = new picturepath();
                 pp1.code = new Guid(data.Replace("\"", ""));
-                picturepath pp2 = new picturepathBLL().GetData<picturepath>(pp1);             
-                picturepath pp = new picturepath();
-                pp.id = pp2.id;
-                pp.name = newfilename;
-                pp.path = path;
-                pp.code = new Guid(data.Replace("\"", ""));
-                string result = new picturepathBLL().UpdateData<picturepath>(pp);
-                pfile.SaveAs(path);
+                picturepath pp2 = new picturepathBLL().GetData<picturepath>(pp1);
+                if (pp2 == null)
+                {
+                    picturepath pp = new picturepath();
+                    pp.name = newfilename;
+                    pp.path = path;
+                    pp.code = new Guid(data.Replace("\"", ""));
+                    string result = new picturepathBLL().CreateData<picturepath>(pp);
+                    pfile.SaveAs(path);
+                }
+                else
+                {
+                    picturepath pp = new picturepath();
+                    pp.id = pp2.id;
+                    pp.name = newfilename;
+                    pp.path = path;
+                    pp.code = new Guid(data.Replace("\"", ""));
+                    string result = new picturepathBLL().UpdateData<picturepath>(pp);
+                    pfile.SaveAs(path);
+                }
+                
             }
             context.Response.Write(imgBaseStr);
         }

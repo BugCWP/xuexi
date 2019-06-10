@@ -37,7 +37,7 @@
                 @change="handleChange"
                 :min="1"
               ></el-input-number>
-              <el-button type="text" class="button">购买</el-button>
+              <el-button type="text" class="button" @click="buybtn(item,index)">购买</el-button>
             </div>
           </div>
         </el-main>
@@ -51,21 +51,19 @@
         </el-footer>
       </el-container>
       <el-container v-if="index==2">
-        <el-main>
+        <el-main style="text-align:left">
           <div class="OwinEquipmentCard" v-for="(item, index) in equipmentOwinList" :key="index">
               <img :src="'../../static/img/nothing.gif'" width="180px" height="110px" v-if="thisimgisNull(item.imgList)"/>
             <el-carousel trigger="click" height="110px" v-else>
               <el-carousel-item v-for="(item2,index) in item.imgList" :key="index" > 
-                <img :src="'data:image/png;base64,'+item2[index]"/>
+                <img :src="'data:image/png;base64,'+item2"/>
               </el-carousel-item>
             </el-carousel>
-            <div>
+            <div style="padding-left:10px">
               <span>{{item.gym_equipment.equipmentname}}</span>
               <br>
               <span style="font-size:13px">数量:{{item.gym_equipment.amount}}</span>
-              <div class="bottom clearfix">
-                <el-button type="text" class="button">更多</el-button>
-              </div>
+              <br/>
             </div>
           </div>
         </el-main>
@@ -110,8 +108,9 @@ export default {
   computed: {},
   methods: {
     equipmentShopimg: function(value, index) {
-      return value.imgList != null
-        ? "data:image/png;base64," + value.imgList[index]
+      console.log(value);
+      return value.imgList.length != 0
+        ? "data:image/png;base64," + value.imgList[0]
         : "../../static/img/nothing.gif";
     },
     changeindex(value) {
@@ -171,11 +170,36 @@ export default {
       this.getOwinEquipmentAndImg();
     },
     thisimgisNull(value){
-       if(value==null){
+       if(value.length==0){
            return true;
        }else{
            return false;
        }
+    },
+    buybtn(item,index){
+      var equipmentid=item.equipment.id;
+      var number=this.num[index];
+      var gymid=this.thisgymid;
+       var url =
+        "/api/gym_equipment/Bugequipment?equipmentid=" +
+        equipmentid +
+        "&gymid=" +
+        gymid +
+        "&number=" +
+        number ;
+      var that = this;
+      this.$axios
+        .get(url)
+        .then(resp => {
+           this.$message({
+            message: "购买成功",
+            type: "success"
+          });
+        })
+        .catch(err => {
+           this.$message.error("购买失败");
+        });
+      
     }
   }
 };
@@ -195,6 +219,9 @@ export default {
 .OwinEquipmentCard{
     width: 180px;
     height: 200px;
-     box-shadow: 1px 1px 5px #888888;
+    box-shadow: 1px 1px 5px #888888;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 </style>

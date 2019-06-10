@@ -9,8 +9,16 @@ using System.Web.Http;
 
 namespace Cwp.GYM.Controllers
 {
-    public class coachController : EntityController<coach,coachBLL>
+    public class coachController : EntityController<coach, coachBLL>
     {
-      
+        /// <summary>
+        /// 教练注册
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public string coachRegister([FromBody]coach coach)
+        {
+            return new coachBLL().coachRegister(coach);
+        }
     }
 }

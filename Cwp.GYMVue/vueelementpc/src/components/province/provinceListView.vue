@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      title:"街道",
+      title:"省",
       controllerName:'province',
       columns:[
         { prop: 'name', label: '名称', sortable: true },

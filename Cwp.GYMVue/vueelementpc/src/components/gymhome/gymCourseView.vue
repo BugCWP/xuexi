@@ -49,24 +49,42 @@
         </el-row>
       </div>
       <div v-if="coursedisabled">
-        <el-calendar>
-          <!-- <template slot="dateCell" slot-scope="{date, data}">
-            <p
-              :class="data.isSelected ? 'is-selected' : ''"
-            >{{ data.day.split('-').slice(1).join('-') }} {{ data.isSelected ? '✔️' : ''}}</p>
-          </template> -->
-        </el-calendar>
+        <div style="width:100%">
+          <el-row>
+            <el-col :span="22">
+              <cwp-list
+                :title="'课程'"
+                :controllerName="'gym_course'"
+                :columns="columns"
+                :titledisabled="true"
+                :createrbtn="false"
+                :deletebtn="false"
+                :searchbtn="false"
+                :paramList="paramList"
+                :btnagree="false"
+              ></cwp-list>
+            </el-col>
+            <el-col :span="2">
+              <el-button type="primary" @click="gotoedit">新增</el-button>
+            </el-col>
+          </el-row>
+        </div>
       </div>
-      <div></div>
     </el-main>
   </el-container>
 </template>
 
 <script>
 import cwplookup from "@/components/cwplookup/cwplookupView";
+import cwplist from "@/components/cwplist/cwplistView";
 export default {
   components: {
-    "cwp-lookup": cwplookup
+    "cwp-lookup": cwplookup,
+    "cwp-list": cwplist
+  },
+  props: {
+    thisgymid: String,
+    thisstaffid: String
   },
   data() {
     return {
@@ -79,11 +97,47 @@ export default {
         { prop: "customerlevel", label: "会员等级", sortable: true },
         { prop: "coachlevel", label: "教练等级", sortable: true }
       ],
-      coursedata: {},
-      coursedisabled: true
+      coursedata: {
+        courseid:"",
+        coursename:'',
+        duration:"",
+        starttime:"",
+        startstatus:"等待",
+        gymid:"",
+        gymname:"",
+      },
+      coursedisabled: true,
+      columns: [
+        { prop: "coursename", label: "课程名", sortable: true },
+        { prop: "coachname", label: "教练", sortable: true },
+        { prop: "startstatus", label: "课程状态", sortable: true },
+        {
+          prop: "starttime",
+          label: "开课时间",
+          sortable: true,
+          type: "datetime"
+        },
+        { prop: "duration", label: "时长(分)", sortable: true },
+        { prop: "amount", label: "人数", sortable: true }
+      ],
+      paramList: { 'gymid': this.thisgymid },
+      gymdata: {}
     };
   },
+  mounted() {
+    this.loaddate();
+  },
   methods: {
+    loaddate() {
+      var url = "/api/gym/GetData?id=" + this.thisgymid;
+      var that = this;
+      this.$axios
+        .get(url)
+        .then(resp => {
+          that.gymdata = resp.data;
+        })
+        .catch(err => {});
+    },
     changeindex(value) {
       this.index = value;
     },
@@ -91,9 +145,28 @@ export default {
       this.coursedata.courseid = data.id;
       this.coursedata.coursename = data.name;
     },
-    saveCourse() {},
+    saveCourse() {
+      this.coursedata.gymid=this.gymdata.id;
+      this.coursedata.gymname=this.gymdata.name;
+        var url = "/api/gym_course/CreateData";
+      this.$axios
+        .post(url, this.coursedata)
+        .then(resp => {
+          this.$message({
+            message: "添加成功",
+            type: "success"
+          });
+          this.coursedisabled=true;
+        })
+        .catch(err => {
+          this.$message.error("添加失败");
+        });
+    },
     gotoCourselist() {
       this.coursedisabled = true;
+    },
+    gotoedit() {
+      this.coursedisabled = false;
     }
   }
 };

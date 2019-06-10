@@ -1,4 +1,5 @@
-﻿using Cwp.Model;
+﻿using Cwp.DAL.CURD;
+using Cwp.Model;
 using Cwp.Model.gym;
 using System;
 using System.Collections.Generic;
@@ -46,6 +47,35 @@ namespace Cwp.BLL.gym
             gymEquipmentAndImgList.pageCount = dataList.pageCount;
             gymEquipmentAndImgList.Count = dataList.Count;
             return gymEquipmentAndImgList;
+        }
+
+        public string Bugequipment(string equipmentid, string gymid, string number)
+        {
+            gym_equipment ge = new gym_equipment();
+            ge.equipmentid = new Guid(equipmentid);
+            ge.gymroomid = new Guid(gymid);
+            List<gym_equipment> gelist= new curdHelp().SelectDataList<gym_equipment>(ge);
+            if (gelist.Count>0)
+            {
+                gym_equipment ge1 = new gym_equipmentBLL().GetData<gym_equipment>(ge);
+                ge1.amount = (Convert.ToInt32(ge1.amount) + Convert.ToInt32(number)).ToString();
+                return new gym_equipmentBLL().UpdateData<gym_equipment>(ge1);
+            }
+            else
+            {
+                gym_equipment ge2 = new gym_equipment();
+                ge2.gymroomid = new Guid(gymid);
+                gymroom gymroom = new gymroom();
+                gymroom.id = new Guid(gymid);
+                ge2.gymroomname = new gymBLL().GetData<gymroom>(gymroom).name;
+                ge2.equipmentid = new Guid(equipmentid);
+                equipment equipment = new equipment();
+                equipment.id = new Guid(equipmentid);
+                ge2.equipmentname = new equipmentBLL().GetData<equipment>(equipment).name;
+                ge2.amount = number;
+                ge2.purchasetime = new DateTime().ToString();
+                return new gym_equipmentBLL().CreateData<gym_equipment>(ge2);
+            }
         }
     }
 }

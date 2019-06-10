@@ -50,6 +50,7 @@
     <Compile Include="gym\customer_course.cs" />
     <Compile Include="gym\equipment.cs" />
     <Compile Include="gym\equipmentAndImg.cs" />
+    <Compile Include="gym\gymAndImg.cs" />
     <Compile Include="gym\gymRegister.cs" />
     <Compile Include="gym\gymroom.cs" />
     <Compile Include="gym\gym_course.cs" />

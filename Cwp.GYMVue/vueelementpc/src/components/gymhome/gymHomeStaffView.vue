@@ -8,9 +8,6 @@
         <el-menu-item index="2" @click="changeindex(2)">
           <span slot="title">请假信息</span>
         </el-menu-item>
-        <el-menu-item index="3" @click="changeindex(3)">
-          <span slot="title">出勤信息</span>
-        </el-menu-item>
       </el-menu>
     </el-aside>
     <el-main>

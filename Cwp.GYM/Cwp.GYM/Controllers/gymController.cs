@@ -13,6 +13,16 @@ namespace Cwp.GYM.Controllers
 {
     public class gymController : EntityController<gymroom,gymBLL>
     {
-
+        /// <summary>
+        /// 获取列表api和图片
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public dataList<gymAndImg> GetDataListAndImg(string search = null, string paramList = null)
+        {
+            return new gymBLL().GetDataListAndImg(search, paramList);
+        }
     }
 }

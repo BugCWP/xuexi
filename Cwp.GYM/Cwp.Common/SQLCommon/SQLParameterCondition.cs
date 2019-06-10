@@ -57,14 +57,29 @@ namespace Cwp.Common.SQLCommon
             int count = 0;
             foreach (var item in modeProperties)
             {
-                if (item.Value != null)
+                if (item.Value != null&&item.Value.ToString()!="null" && item.Value.ToString() != "00000000-0000-0000-0000-000000000000")
+                {
+                    count++;
+                }else if (item.Value != null && item.Value.ToString() == "null")
+                {
+                    count++;
+                }
+                else if (item.Value != null && item.Value.ToString() == "00000000-0000-0000-0000-000000000000")
                 {
                     count++;
                 }
             }
             foreach (var item in changemodeProperties)
             {
-                if (item.Value != null)
+                if (item.Value != null && item.Value.ToString() != "null" && item.Value.ToString() != "00000000-0000-0000-0000-000000000000")
+                {
+                    count++;
+                }
+                else if (item.Value != null && item.Value.ToString() == "null")
+                {
+                    count++;
+                }
+                else if (item.Value != null && item.Value.ToString() == "00000000-0000-0000-0000-000000000000")
                 {
                     count++;
                 }
@@ -73,17 +88,37 @@ namespace Cwp.Common.SQLCommon
             int _i = 0;
             foreach (var item in modeProperties)
             {
-                if (item.Value != null)
+                if (item.Value != null && item.Value.ToString() != "null"&& item.Value.ToString() != "00000000-0000-0000-0000-000000000000")
                 {
                     sqlparameterlist[_i] = (new SqlParameter("@" + item.Key, item.Value));
+                    _i++;
+                }
+                else if (item.Value != null && item.Value.ToString() == "null")
+                {
+                    sqlparameterlist[_i] = (new SqlParameter("@" + item.Key, ""));
+                    _i++;
+                }
+                else if (item.Value != null && item.Value.ToString() == "00000000-0000-0000-0000-000000000000")
+                {
+                    sqlparameterlist[_i] = (new SqlParameter("@" + item.Key, "00000000-0000-0000-0000-000000000000"));
                     _i++;
                 }
             }
             foreach (var item in changemodeProperties)
             {
-                if (item.Value != null)
+                if (item.Value != null && item.Value.ToString() != "null" && item.Value.ToString() != "00000000-0000-0000-0000-000000000000")
                 {
                     sqlparameterlist[_i] = (new SqlParameter("@" + item.Key, item.Value));
+                    _i++;
+                }
+                else if (item.Value != null && item.Value.ToString() == "null")
+                {
+                    sqlparameterlist[_i] = (new SqlParameter("@" + item.Key, ""));
+                    _i++;
+                }
+                else if (item.Value != null && item.Value.ToString() == "00000000-0000-0000-0000-000000000000")
+                {
+                    sqlparameterlist[_i] = (new SqlParameter("@" + item.Key, "00000000-0000-0000-0000-000000000000"));
                     _i++;
                 }
             }

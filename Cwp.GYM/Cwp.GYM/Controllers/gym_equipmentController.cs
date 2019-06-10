@@ -17,5 +17,11 @@ namespace Cwp.GYM.Controllers
         {
             return new gym_equipmentBLL().GetDataListAndImg(pageIndex,pageSize,search,paramList);
         }
+
+        [HttpGet]
+        public string Bugequipment(string equipmentid,string gymid,string number)
+        {
+            return new gym_equipmentBLL().Bugequipment(equipmentid,gymid,number);
+        }
     }
 }

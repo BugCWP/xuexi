@@ -23,5 +23,36 @@ namespace Cwp.BLL.person
             }
             return result;
         }
+
+
+        /// <summary>
+        /// 用户登陆
+        /// </summary>
+        /// <returns></returns>
+        public string customerLogin(string account, string password)
+        {
+            string passwordSQL = new personDAL().SelectCustomerPassword(account);
+            string result = "";
+            if (passwordSQL == password)
+            {
+                result = "success";
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 人员登陆
+        /// </summary>
+        /// <returns></returns>
+        public string coachLogin(string account, string password)
+        {
+            string passwordSQL = new personDAL().SelectCoachPassword(account);
+            string result = "";
+            if (passwordSQL == password)
+            {
+                result = "success";
+            }
+            return result;
+        }
     }
 }

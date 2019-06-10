@@ -3,7 +3,14 @@
     <div>
       <el-row class="listbtnbox">
         <el-col :span="3" class="listtitle">课程</el-col>
-        <el-col :span="16">&nbsp;</el-col>
+        <el-col :span="15">&nbsp;</el-col>
+        <el-col :span="2">
+          <cwp-img-upload
+            v-show="editId!=''"
+            :ThingcontrollerName="controllerName"
+            :Thingid="editId"
+          ></cwp-img-upload>
+        </el-col>
         <el-col :span="2">
           <template>
             <el-button
@@ -72,7 +79,7 @@
         <el-row>
           <el-col :span="7">
             <el-form-item label="人数" prop="amount">
-              <el-input v-model="formData.remuneration" clearable :disabled=true></el-input>
+              <el-input v-model="formData.remuneration" clearable :disabled="true"></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="7">
@@ -96,7 +103,7 @@
         <el-row>
           <el-col :span="7">
             <el-form-item label="课时(分)" prop="duration">
-               <el-input v-model="formData.duration" clearable></el-input>
+              <el-input v-model="formData.duration" clearable></el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -107,10 +114,12 @@
 
 <script>
 import cwplookup from "@/components/cwplookup/cwplookupView";
+import cwpimgupload from "@/components/cwpimg/cwpImgUpload";
 export default {
   name: "gym_courseEdit",
   components: {
-    "cwp-lookup": cwplookup
+    "cwp-lookup": cwplookup,
+    "cwp-img-upload": cwpimgupload
   },
   data() {
     return {
@@ -188,6 +197,7 @@ export default {
   methods: {
     goAddPage() {
       var url = "/api/" + this.controllerName + "/CreateData";
+      this.formData.code = this.guid();
       this.$axios
         .post(url, this.formData)
         .then(resp => {
@@ -248,6 +258,25 @@ export default {
     getcoachinput(data) {
       this.formData.coachid = data.id;
       this.formData.coachname = data.name;
+    },
+    guid() {
+      return (
+        this.S4() +
+        this.S4() +
+        "-" +
+        this.S4() +
+        "-" +
+        this.S4() +
+        "-" +
+        this.S4() +
+        "-" +
+        this.S4() +
+        this.S4() +
+        this.S4()
+      );
+    },
+    S4(c) {
+      return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
     }
   }
 };

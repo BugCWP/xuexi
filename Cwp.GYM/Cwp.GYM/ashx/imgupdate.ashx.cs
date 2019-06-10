@@ -25,7 +25,7 @@ namespace Cwp.GYM.ashx
             MyTool mytool = new MyTool();
             if (pfile != null)
             {
-                string newfilename = mytool.GetMD5(pfile.InputStream) + Path.GetExtension(pfile.FileName);
+                string newfilename = mytool.GetMD5(pfile.InputStream) +Guid.NewGuid() + Path.GetExtension(pfile.FileName);
                 string newpath = context.Request.MapPath("/images/") + DateTime.Now.ToString("yyyyMMdd");
                 mytool.CreateDirectory(newpath);
                 string path = Path.Combine(newpath, newfilename);

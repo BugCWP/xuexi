@@ -10,7 +10,6 @@
     >
       <el-upload
         :action="updateurl"
-        :headers="headers"
         list-type="picture-card"
         :on-preview="handlePictureCardPreview"
         :on-remove="handleRemove"
@@ -38,19 +37,14 @@ export default {
       dialogVisible: false,
       controllerName: "picturepath",
       updateurl: "http://localhost:50379/ashx/" + "imgupdate.ashx",
-      fileList: [
-        {
-          name:"111",
-          url:"D:\\MyFile\\picture\\e5c6b11a06c94e0da7fe6252b9a48916.jpeg"
-        }
-      ],
+      fileList: [],
       dialogImageUrl: "",
-      headers: [{ "Access-Control-Allow-Origin": "*" }],
       uploadImgData: {
         data: ""
       },
       formData: {},
-      paramList: []
+      paramList: [],
+      imgListdata: []
     };
   },
   props: {
@@ -89,10 +83,24 @@ export default {
       this.dialogshow = false;
     },
     handleRemove(file, fileList) {
-      console.log(file, fileList);
+      var url = "/api/" + this.controllerName + "/DeleteData";
+      var multipleSelection = [];
+      multipleSelection.push({ id: file.id });
+      this.$axios
+        .post(url, multipleSelection)
+        .then(resp => {
+          this.$message({
+            message: "成功删除" + resp.data + "条省记录信息",
+            type: "success"
+          });
+        })
+        .catch(err => {
+          this.$message.error("删除失败");
+        });
     },
     handlePictureCardPreview(file) {
-      console.log(file);
+      this.dialogVisible = true;
+      this.dialogImageUrl = file.url;
     },
     getFoemData() {
       var that = this;
@@ -111,16 +119,34 @@ export default {
     },
     getImgPath() {
       var that = this;
-      var url = "/api/" + this.controllerName + "/GetDataList? ";
+      var url = "/api/" + this.controllerName + "/GetDataList";
       if (this.formData != null) {
-        this.paramList=[];
-        this.paramList.push({'code':this.formData.code});
-        url = url + " paramList=" + JSON.stringify(this.paramList);
+        this.paramList = {};
+        this.paramList = { code: this.formData.code };
+        url = url + "?paramList=" + JSON.stringify(this.paramList);
         this.$axios
           .get(url)
           .then(resp => {
-            for (var i = 0; i < resp.length; i++) {
-              that.fileList.push({ name: resp[i].name, url: resp[i].path });
+            that.imgListdata = resp.data;
+            that.getimgbase(resp.data[0]);
+          })
+          .catch(err => {});
+      }
+    },
+    getimgbase(value) {
+      var that = this;
+      if (value != null) {
+        var url = "http://localhost:50379/ashx/imgdown.ashx?code=" + value.code;
+        this.$axios
+          .get(url)
+          .then(resp => {
+            for (var i = 0; i < resp.data.length; i++) {
+              var src = "";
+              src = "data:image/png;base64," + resp.data[i].url;
+              that.fileList.push({
+                id:  resp.data[i].id,
+                url: src
+              });
             }
           })
           .catch(err => {});

@@ -129,11 +129,20 @@ namespace Cwp.Common.SQLCommon
             Dictionary<string, object> modeProperties = ForeachClass.ForeachClassProperties<T>(model);
             foreach (var item in modeProperties)
             {
-                if (item.Value!=null)
+                if (item.Value!=null&&item.Value.ToString()!="null" && item.Value.ToString() != "00000000-0000-0000-0000-000000000000")
                 {
                     string sql = item.Key + "=@" + item.Key+",";
                     sqlstring.Append(sql);
-                }  
+                }else if (item.Value != null && item.Value.ToString() == "null")
+                {
+                    string sql = item.Key + "=@" + item.Key + ",";
+                    sqlstring.Append(sql);
+                }
+                else if (item.Value != null && item.Value.ToString() == "00000000-0000-0000-0000-000000000000")
+                {
+                    string sql = item.Key + "=@" + item.Key + ",";
+                    sqlstring.Append(sql);
+                }
             }
             sqlstring = sqlstring.Remove(sqlstring.Length - 1, 1);
             sqlstring.Append(" where 0=0");
