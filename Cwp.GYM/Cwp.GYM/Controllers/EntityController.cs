@@ -65,7 +65,7 @@ namespace Cwp.GYM.Controllers
         /// 删除数据
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
+        /// <returns><o/returns>
         [EnableCors(origins: "*", headers: "*", methods: "*")]
         [HttpPost]
         public string DeleteData([FromBody]JObject multipleSelection)
